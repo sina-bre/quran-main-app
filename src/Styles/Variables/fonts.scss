@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "IRANSans";
+  src: url("../../Fonts/IRANSans/FontsFree-Net-ir_sans.eot");
+  src: url("../../Fonts/IRANSans/FontsFree-Net-ir_sans.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../Fonts/IRANSans/IRANSans.woff") format("woff"),
+    url("../../Fonts/IRANSans/FontsFree-Net-ir_sans.woff2") format("woff2"),
+    url("../../Fonts/IRANSans/IRANSans.ttf") format("truetype"),
+    url("../../Fonts/IRANSans/IRANSans.svg") format("svg");
+}
+@font-face {
+  font-family: "IRANYecan";
+  src: url("../../Fonts/IRANYecan/IRANYekan.eot");
+  src: url("../../Fonts/IRANYecan/IRANYekan.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../Fonts/IRANYecan/IRANYekan.woff") format("woff"),
+    url("../../Fonts/IRANYecan/IRANYekan.woff2") format("woff2"),
+    url("../../Fonts/IRANYecan/IRANYekan.ttf") format("truetype"),
+    url("../../Fonts/IRANYecan/IRANYekan.svg") format("svg");
+}
+@font-face {
+  font-family: "QuranTaha";
+  src: url("../../Fonts/QuranTaha/QuranTaha.eot");
+  src: url("../../Fonts/QuranTaha/QuranTaha.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../Fonts/QuranTaha/QuranTaha.woff") format("woff"),
+    url("../../Fonts/QuranTaha/QuranTaha.woff2") format("woff2"),
+    url("../../Fonts/QuranTaha/QuranTaha.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Me-Quran";
+  src: url("../../Fonts/Me_Quran/me-quran.eot");
+  src: url("../../Fonts/Me_Quran/me-quran.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../Fonts/Me_Quran/me_quran.woff") format("woff"),
+    url("../../Fonts/Me_Quran/me-quran.woff2") format("woff2"),
+    url("../../Fonts/Me_Quran/me_quran.ttf") format("truetype"),
+    url("../../Fonts/Me_Quran/me_quran.svg") format("svg");
+}
+$IRANSans: "IRANSans", sans-serif;
+$IRANYecan: "IRANYecan", sans-serif;
+$Me-Quran: "Me-Quran", "IRANSans";
