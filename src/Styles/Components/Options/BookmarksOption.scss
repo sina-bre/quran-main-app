@@ -1,0 +1,62 @@
+@import "../../Variables/items.scss";
+@import "../../Variables/colors.scss";
+.BookmarksOption-container {
+  @include option;
+  @include flex(space-between, center, column);
+  margin: 1rem 0;
+}
+
+.BookmarksOption-img-div {
+  @include flex(center, center, row);
+  width: 50%;
+  height: 100%;
+  img {
+    object-fit: contain;
+    width: 2.5rem;
+    height: auto;
+  }
+}
+.BookmarksOption-text {
+  margin: 0.5rem;
+}
+.BookmarksOption-text-title {
+  p {
+    @include text($title-text-color, 0.7rem, 400);
+  }
+}
+.BookmarksOption-text-subtitle {
+  display: none;
+}
+
+@media only screen and (min-width: 577px) {
+  .BookmarksOption-container {
+    @include flex(space-between, center, row-reverse);
+  }
+  .BookmarksOption-img-div {
+    img {
+      width: 3rem;
+    }
+  }
+  .BookmarksOption-text-title {
+    p {
+      @include text($title-text-color, 0.8rem, 400);
+    }
+  }
+}
+@media only screen and (min-width: 640px) {
+  .BookmarksOption-text-subtitle {
+    display: block;
+    p {
+      @include text($sub-title1-text-color, 0.6rem, 400);
+    }
+  }
+  .BookmarksOption-img-div {
+    width: 35%;
+    img {
+      width: 3.3rem;
+    }
+  }
+  .BookmarksOption-text {
+    width: 65%;
+  }
+}

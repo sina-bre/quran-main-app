@@ -1,0 +1,62 @@
+@import "../../Variables/items.scss";
+@import "../../Variables/colors.scss";
+.AboutAppOption-container {
+  @include option;
+  @include flex(space-between, center, column);
+  margin: 1rem 0;
+}
+
+.AboutAppOption-img-div {
+  @include flex(center, center, row);
+  width: 50%;
+  height: 100%;
+  img {
+    object-fit: contain;
+    width: 2.5rem;
+    height: auto;
+  }
+}
+.AboutAppOption-text {
+  margin: 0.5rem;
+}
+.AboutAppOption-text-title {
+  p {
+    @include text($title-text-color, 0.7rem, 400);
+  }
+}
+.AboutAppOption-text-subtitle {
+  display: none;
+}
+
+@media only screen and (min-width: 577px) {
+  .AboutAppOption-container {
+    @include flex(space-between, center, row-reverse);
+  }
+  .AboutAppOption-img-div {
+    img {
+      width: 3rem;
+    }
+  }
+  .AboutAppOption-text-title {
+    p {
+      @include text($title-text-color, 0.8rem, 400);
+    }
+  }
+}
+@media only screen and (min-width: 640px) {
+  .AboutAppOption-text-subtitle {
+    display: block;
+    p {
+      @include text($sub-title1-text-color, 0.6rem, 400);
+    }
+  }
+  .AboutAppOption-img-div {
+    width: 35%;
+    img {
+      width: 3.3rem;
+    }
+  }
+  .AboutAppOption-text {
+    width: 65%;
+  }
+}

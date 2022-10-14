@@ -1,0 +1,83 @@
+@import "../../Variables/items.scss";
+@import "../../Variables/colors.scss";
+.AudioQuranOption-container {
+  @include option;
+  @include flex(space-between, center, row);
+  width: 90%;
+  height: 120px;
+  transition: 0.3s;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+.AudioQuranOption-container:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+.AudioQuranOption-img-div {
+  @include flex(center, center, row);
+  width: 50%;
+  height: 100%;
+  img {
+    object-fit: contain;
+    width: 7rem;
+    height: auto;
+  }
+}
+
+.AudioQuranOption-right {
+  @include flex(center, center, column);
+  width: 50%;
+  height: 100%;
+  margin: 0 1rem 0 0;
+}
+.AudioQuranOption-title {
+  margin-bottom: 0.5rem;
+  width: 100%;
+  p {
+    @include text($title-text-color, 1rem, 400);
+  }
+}
+.AudioQuranOption-subtitle {
+  width: 100%;
+  p {
+    @include text($sub-title1-text-color, 0.7rem, 400);
+  }
+}
+
+@media only screen and (min-width: 420px) {
+  .AudioQuranOption-title {
+    p {
+      @include text($title-text-color, 1.1rem, 400);
+    }
+  }
+  .AudioQuranOption-subtitle {
+    p {
+      @include text($sub-title1-text-color, 0.8rem, 400);
+    }
+  }
+  .AudioQuranOption-img-div {
+    width: 45%;
+  }
+  .AudioQuranOption-right {
+    width: 55%;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  AudioQuranOption-title {
+    p {
+      @include text($title-text-color, 1.5rem, 400);
+    }
+  }
+  .AudioQuranOption-subtitle {
+    p {
+      @include text($sub-title1-text-color, 0.9rem, 400);
+    }
+  }
+  .AudioQuranOption-img-div {
+    width: 30%;
+  }
+  .AudioQuranOption-right {
+    width: 70%;
+  }
+}

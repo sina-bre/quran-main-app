@@ -1,11 +1,7 @@
 import "./Styles/Components/App.scss";
-import Cover from "./Components/UI/Cover";
+import MainPage from "./Components/Pages/MainPage";
 function App() {
-  return (
-    <div className="body">
-      <Cover />
-    </div>
-  );
+  return <MainPage />;
 }
 
 export default App;

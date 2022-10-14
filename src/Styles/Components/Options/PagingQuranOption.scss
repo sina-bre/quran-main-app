@@ -1,0 +1,62 @@
+@import "../../Variables/items.scss";
+@import "../../Variables/colors.scss";
+.PagingQuranOption-container {
+  @include option;
+  @include flex(space-between, center, column);
+  margin: 1rem 0;
+}
+
+.PagingQuranOption-img-div {
+  @include flex(center, center, row);
+  width: 50%;
+  height: 100%;
+  img {
+    object-fit: contain;
+    width: 2.5rem;
+    height: auto;
+  }
+}
+.PagingQuranOption-text {
+  margin: 0.5rem;
+}
+.PagingQuranOption-text-title {
+  p {
+    @include text($title-text-color, 0.7rem, 400);
+  }
+}
+.PagingQuranOption-text-subtitle {
+  display: none;
+}
+
+@media only screen and (min-width: 577px) {
+  .PagingQuranOption-container {
+    @include flex(space-between, center, row-reverse);
+  }
+  .PagingQuranOption-img-div {
+    img {
+      width: 3rem;
+    }
+  }
+  .PagingQuranOption-text-title {
+    p {
+      @include text($title-text-color, 0.8rem, 400);
+    }
+  }
+}
+@media only screen and (min-width: 640px) {
+  .PagingQuranOption-text-subtitle {
+    display: block;
+    p {
+      @include text($sub-title1-text-color, 0.6rem, 400);
+    }
+  }
+  .PagingQuranOption-img-div {
+    width: 35%;
+    img {
+      width: 3.3rem;
+    }
+  }
+  .PagingQuranOption-text {
+    width: 65%;
+  }
+}
