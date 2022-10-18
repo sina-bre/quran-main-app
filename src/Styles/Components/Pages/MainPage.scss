@@ -1,7 +1,6 @@
-@import "../Variables/items.scss";
+@import "../../Variables/items.scss";
 .options-row1 {
   width: 90%;
-  //   @include flex(space-between, center, row);
   display: grid;
   grid-template-columns: repeat(2, 45%);
   grid-template-rows: repeat(2, 115px);

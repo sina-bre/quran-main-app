@@ -1,7 +1,8 @@
-import "../../Styles/Components/Cover.scss";
+import "../../Styles/Components/UI/Cover.scss";
 import { HiMenu } from "react-icons/hi";
 import { BsFillMoonFill } from "react-icons/bs";
-const Cover = (props) => {
+import { Outlet } from "react-router-dom";
+const Cover = () => {
   return (
     <div className="cover">
       <div className="cover-header">
@@ -13,7 +14,9 @@ const Cover = (props) => {
           <BsFillMoonFill className="BsFillMoonFill" fill="white" size={35} />
         </div>
       </div>
-      <div className="cover-inline">{props.children}</div>
+      <div className="cover-inline">
+        <Outlet />
+      </div>
     </div>
   );
 };

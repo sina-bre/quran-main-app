@@ -1,0 +1,33 @@
+@import "../../Variables/items.scss";
+@import "../../Variables/colors.scss";
+.AudioQuran-container {
+  width: 100%;
+  margin-top: 7rem;
+  @include flex(space-between, center, column);
+
+  .AudioQuran-title {
+    margin: 2rem 0;
+    p {
+      @include text($header-text-color, 1.1rem, 600);
+    }
+  }
+}
+
+@media only screen and (min-width: 420px) {
+  .AudioQuran-container {
+    .AudioQuran-title {
+      p {
+        @include text($header-text-color, 1.3rem, 600);
+      }
+    }
+  }
+}
+@media only screen and (min-width: 650px) {
+  .AudioQuran-container {
+    .AudioQuran-title {
+      p {
+        @include text($header-text-color, 1.5rem, 600);
+      }
+    }
+  }
+}

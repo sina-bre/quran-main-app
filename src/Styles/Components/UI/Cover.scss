@@ -1,9 +1,9 @@
-@import "../Variables/colors.scss";
-@import "../Variables/items.scss";
+@import "../../Variables/colors.scss";
+@import "../../Variables/items.scss";
 .cover {
   width: 720px;
   max-width: 100%;
-  height: 100vh;
+  height: 100%;
   margin-right: auto;
   margin-left: auto;
   background-color: $sky-color;
@@ -12,6 +12,7 @@
 .cover-header {
   @include flex(space-between, center, row);
   width: 90%;
+  margin-top: 1rem;
   .HiMenu-div {
     @include flex(center, center, row);
     cursor: pointer;

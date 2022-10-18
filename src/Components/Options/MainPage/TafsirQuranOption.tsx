@@ -1,5 +1,5 @@
-import TafsirQuranOptionLogo from "../../Images/law-book.png";
-import "../../Styles/Components/Options/TafsirQuranOption.scss";
+import TafsirQuranOptionLogo from "../../../Images/law-book.png";
+import "../../../Styles/Components/Options/MainPage/TafsirQuranOption.scss";
 const TafsirQuranOption = () => {
   return (
     <div className="TafsirQuranOption-container">

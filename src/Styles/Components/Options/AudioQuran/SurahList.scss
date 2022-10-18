@@ -1,0 +1,95 @@
+@import "../../../Variables/colors.scss";
+@import "../../../Variables/items.scss";
+
+.SurahList-container {
+  width: 90%;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.SurahList-item {
+  width: 100%;
+  @include flex(space-between, center, row);
+  margin: 0.5rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid $border-color;
+}
+.SurahList-item-right {
+  width: 50%;
+  @include flex(flex-start, center, row);
+}
+.SurahList-index {
+  @include flex(center, center, row);
+  background-image: url("../../../../Images/islam.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 1rem;
+}
+.SurahList-name,
+.SurahList-index {
+  @include text($title-text-color, 0.8rem, 400);
+}
+.SurahList-item-left {
+  width: 50%;
+  @include flex(flex-end, center, row);
+}
+.SurahList-type {
+  img {
+    object-fit: contain;
+    width: 1.5rem;
+    height: auto;
+  }
+}
+.SurahList-add {
+  margin-right: 1rem;
+  img {
+    object-fit: contain;
+    width: 1.5rem;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 420px) {
+  .SurahList-name,
+  .SurahList-index {
+    @include text($title-text-color, 0.9rem, 400);
+  }
+  .SurahList-type {
+    @include flex(center, center, row);
+    img {
+      width: 2rem;
+    }
+  }
+  .SurahList-add {
+    @include flex(center, center, row);
+    img {
+      width: 2rem;
+    }
+  }
+  .SurahList-index {
+    width: 2.7rem;
+    height: 2.7rem;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .SurahList-name,
+  .SurahList-index {
+    @include text($title-text-color, 1rem, 400);
+  }
+  .SurahList-type {
+    img {
+      width: 2.5rem;
+    }
+  }
+  .SurahList-add {
+    img {
+      width: 2.5rem;
+    }
+  }
+  .SurahList-index {
+    width: 3rem;
+    height: 3rem;
+  }
+}

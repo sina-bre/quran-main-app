@@ -1,8 +1,13 @@
-import "../../Styles/Components/Options/AudioQuranOption.scss";
-import AudioQuranOptionLogo from "../../Images/12.png";
+import "../../../Styles/Components/Options/MainPage/AudioQuranOption.scss";
+import AudioQuranOptionLogo from "../../../Images/12.png";
+import { useNavigate } from "react-router-dom";
 const AudioQuranOption = () => {
+  const navigate = useNavigate();
+  const onClickHandler = () => {
+    navigate("/audioQuran");
+  };
   return (
-    <div className="AudioQuranOption-container">
+    <div className="AudioQuranOption-container" onClick={onClickHandler}>
       <div className="AudioQuranOption-right">
         <div className="AudioQuranOption-title">
           <p>قرآن صوتی</p>

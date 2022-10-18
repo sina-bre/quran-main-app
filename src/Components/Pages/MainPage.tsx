@@ -1,13 +1,12 @@
-import "../../Styles/Components/MainPage.scss";
-import Cover from "../UI/Cover";
-import AudioQuraOption from "../Options/AudioQuraOption";
-import PagingQuranOption from "../Options/PagingQuranOption";
-import TafsirQuranOption from "../Options/TafsirQuranOption";
-import BookmarksOption from "../Options/BookmarksOption";
-import AboutAppOption from "../Options/AboutAppOption";
+import "../../Styles/Components/Pages/MainPage.scss";
+import AudioQuraOption from "../Options/MainPage/AudioQuranOption";
+import PagingQuranOption from "../Options/MainPage/PagingQuranOption";
+import TafsirQuranOption from "../Options/MainPage/TafsirQuranOption";
+import BookmarksOption from "../Options/MainPage/BookmarksOption";
+import AboutAppOption from "../Options/MainPage/AboutAppOption";
 const MainPage = () => {
   return (
-    <Cover>
+    <>
       <AudioQuraOption />
       <div className="options-row1">
         <PagingQuranOption />
@@ -15,7 +14,7 @@ const MainPage = () => {
         <BookmarksOption />
         <AboutAppOption />
       </div>
-    </Cover>
+    </>
   );
 };
 export default MainPage;

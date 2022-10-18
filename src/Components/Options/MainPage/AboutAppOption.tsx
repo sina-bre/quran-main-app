@@ -1,5 +1,5 @@
-import AboutAppOptionLogo from "../../Images/information.png";
-import "../../Styles/Components/Options/AboutAppOption.scss";
+import AboutAppOptionLogo from "../../../Images/information.png";
+import "../../../Styles/Components/Options/MainPage/AboutAppOption.scss";
 const AboutAppOption = () => {
   return (
     <div className="AboutAppOption-container">

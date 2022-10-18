@@ -1,5 +1,5 @@
-@import "../../Variables/items.scss";
-@import "../../Variables/colors.scss";
+@import "../../../Variables/items.scss";
+@import "../../../Variables/colors.scss";
 .AudioQuranOption-container {
   @include option;
   @include flex(space-between, center, row);

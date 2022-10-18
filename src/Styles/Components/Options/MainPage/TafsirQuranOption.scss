@@ -1,12 +1,17 @@
-@import "../../Variables/items.scss";
-@import "../../Variables/colors.scss";
-.PagingQuranOption-container {
+@import "../../../Variables/items.scss";
+@import "../../../Variables/colors.scss";
+.TafsirQuranOption-container {
   @include option;
   @include flex(space-between, center, column);
   margin: 1rem 0;
+  transition: 0.3s;
+  cursor: pointer;
 }
-
-.PagingQuranOption-img-div {
+.TafsirQuranOption-container:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+.TafsirQuranOption-img-div {
   @include flex(center, center, row);
   width: 50%;
   height: 100%;
@@ -16,47 +21,50 @@
     height: auto;
   }
 }
-.PagingQuranOption-text {
+.TafsirQuranOption-text {
   margin: 0.5rem;
 }
-.PagingQuranOption-text-title {
+.TafsirQuranOption-text-title {
   p {
     @include text($title-text-color, 0.7rem, 400);
   }
 }
-.PagingQuranOption-text-subtitle {
+.TafsirQuranOption-text-subtitle {
   display: none;
 }
 
 @media only screen and (min-width: 577px) {
-  .PagingQuranOption-container {
+  .TafsirQuranOption-container {
     @include flex(space-between, center, row-reverse);
   }
-  .PagingQuranOption-img-div {
+  .TafsirQuranOption-text {
+    width: 60%;
+  }
+  .TafsirQuranOption-img-div {
     img {
       width: 3rem;
     }
   }
-  .PagingQuranOption-text-title {
+  .TafsirQuranOption-text-title {
     p {
       @include text($title-text-color, 0.8rem, 400);
     }
   }
 }
 @media only screen and (min-width: 640px) {
-  .PagingQuranOption-text-subtitle {
+  .TafsirQuranOption-text-subtitle {
     display: block;
     p {
       @include text($sub-title1-text-color, 0.6rem, 400);
     }
   }
-  .PagingQuranOption-img-div {
+  .TafsirQuranOption-img-div {
     width: 35%;
     img {
       width: 3.3rem;
     }
   }
-  .PagingQuranOption-text {
+  .TafsirQuranOption-text {
     width: 65%;
   }
 }

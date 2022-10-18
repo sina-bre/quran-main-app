@@ -1,5 +1,5 @@
-import "../../Styles/Components/Options/PagingQuranOption.scss";
-import PagingQuranLogo from "../../Images/open-book.png";
+import "../../../Styles/Components/Options/MainPage/PagingQuranOption.scss";
+import PagingQuranLogo from "../../../Images/open-book.png";
 const PagingQuranOption = () => {
   return (
     <div className="PagingQuranOption-container">

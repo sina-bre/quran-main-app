@@ -1,5 +1,5 @@
-import BookmarksOptionLogo from "../../Images/bookmark.png";
-import "../../Styles/Components/Options/BookmarksOption.scss";
+import BookmarksOptionLogo from "../../../Images/bookmark.png";
+import "../../../Styles/Components/Options/MainPage/BookmarksOption.scss";
 const BookmarksOption = () => {
   return (
     <div className="BookmarksOption-container">
