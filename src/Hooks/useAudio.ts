@@ -19,3 +19,4 @@ const useAudio = (url: string) => {
 
   return [playing, toggle];
 };
+export default useAudio;

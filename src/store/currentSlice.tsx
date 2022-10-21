@@ -5,6 +5,7 @@ interface currentState {
   currentPage: string | number;
   currentSurah: string | number;
   currentJuz: string | number;
+  currentAyahInSurah: string | number;
 }
 
 const initialCurrentState: currentState = {
@@ -12,6 +13,7 @@ const initialCurrentState: currentState = {
   currentPage: 1,
   currentSurah: 0,
   currentJuz: 0,
+  currentAyahInSurah: 0,
 };
 
 const currentSlice = createSlice({
@@ -29,6 +31,9 @@ const currentSlice = createSlice({
     },
     setCurrentJuz(state, action) {
       state.currentJuz = action.payload;
+    },
+    setCurrentAyahInSurah(state, action) {
+      state.currentAyahInSurah = action.payload;
     },
   },
 });

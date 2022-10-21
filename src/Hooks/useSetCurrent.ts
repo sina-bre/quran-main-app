@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { useAppDispatch } from "../../Hooks/useAppDispatch";
-import { useAppSelector } from "../../Hooks/useAppSelector";
-import { currentActions } from "../../store/currentSlice";
-import findPageByAyah from "./findPageByAyah";
-import findSurahByAyah from "./findSurahByAyah";
-import findjuzByAyah from "./findJuzByAyah";
+import { useAppDispatch } from "./useAppDispatch";
+import { useAppSelector } from "./useAppSelector";
+import { currentActions } from "../store/currentSlice";
+import findPageByAyah from "../Components/Functions/findPageByAyah";
+import findSurahByAyah from "../Components/Functions/findSurahByAyah";
+import findjuzByAyah from "../Components/Functions/findJuzByAyah";
+import findAyahInSurah from "../Components/Functions/findAyahInSurah";
 import { useNavigate } from "react-router-dom";
 
 const useSetCurrent = () => {
@@ -19,9 +20,11 @@ const useSetCurrent = () => {
     dispatch(currentActions.setCurrentPage(findPageByAyah(index)));
     dispatch(currentActions.setCurrentSurah(findSurahByAyah(index)));
     dispatch(currentActions.setCurrentJuz(findjuzByAyah(index)));
+    dispatch(currentActions.setCurrentAyahInSurah(findAyahInSurah(index)));
   };
   useEffect(() => {
     if (changeCurrent) {
+      console.log(currentAyah, currentPage);
       navigate(`/audioQuran/page/${currentPage}`);
       setChangeCurrent(false);
     }
