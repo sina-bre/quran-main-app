@@ -1,12 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import currentAyahSlice, { currentAyahActions } from "./currentAyahSlice";
+import currentSlice from "./currentSlice";
 // ...
 
 export const store = configureStore({
   reducer: {
-    currentAyah: currentAyahSlice.reducer,
+    current: currentSlice.reducer,
   },
 });
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
+export default store;

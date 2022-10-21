@@ -11,8 +11,10 @@ const PageContext = () => {
   const indexArray = tempIndexArray;
   return (
     <div>
-      {indexArray.map((ayahIndex) => (
-        <Ayah index={ayahIndex} />
+      {indexArray.map((ayahIndex, index) => (
+        <div key={index}>
+          <Ayah index={ayahIndex} />
+        </div>
       ))}
     </div>
   );
