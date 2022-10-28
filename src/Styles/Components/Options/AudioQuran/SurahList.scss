@@ -3,8 +3,33 @@
 
 .SurahList-container {
   width: 90%;
-  margin: 1rem 0;
+  margin: 0 0 1rem 0;
   cursor: pointer;
+}
+
+.search-surah-div {
+  width: 100%;
+  margin-bottom: 2rem;
+  @include flex(center, center, row);
+}
+.search-surah-input {
+  width: 90%;
+  padding: 0 0.5rem;
+  border-radius: 0 0 10px 10px;
+  outline: 0;
+  // border-left: 2px solid $sub-title1-text-color;
+  // border-right: 2px solid $sub-title1-text-color;
+  border-bottom: 2px solid $sky-color;
+  border-right: 2px solid $sky-color;
+  border-left: 2px solid $sky-color;
+  border-top: 0;
+  height: 2rem;
+}
+// .search-surah-input:focus {
+//   border: 2px solid $blue-color1;
+// }
+.search-surah-input::placeholder {
+  @include text($sub-title1-text-color, 0.6rem, 400);
 }
 
 .SurahList-item {
@@ -52,6 +77,9 @@
   }
 }
 @media only screen and (min-width: 420px) {
+  .search-surah-input::placeholder {
+    @include text($sub-title1-text-color, 0.7rem, 400);
+  }
   .SurahList-name,
   .SurahList-index {
     @include text($title-text-color, 0.9rem, 400);
@@ -59,13 +87,13 @@
   .SurahList-type {
     @include flex(center, center, row);
     img {
-      width: 2rem;
+      width: 1.7rem;
     }
   }
   .SurahList-add {
     @include flex(center, center, row);
     img {
-      width: 2rem;
+      width: 1.7rem;
     }
   }
   .SurahList-index {
@@ -74,18 +102,21 @@
   }
 }
 @media only screen and (min-width: 650px) {
+  .search-surah-input::placeholder {
+    @include text($sub-title1-text-color, 0.8rem, 400);
+  }
   .SurahList-name,
   .SurahList-index {
     @include text($title-text-color, 1rem, 400);
   }
   .SurahList-type {
     img {
-      width: 2.5rem;
+      width: 2rem;
     }
   }
   .SurahList-add {
     img {
-      width: 2.5rem;
+      width: 2rem;
     }
   }
   .SurahList-index {

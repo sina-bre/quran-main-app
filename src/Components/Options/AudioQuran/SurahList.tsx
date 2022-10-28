@@ -4,6 +4,7 @@ import "../../../Styles/Components/Options/AudioQuran/SurahList.scss";
 import MeccanLogo from "../../../Images/kaaba.png";
 import MedinanLogo from "../../../Images/nabawi-mosque.png";
 import AddLogo from "../../../Images/addLogo.png";
+import toFaNumber from "../../Functions/toFa";
 
 const SurahList = () => {
   const setCurrent = useSetCurrent();
@@ -16,10 +17,17 @@ const SurahList = () => {
   };
 
   const surahOnclickHandler = (index: number) => {
-    setCurrent(quranSurahs2[index].start + 1);
+    setCurrent(quranSurahs2[index].start);
   };
   return (
     <div className="SurahList-container">
+      <div className="search-surah-div">
+        <input
+          type="text"
+          className="search-surah-input"
+          placeholder="نام سوره مورد نظر را وارد کنید"
+        />
+      </div>
       {quranSurahs2.map(
         (item, index) =>
           !(index == 0) && (
@@ -29,7 +37,9 @@ const SurahList = () => {
               onClick={() => surahOnclickHandler(index)}
             >
               <div className="SurahList-item-right">
-                <div className="SurahList-index">{index}</div>
+                <div className="SurahList-index">
+                  {toFaNumber(index.toString())}
+                </div>
                 <div className="SurahList-name">{item.name}</div>
               </div>
               <div className="SurahList-item-left">

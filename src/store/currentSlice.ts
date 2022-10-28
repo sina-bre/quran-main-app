@@ -6,6 +6,7 @@ interface currentState {
   currentSurah: string | number;
   currentJuz: string | number;
   currentAyahInSurah: string | number;
+  currentAudio: string | number;
 }
 
 const initialCurrentState: currentState = {
@@ -14,6 +15,7 @@ const initialCurrentState: currentState = {
   currentSurah: 0,
   currentJuz: 0,
   currentAyahInSurah: 0,
+  currentAudio: "",
 };
 
 const currentSlice = createSlice({
@@ -34,6 +36,9 @@ const currentSlice = createSlice({
     },
     setCurrentAyahInSurah(state, action) {
       state.currentAyahInSurah = action.payload;
+    },
+    setCurrentAudio(state, action) {
+      state.currentAudio = action.payload;
     },
   },
 });

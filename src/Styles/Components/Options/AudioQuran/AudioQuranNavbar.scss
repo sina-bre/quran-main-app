@@ -1,23 +1,25 @@
 @import "../../../Variables/items.scss";
 @import "../../../Variables/colors.scss";
 .QuranNavbar-container {
+  background-color: $sky-color;
+  border-radius: 15px;
   width: 90%;
   @include flex(space-between, center, row);
-  margin: 1rem 0;
+  margin: 1rem 0 0 0;
 }
 .QuranNavbar-item {
-  padding-bottom: 0.5rem;
   background-color: transparent;
   border: 0;
+  padding: 0.3rem 0.8rem;
+  margin: 0.2rem;
+  border-radius: 12px;
   a {
     cursor: pointer;
-    @include text($sub-title1-text-color, 0.7rem, 400);
+    @include text(white, 0.7rem, 400);
   }
 }
-.QuranNavbar-item:hover {
-  a {
-    color: $sub-title2-text-color;
-  }
+.QuranNavbar-item.active {
+  background-color: $blue-color1;
 }
 // .QuranNavbar-item:focus {
 //   border-bottom: 2px solid $blue-color1;
@@ -26,17 +28,11 @@
 //     color: $sub-title2-text-color;
 //   }
 // }
-.QuranNavbar-item.active {
-  border-bottom: 2px solid $blue-color1;
-  margin-bottom: -2px;
-  a {
-    color: $sub-title2-text-color;
-  }
-}
+
 @media only screen and (min-width: 420px) {
   .QuranNavbar-item {
     a {
-      @include text($sub-title1-text-color, 0.8rem, 400);
+      @include text(white, 0.8rem, 400);
     }
   }
 }
@@ -44,7 +40,7 @@
 @media only screen and (min-width: 650px) {
   .QuranNavbar-item {
     a {
-      @include text($sub-title1-text-color, 0.9rem, 400);
+      @include text(white, 0.9rem, 400);
     }
   }
 }
