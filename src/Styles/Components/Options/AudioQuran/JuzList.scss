@@ -1,17 +1,17 @@
 @import "../../../Variables/colors.scss";
 @import "../../../Variables/items.scss";
-
-.SurahList-container {
+.juzList-container {
   width: 90%;
   margin: 0 0 1rem 0;
 }
 
-.search-surah-div {
+.search-juz-div {
   width: 100%;
   margin-bottom: 2rem;
   @include flex(center, center, row);
+  cursor: pointer;
 }
-.search-surah-input {
+.search-juz-input {
   width: 90%;
   padding: 0 0.5rem;
   border-radius: 0 0 10px 10px;
@@ -22,11 +22,11 @@
   border-top: 0;
   height: 2rem;
 }
-.search-surah-input::placeholder {
+.search-juz-input::placeholder {
   @include text($sub-title1-text-color, 0.6rem, 400);
 }
 
-.SurahList-item {
+.juzList-item {
   width: 100%;
   @include flex(space-between, center, row);
   margin: 0.5rem 0;
@@ -34,36 +34,36 @@
   border-bottom: 1px solid $border-color;
   cursor: pointer;
 }
-.SurahList-item-right {
-  width: 50%;
+.juzList-item-right {
+  width: 70%;
   @include flex(flex-start, center, row);
 }
-.SurahList-index {
-  @include flex(center, center, row);
-  background-image: url("../../../../Images/islam.png");
+
+.juzList-item-number {
+  background-image: url("../../../../Images/halal.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 2.5rem;
   height: 2.5rem;
+  @include flex(center, center, row);
+  color: white;
   margin-left: 0.5rem;
 }
-.SurahList-name,
-.SurahList-index {
-  @include text($title-text-color, 0.8rem, 400);
+.juzList-item-desc {
+  @include flex(space-between, center, row);
 }
-.SurahList-item-left {
-  width: 50%;
+
+.juzList-item-number,
+.juzList-item-desc {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.juzList-item-left {
+  width: 30%;
   @include flex(flex-end, center, row);
 }
-.SurahList-type {
-  img {
-    object-fit: contain;
-    width: 1.5rem;
-    height: auto;
-  }
-}
-.SurahList-add {
+.juzList-add {
   margin-right: 1rem;
   img {
     object-fit: contain;
@@ -71,51 +71,43 @@
     height: auto;
   }
 }
+
 @media only screen and (min-width: 420px) {
-  .search-surah-input::placeholder {
+  .search-juz-input::placeholder {
     @include text($sub-title1-text-color, 0.7rem, 400);
   }
-  .SurahList-name,
-  .SurahList-index {
-    @include text($title-text-color, 0.9rem, 400);
+  .juzList-item-number,
+  .juzList-item-desc {
+    font-size: 0.9rem;
+    font-weight: 400;
   }
-  .SurahList-type {
-    @include flex(center, center, row);
-    img {
-      width: 1.7rem;
-    }
-  }
-  .SurahList-add {
-    @include flex(center, center, row);
-    img {
-      width: 1.7rem;
-    }
-  }
-  .SurahList-index {
+  .juzList-item-number {
     width: 2.7rem;
     height: 2.7rem;
   }
+  .juzList-add {
+    img {
+      width: 1.7rem;
+    }
+  }
 }
+
 @media only screen and (min-width: 650px) {
-  .search-surah-input::placeholder {
+  .search-juz-input::placeholder {
     @include text($sub-title1-text-color, 0.8rem, 400);
   }
-  .SurahList-name,
-  .SurahList-index {
-    @include text($title-text-color, 1rem, 400);
+  .juzList-item-number,
+  .juzList-item-desc {
+    font-size: 1rem;
+    font-weight: 400;
   }
-  .SurahList-type {
-    img {
-      width: 2rem;
-    }
-  }
-  .SurahList-add {
-    img {
-      width: 2rem;
-    }
-  }
-  .SurahList-index {
+  .juzList-item-number {
     width: 3rem;
     height: 3rem;
+  }
+  .juzList-add {
+    img {
+      width: 2rem;
+    }
   }
 }

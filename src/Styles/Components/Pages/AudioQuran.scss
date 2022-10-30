@@ -2,11 +2,11 @@
 @import "../../Variables/colors.scss";
 .AudioQuran-container {
   width: 100%;
-  margin-top: 7rem;
+  margin-top: 3rem;
   @include flex(space-between, center, column);
 
   .AudioQuran-title {
-    margin: 2rem 0;
+    margin: 2rem 0 1rem 0;
     p {
       @include text($header-text-color, 1.1rem, 600);
     }
@@ -15,7 +15,9 @@
 
 @media only screen and (min-width: 420px) {
   .AudioQuran-container {
+    margin-top: 4rem;
     .AudioQuran-title {
+      margin-bottom: 4rem;
       p {
         @include text($header-text-color, 1.3rem, 600);
       }
@@ -24,7 +26,9 @@
 }
 @media only screen and (min-width: 650px) {
   .AudioQuran-container {
+    margin-top: 5rem;
     .AudioQuran-title {
+      margin-bottom: 6rem;
       p {
         @include text($header-text-color, 1.5rem, 600);
       }

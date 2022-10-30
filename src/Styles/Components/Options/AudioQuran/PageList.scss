@@ -1,0 +1,134 @@
+@import "../../../Variables/colors.scss";
+@import "../../../Variables/items.scss";
+.PageList-container {
+  width: 90%;
+  margin: 0 0 1rem 0;
+}
+
+.search-page-div {
+  width: 100%;
+  margin-bottom: 2rem;
+  @include flex(center, center, row);
+  cursor: pointer;
+}
+.search-page-input {
+  width: 90%;
+  padding: 0 0.5rem;
+  border-radius: 0 0 10px 10px;
+  outline: 0;
+  border-bottom: 2px solid $sky-color;
+  border-right: 2px solid $sky-color;
+  border-left: 2px solid $sky-color;
+  border-top: 0;
+  height: 2rem;
+}
+.search-page-input::placeholder {
+  @include text($sub-title1-text-color, 0.6rem, 400);
+}
+.PageList-item-container {
+  width: 100%;
+  height: 16.9rem;
+  @include flex(flex-start, center, column);
+}
+.PageList-item {
+  width: 100%;
+  @include flex(space-between, center, row);
+  margin: 0.5rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid $border-color;
+  cursor: pointer;
+}
+
+.PageList-item-right {
+  width: 70%;
+  @include flex(flex-start, center, row);
+}
+.PageList-number {
+  background-image: url("../../../../Images/muhammad.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 2.5rem;
+  height: 2.5rem;
+  @include flex(center, center, row);
+  color: $sky-color;
+  margin-left: 0.5rem;
+}
+.PageList-desc {
+  @include flex(space-between, center, row);
+}
+
+.PageList-number {
+  font-size: 0.5rem;
+}
+.PageList-desc {
+  font-size: 0.8rem;
+}
+
+.PageList-item-left {
+  width: 30%;
+  @include flex(flex-end, center, row);
+}
+.PageList-add {
+  margin-right: 1rem;
+  img {
+    object-fit: contain;
+    width: 1.5rem;
+    height: auto;
+  }
+}
+.PageList-off {
+  width: 100%;
+  @include flex(center, center, row);
+  text-align: center;
+  height: 16.9rem;
+  @include text($sky-color, 0.8rem, 400);
+}
+
+@media only screen and (min-width: 420px) {
+  .search-page-input::placeholder {
+    @include text($sub-title1-text-color, 0.7rem, 400);
+  }
+  .PageList-number {
+    font-size: 0.6rem;
+  }
+  .PageList-desc {
+    font-size: 0.9rem;
+  }
+  .PageList-number {
+    width: 2.7rem;
+    height: 2.7rem;
+  }
+  .PageList-add {
+    img {
+      width: 1.7rem;
+    }
+  }
+  .PageList-off {
+    @include text($sky-color, 0.9rem, 400);
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  .search-page-input::placeholder {
+    @include text($sub-title1-text-color, 0.8rem, 400);
+  }
+  .PageList-number {
+    font-size: 0.7rem;
+  }
+  .PageList-desc {
+    font-size: 1rem;
+  }
+  .PageList-number {
+    width: 3rem;
+    height: 3rem;
+  }
+  .PageList-add {
+    img {
+      width: 2rem;
+    }
+  }
+  .PageList-off {
+    @include text($sky-color, 1rem, 400);
+  }
+}

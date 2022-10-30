@@ -27,12 +27,12 @@ const useSetCurrent = () => {
     dispatch(currentActions.setCurrentJuz(findjuzByAyah(index)));
     dispatch(currentActions.setCurrentAudio(createAudioUrlByAyah(index)));
   };
-  useEffect(() => {
-    dispatch(globalOrdersActions.setIsNavigate(true));
-  }, [currentPage]);
+  // useEffect(() => {
+  //   dispatch(globalOrdersActions.setIsNavigate(true));
+  // }, [currentPage]);
 
   useEffect(() => {
-    if (isNavigate) {
+    if (changeCurrent) {
       navigate(`/audioQuran/page/${currentPage}`);
       dispatch(globalOrdersActions.setIsNavigate(false));
       console.log("page changes");
@@ -40,9 +40,9 @@ const useSetCurrent = () => {
     }
   }, [changeCurrent]);
 
-  useEffect(() => {
-    dispatch(globalOrdersActions.setIsScroll(true));
-  }, [currentAyah]);
+  // useEffect(() => {
+  //   dispatch(globalOrdersActions.setIsScroll(true));
+  // }, [currentAyah]);
 
   useEffect(() => {
     if (changeCurrent) {

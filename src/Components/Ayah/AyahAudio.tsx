@@ -28,7 +28,7 @@ const AyahAudio: React.FC<{ url: string; bisUrl: string }> = (props) => {
       bimillahAudioRef.current?.pause();
       audioRef.current?.pause();
     }
-  }, [isplaying, currentAyah]);
+  }, [isplaying, currentAudio, currentAyah]);
 
   const prevOnClickHandler = () => {
     setCurrent(Number(currentAyah) - 1);

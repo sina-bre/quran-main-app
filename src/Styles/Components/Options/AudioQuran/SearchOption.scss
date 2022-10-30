@@ -4,7 +4,7 @@
   @include option();
   @include flex(space-between, center, row-reverse);
   width: 90%;
-  height: 3.5rem;
+  height: 3rem;
   margin: 1rem 0;
 }
 .searchOption-img {
@@ -13,7 +13,7 @@
   margin-left: 1rem;
   img {
     object-fit: contain;
-    width: 1.7rem;
+    width: 1.5rem;
     height: auto;
   }
 }
@@ -25,9 +25,12 @@
 }
 
 @media only screen and (min-width: 420px) {
+  .searchOption-container {
+    height: 3.2rem;
+  }
   .searchOption-img {
     img {
-      width: 2rem;
+      width: 1.7rem;
     }
   }
   .searchOption-text {
@@ -38,9 +41,12 @@
 }
 
 @media only screen and (min-width: 650px) {
+  .searchOption-container {
+    height: 3.5rem;
+  }
   .searchOption-img {
     img {
-      width: 2.5rem;
+      width: 2rem;
     }
   }
   .searchOption-text {
