@@ -5,6 +5,7 @@ interface globalOrdersState {
   isScroll: boolean;
   isPlaying: boolean;
   isCahnging: boolean;
+  onClickChanging: boolean;
 }
 
 const initailGlobalOrdersState: globalOrdersState = {
@@ -12,6 +13,7 @@ const initailGlobalOrdersState: globalOrdersState = {
   isScroll: false,
   isPlaying: false,
   isCahnging: false,
+  onClickChanging: false,
 };
 
 const globalOrdersSlice = createSlice({
@@ -29,6 +31,9 @@ const globalOrdersSlice = createSlice({
     },
     setIsChanging(state, action) {
       state.isCahnging = action.payload;
+    },
+    setOnClickChanging(state, action) {
+      state.onClickChanging = action.payload;
     },
   },
 });

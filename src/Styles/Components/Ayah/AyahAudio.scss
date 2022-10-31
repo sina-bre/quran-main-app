@@ -1,0 +1,73 @@
+@import "../../Variables/colors.scss";
+@import "../../Variables/items.scss";
+
+.AyahAudio-container {
+  width: 90%;
+}
+
+.audio-controls {
+  width: 12rem;
+  height: 7rem;
+  position: relative;
+  @include flex(center, center, row);
+}
+.pauseIcon-div {
+  position: absolute;
+  z-index: 2;
+  @include flex(center, center, row);
+  width: 5rem;
+  height: 5rem;
+  background-color: $sky-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+
+.playFill-div {
+  position: absolute;
+  z-index: 2;
+  @include flex(center, center, row);
+  width: 5rem;
+  height: 5rem;
+  background-color: $sky-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+
+.pauseIcon {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  color: white;
+}
+.playFill {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  color: white;
+}
+
+.nextprev-div {
+  position: absolute;
+  width: 9.5rem;
+  height: 2rem;
+  background-color: #2d3f50ea;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2rem;
+  @include flex(space-between, center, row);
+  z-index: 1;
+}
+.next-icon-div,
+.prev-icon-div {
+  width: 2rem;
+  height: 2rem;
+  color: white;
+  margin-inline-start: 0.2rem;
+  margin-inline-end: 0.2rem;
+  @include flex(center, center, row);
+}
+
+.next-icon,
+.prev-icon {
+  width: 1.3rem;
+  height: 1.3rem;
+}
