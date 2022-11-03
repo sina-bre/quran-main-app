@@ -1,15 +1,15 @@
 import { Outlet } from "react-router-dom";
 import { HiChevronLeft } from "react-icons/hi";
 import { HiChevronRight } from "react-icons/hi";
-import AyahAudio from "../Ayah/AyahAudio";
+import Audio from "../Audio/Audio";
 
 const Page = () => {
   return (
-    <div>
+    <div className="Page-container">
       <HiChevronRight />
       <HiChevronLeft />
       <Outlet />
-      <AyahAudio />
+      <Audio />
     </div>
   );
 };

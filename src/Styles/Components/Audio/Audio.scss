@@ -1,0 +1,23 @@
+@import "../../Variables/colors.scss";
+@import "../../Variables/items.scss";
+
+.Audio-container {
+  position: fixed;
+  bottom: 1rem;
+  left: 0 !important;
+  right: 0 !important;
+  width: 720px;
+  max-width: 100%;
+  z-index: 10002;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  @include flex(center, center, row);
+}
+.Audio-container-inner {
+  @include option();
+  border-radius: 1rem;
+  height: 6rem;
+  @include flex(center, center, row);
+  width: 80%;
+  position: relative;
+}

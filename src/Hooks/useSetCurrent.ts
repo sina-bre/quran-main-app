@@ -4,20 +4,17 @@ import { useAppDispatch } from "./useAppDispatch";
 import { useAppSelector } from "./useAppSelector";
 import { currentActions } from "../store/currentSlice";
 import { globalOrdersActions } from "../store/globalOrdersSlice";
-import findPageByAyah from "../Components/Functions/findPageByAyah";
-import findSurahByAyah from "../Components/Functions/findSurahByAyah";
-import findjuzByAyah from "../Components/Functions/findJuzByAyah";
-import createAudioUrlByAyah from "../Components/Functions/createAudioUrlByAyah";
-import createBisAudioUrlByAyah from "../Components/Functions/createBisAudioUrlByAyah";
+import findPageByAyah from "../Functions/findPageByAyah";
+import findSurahByAyah from "../Functions/findSurahByAyah";
+import findjuzByAyah from "../Functions/findJuzByAyah";
+import createAudioUrlByAyah from "../Functions/createAudioUrlByAyah";
+import createBisAudioUrlByAyah from "../Functions/createBisAudioUrlByAyah";
 
 const useSetCurrent = () => {
   // const [changeCurrent, setChangeCurrent] = useState(false);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const isChanging = useAppSelector((state) => state.globalOrders.isCahnging);
-  const onClickChanging = useAppSelector(
-    (state) => state.globalOrders.onClickChanging
-  );
   const currentAyah = useAppSelector((state) => state.current.currentAyah);
   const currentPage = useAppSelector((state) => state.current.currentPage);
   const currentAudio = useAppSelector((state) => state.current.currentAudio);
@@ -25,7 +22,6 @@ const useSetCurrent = () => {
   const isScroll = useAppSelector((state) => state.globalOrders.isScroll);
   const setCurrent = (index: number) => {
     dispatch(globalOrdersActions.setIsChanging(true));
-    dispatch(globalOrdersActions.setOnClickChanging(!onClickChanging));
     dispatch(currentActions.setCurrentAyah(index));
     dispatch(currentActions.setCurrentPage(findPageByAyah(index)));
     dispatch(currentActions.setCurrentSurah(findSurahByAyah(index)));

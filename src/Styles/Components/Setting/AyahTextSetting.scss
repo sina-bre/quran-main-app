@@ -1,0 +1,9 @@
+@import "../../Variables/colors.scss";
+@import "../../Variables/items.scss";
+
+.AyahTextSetting-container {
+  width: 95%;
+  background-color: $blue-color2;
+  border-radius: 15px;
+  @include flex(flex-start, center, column);
+}

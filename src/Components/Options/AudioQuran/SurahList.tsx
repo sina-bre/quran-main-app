@@ -4,7 +4,7 @@ import "../../../Styles/Components/Options/AudioQuran/SurahList.scss";
 import MeccanLogo from "../../../Images/kaaba.png";
 import MedinanLogo from "../../../Images/nabawi-mosque.png";
 import AddLogo from "../../../Images/addLogo.png";
-import toFaNumber from "../../Functions/toFa";
+import toFaNumber from "../../../Functions/toFa";
 
 const SurahList = () => {
   const setCurrent = useSetCurrent();

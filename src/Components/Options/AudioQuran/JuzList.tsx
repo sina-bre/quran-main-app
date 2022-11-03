@@ -1,9 +1,9 @@
 import "../../../Styles/Components/Options/AudioQuran/JuzList.scss";
 import quranJuzes from "../../../Resources/QuranMetaData/quranJuzes";
 import quranSurahs2 from "../../../Resources/QuranMetaData/quranSurahs2";
-import toFaNumber from "../../Functions/toFa";
-import findSurahByAyah from "../../Functions/findSurahByAyah";
-import findAyahInSurah from "../../Functions/findAyahInSurah";
+import toFaNumber from "../../../Functions/toFa";
+import findSurahByAyah from "../../../Functions/findSurahByAyah";
+import findAyahInSurah from "../../../Functions/findAyahInSurah";
 import AddLogo from "../../../Images/addLogo.png";
 import useSetCurrent from "../../../Hooks/useSetCurrent";
 const JuzList = () => {

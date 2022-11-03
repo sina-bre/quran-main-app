@@ -1,0 +1,8 @@
+@import "../../Variables/items.scss";
+@import "../../Variables/colors.scss";
+
+.Setting-container {
+  margin-top: 10rem;
+  @include flex(flex-start, center, column);
+  width: 100%;
+}

@@ -2,8 +2,14 @@ import "../../Styles/Components/UI/Cover.scss";
 import { Icon } from "@iconify/react";
 import moonStarsFill from "@iconify/icons-mingcute/moon-stars-fill";
 import settingTwo from "@iconify/icons-icon-park-solid/setting-two";
-import { Outlet } from "react-router-dom";
+import { useAppSelector } from "../../Hooks/useAppSelector";
+import { Outlet, useNavigate } from "react-router-dom";
+
 const Cover = () => {
+  const navigate = useNavigate();
+  const settingTwoOnClickHandler = () => {
+    navigate("/setting");
+  };
   return (
     <div className="cover">
       <div className="cover-header">
@@ -13,6 +19,7 @@ const Cover = () => {
             width={40}
             fill="white"
             className="settingTwo"
+            onClick={settingTwoOnClickHandler}
           />
         </div>
         <div className="moonStarsFill-div">

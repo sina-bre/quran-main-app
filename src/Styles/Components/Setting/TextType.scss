@@ -1,0 +1,27 @@
+@import "../../Variables/colors.scss";
+@import "../../Variables/items.scss";
+
+.TextType-container {
+  width: 90%;
+}
+
+.TextType-title {
+  margin: 0.5rem 0;
+  width: 100%;
+  @include text($sky-color, 0.8rem, 600);
+}
+
+.TextType-options {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-template-rows: repeat(2, 2rem);
+  justify-content: space-between;
+}
+
+.TextType-option {
+  @include flex(flex-start, center, row);
+}
+.TextType-option-title {
+  @include text($sky-color2, 0.8rem, 400);
+}

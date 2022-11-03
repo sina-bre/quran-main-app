@@ -1,4 +1,4 @@
-import toFaNumber from "../Functions/toFa";
+import toFaNumber from "../../Functions/toFa";
 
 const AyahNumber = (index: number) => {
   return <div>{toFaNumber(index.toString())}</div>;

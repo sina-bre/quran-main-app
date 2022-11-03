@@ -28,15 +28,14 @@
     url("../../Fonts/QuranTaha/QuranTaha.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Me-Quran";
-  src: url("../../Fonts/Me_Quran/me-quran.eot");
-  src: url("../../Fonts/Me_Quran/me-quran.eot?#iefix")
-      format("embedded-opentype"),
-    url("../../Fonts/Me_Quran/me_quran.woff") format("woff"),
-    url("../../Fonts/Me_Quran/me-quran.woff2") format("woff2"),
-    url("../../Fonts/Me_Quran/me_quran.ttf") format("truetype"),
-    url("../../Fonts/Me_Quran/me_quran.svg") format("svg");
+  font-family: "MeQuran";
+  src: url("../../Fonts/MeQuran/MeQuran.eot");
+  src: url("../../Fonts/MeQuran/MeQuran.eot?#iefix") format("embedded-opentype"),
+    url("../../Fonts/MeQuran/MeQuran.woff") format("woff"),
+    url("../../Fonts/MeQuran/MeQuran.woff2") format("woff2"),
+    url("../../Fonts/MeQuran/MeQuran.ttf") format("truetype"),
+    url("../../Fonts/MeQuran/MeQuran.svg") format("svg");
 }
 $IRANSans: "IRANSans", sans-serif;
 $IRANYecan: "IRANYecan", sans-serif;
-$Me-Quran: "Me-Quran", "QuranTaha";
+$MeQuran: "MeQuran", "QuranTaha";

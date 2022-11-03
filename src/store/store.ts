@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import currentSlice from "./currentSlice";
 import globalOrdersSlice from "./globalOrdersSlice";
 import navbarSlice from "./navbarSlice";
+import settingSlice from "./settingSlice";
 // ...
 
 export const store = configureStore({
@@ -9,6 +10,7 @@ export const store = configureStore({
     current: currentSlice.reducer,
     globalOrders: globalOrdersSlice.reducer,
     navbar: navbarSlice.reducer,
+    setting: settingSlice.reducer,
   },
 });
 

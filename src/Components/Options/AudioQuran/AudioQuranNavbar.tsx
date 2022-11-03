@@ -40,7 +40,7 @@ const AudioQuranNavbar = () => {
       </button>
       <button
         type="button"
-        className={`QuranNavbar-item ${showJuzList && ["active"]}`}
+        className={`QuranNavbar-item ${showJuzList && [`active`]}`}
         onClick={juzOnClickHandler}
       >
         <a>جزء</a>
