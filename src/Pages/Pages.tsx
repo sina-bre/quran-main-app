@@ -1,12 +1,12 @@
 import React, { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import MainPage from "../Components/Pages/MainPage";
 import Cover from "../Components/UI/Cover";
-import Page from "../Components/Pages/Page";
-import PageContext from "../Components/Pages/PageContext";
 import Loading1 from "../Components/UI/Loasing1";
+const MainPage = React.lazy(() => import("../Components/Pages/MainPage"));
 const AudioQuran = React.lazy(() => import("../Components/Pages/AudioQuran"));
 const Setting = React.lazy(() => import("../Components/Setting/Setting"));
+const Page = React.lazy(() => import("../Components/Pages/Page"));
+const PageContext = React.lazy(() => import("../Components/Pages/PageContext"));
 
 const Pages = () => {
   return (

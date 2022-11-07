@@ -1,10 +1,8 @@
-import { useRef } from "react";
 import { useParams } from "react-router-dom";
 import quranPages from "../../Resources/QuranMetaData/quranPages";
 import Ayah from "../Ayah/Ayah";
 
 const PageContext = () => {
-  const ayahRef = useRef<HTMLDivElement>(null);
   const { index } = useParams<{ index: any }>();
   let tempIndexArray = [];
   for (let i = quranPages[index].start; i <= quranPages[index].end; i++) {

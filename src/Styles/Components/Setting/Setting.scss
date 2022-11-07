@@ -6,3 +6,15 @@
   @include flex(flex-start, center, column);
   width: 100%;
 }
+.AyahTextSetting-head {
+  width: 92%;
+  @include flex(flex-start, center, row);
+  @include text(black, 1.1rem, 600);
+  margin: 1rem 0 0.5rem 0;
+}
+.TranslationTextSetting-head {
+  width: 92%;
+  @include flex(flex-start, center, row);
+  @include text(black, 1.1rem, 600);
+  margin: 1rem 0 0.5rem 0;
+}

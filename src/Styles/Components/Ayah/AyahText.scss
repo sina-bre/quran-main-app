@@ -1,0 +1,93 @@
+@import "../../Variables/fonts.scss";
+@import "../../Variables/colors.scss";
+.ayahText {
+  color: $ayahText-color;
+  -webkit-font-smoothing: antialiased;
+  white-space: normal;
+  word-spacing: 0.5rem;
+}
+.ayahText.textAlign {
+  text-align: justify;
+}
+.ayahText.Simple-thin {
+  font-family: $Simple-thin;
+  line-height: 2;
+}
+.ayahText.Simple-normal {
+  font-family: $Simple-normal;
+  line-height: 2;
+}
+.ayahText.Simple-bold {
+  font-family: $Simple-bold;
+  line-height: 2;
+}
+
+.ayahText.Simple2-thin {
+  font-family: $Simple-thin;
+  font-feature-settings: "jalt", "dlig", "kern" off;
+  line-height: 2;
+}
+.ayahText.Simple2-normal {
+  font-family: $Simple-normal;
+  font-feature-settings: "jalt", "dlig", "kern" off;
+  line-height: 2;
+}
+.ayahText.Simple2-bold {
+  font-family: $Simple-bold;
+  font-feature-settings: "jalt", "dlig", "kern" off;
+  line-height: 2;
+}
+
+.ayahText.Muhammad-thin {
+  font-family: $Muhammad;
+  font-feature-settings: "dlig" off;
+  line-height: 2;
+  font-weight: normal;
+}
+.ayahText.Muhammad-bold,
+.ayahText.Muhammad-normal {
+  font-family: $Muhammad;
+  font-feature-settings: "dlig" off;
+  line-height: 2;
+  font-weight: bold;
+}
+
+.ayahText.UthmanTaha-thin {
+  font-family: $UthmanTahaNotBold;
+  font-weight: normal;
+  line-height: 2;
+}
+.ayahText.UthmanTaha-normal {
+  font-family: $UthmanTahaNotBold;
+  font-weight: bold;
+  line-height: 2;
+}
+.ayahText.UthmanTaha-bold {
+  font-family: $UthmanTaha;
+  font-weight: bold;
+  line-height: 2;
+}
+
+.ayahText.QuranTaha-thin {
+  font-family: $QuranTaha;
+  font-weight: normal;
+  line-height: 2;
+}
+.ayahText.QuranTaha-bold,
+.ayahText.QuranTaha-normal {
+  font-family: $QuranTaha;
+  font-weight: bold;
+  line-height: 2;
+}
+
+.ayahText.MeQuran-thin {
+  font-family: $MeQuran;
+  font-weight: normal;
+  line-height: 2;
+}
+.ayahText.MeQuran-bold,
+.ayahText.MeQuran-normal {
+  font-family: $MeQuran;
+  font-weight: bold;
+  line-height: 2;
+}

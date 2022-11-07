@@ -1,23 +1,27 @@
 @import "../../Variables/colors.scss";
 @import "../../Variables/items.scss";
 
-.TextType-container {
+.TextWeight-container {
   width: 93%;
 }
 
-.TextType-title {
+.TextWeight-title {
   margin: 1.5rem 0 0.5rem 0;
-  width: 100%;
   @include text($sky-color, 0.9rem, 600);
 }
 
-.TextType-options {
+.TextWeight-options {
+  width: 100%;
+  //   display: grid;
+  //   grid-template-columns: repeat(2, 45%);
+  //   grid-template-rows: repeat(2, 2rem);
   @include flex(space-between, center, row);
+  justify-content: space-between;
 }
 
-.TextType-option {
+.TextWeight-option {
   @include flex(flex-start, center, row);
 }
-.TextType-option-title {
+.TextWeight-option-title {
   @include text($sky-color2, 0.9rem, 400);
 }

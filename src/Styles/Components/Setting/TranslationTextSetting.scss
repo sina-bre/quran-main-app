@@ -1,15 +1,14 @@
 @import "../../Variables/colors.scss";
 @import "../../Variables/items.scss";
 
-.AyahTextSetting-container {
+.TranslationTextSetting-container {
   width: 92%;
   background-color: $blue-color2;
   border-radius: 15px;
   @include flex(flex-start, center, column);
   margin-bottom: 1.5rem;
 }
-
-.AyahTextSetting-AyahText-container {
+.TranslationTextSetting-AyahTranslation-container {
   width: 90%;
   margin-bottom: 1rem;
 }

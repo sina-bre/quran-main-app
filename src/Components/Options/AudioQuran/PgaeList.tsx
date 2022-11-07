@@ -2,11 +2,9 @@ import { useState } from "react";
 import "../../../Styles/Components/Options/AudioQuran/PageList.scss";
 import toFaNumber from "../../../Functions/toFa";
 import AddLogo from "../../../Images/addLogo.png";
-import { useNavigate } from "react-router-dom";
 import useSetCurrent from "../../../Hooks/useSetCurrent";
 import quranPages from "../../../Resources/QuranMetaData/quranPages";
 const PageList = () => {
-  const navigate = useNavigate();
   const setCurrent = useSetCurrent();
   const [page, setPage] = useState<number | string>("");
   const [show, setShow] = useState(false);

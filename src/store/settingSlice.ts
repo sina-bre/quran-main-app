@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 interface settingState {
   textSize: string;
@@ -18,13 +18,13 @@ interface settingState {
 
 const initialSettingState: settingState = {
   textSize: "26px",
-  translationSize: "24px",
-  textWeight: "400",
-  translationWeight: "400",
-  textFont: "MeQuran",
+  translationSize: "19px",
+  textWeight: "normal",
+  translationWeight: "normal",
+  textFont: "Simple",
   translationFont: "IRANSans",
-  textType: "quran-simple",
-  translationName: "ansarian-translation",
+  textType: "quranSimple",
+  translationName: "fooladvand",
   isShowTranslation: true,
   reciter: "Alafasy_64kbps",
   autoNextAyahPlay: true,

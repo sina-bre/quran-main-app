@@ -1,26 +1,26 @@
 @import "../../Variables/colors.scss";
 @import "../../Variables/items.scss";
 
-.TextSize-container {
+.TranslationSize-container {
   width: 93%;
 }
 
-.TextSize-title {
+.TranslationSize-title {
   margin: 1.5rem 0 0.5rem 0;
   @include text($sky-color, 0.9rem, 600);
 }
-.TextSize-range-container {
+.TranslationSize-range-container {
   width: 100%;
   margin: 1rem 0;
 }
-.TextSize-range-shape {
+.TranslationSize-range-shape {
   width: 100%;
   height: 4rem;
   @include flex(center, center, row);
   margin-bottom: 0.5rem;
   position: relative;
 }
-.TextSize-range-line {
+.TranslationSize-range-line {
   z-index: 1001;
   width: 100%;
   height: 2px;
@@ -28,17 +28,17 @@
   position: absolute;
   top: 3.8px;
 }
-.TextSize-range-items {
+.TranslationSize-range-items {
   position: absolute;
   width: 100%;
   @include flex(space-between, center, row);
   top: 0;
 }
-.TextSize-range-item {
+.TranslationSize-range-item {
   background-color: transparent;
   @include flex(space-between, center, column);
 }
-.TextSize-range-dot {
+.TranslationSize-range-dot {
   cursor: pointer;
   width: 10px;
   height: 10px;
@@ -50,26 +50,26 @@
   z-index: 1003;
   transition: 0.3s ease;
 }
-.TextSize-range-dot.active {
+.TranslationSize-range-dot.active {
   transition: transform 0.3s ease;
   transform: scale(1.6);
   background-color: $color2;
 }
-.TextSize-range-title {
+.TranslationSize-range-title {
   cursor: pointer;
   @include text($sky-color2, 0.8rem, 400);
   margin-top: 1rem;
   transition: 0.3s ease;
 }
-.TextSize-range-title.active {
+.TranslationSize-range-title.active {
   color: $color2;
   transition: 0.3s ease;
 }
 
-.TextSize-firstdot {
+.TranslationSize-firstdot {
   position: relative;
 }
-.TextSize-before-firstdot {
+.TranslationSize-before-firstdot {
   width: 2rem;
   height: 14px;
   right: -2rem;
@@ -78,10 +78,10 @@
   z-index: 1002;
 }
 
-.TextSize-lastdot {
+.TranslationSize-lastdot {
   position: relative;
 }
-.TextSize-after-lastdot {
+.TranslationSize-after-lastdot {
   width: 2rem;
   height: 14px;
   left: -1.9rem;

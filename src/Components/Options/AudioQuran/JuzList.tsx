@@ -25,7 +25,7 @@ const JuzList = () => {
       </div>
       {quranJuzes.map(
         (item, index) =>
-          !(index == 0) && (
+          !(index === 0) && (
             <div
               className="juzList-item"
               key={index}

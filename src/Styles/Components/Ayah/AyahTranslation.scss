@@ -1,0 +1,60 @@
+@import "../../Variables/fonts.scss";
+@import "../../Variables/colors.scss";
+
+.AyahTranslation {
+  -webkit-font-smoothing: antialiased;
+  white-space: normal;
+  color: $TranslationText-color;
+  text-align: justify;
+}
+.AyahTranslation.IRANSans-light {
+  font-family: $IRANSans-light;
+  line-height: 2;
+}
+.AyahTranslation.IRANSans-normal {
+  font-family: $IRANSans-normal;
+  line-height: 2;
+}
+.AyahTranslation.IRANSans-bold {
+  font-family: $IRANSans-bold;
+  line-height: 2;
+}
+
+.AyahTranslation.IRANSansDn-light {
+  font-family: $IRANSansDn-light;
+  line-height: 2;
+}
+.AyahTranslation.IRANSansDn-normal {
+  font-family: $IRANSansDn-normal;
+  line-height: 2;
+}
+.AyahTranslation.IRANSansDn-bold {
+  font-family: $IRANSansDn-bold;
+  line-height: 2;
+}
+
+.AyahTranslation.IRANYekan-light {
+  font-family: $IRANYekan-light;
+  line-height: 2;
+}
+.AyahTranslation.IRANYekan-normal {
+  font-family: $IRANYekan-normal;
+  line-height: 2;
+}
+.AyahTranslation.IRANYekan-bold {
+  font-family: $IRANYekan-bold;
+  line-height: 2;
+}
+
+.AyahTranslation.Vazir-light {
+  font-family: $Vazir-light;
+  line-height: 2;
+}
+.AyahTranslation.Vazir-normal {
+  font-family: $Vazir-normal;
+  line-height: 2;
+}
+.AyahTranslation.Vazir-bold {
+  font-family: $Vazir-bold;
+  line-height: 2;
+}

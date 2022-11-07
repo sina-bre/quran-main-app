@@ -1,41 +1,173 @@
 @font-face {
-  font-family: "IRANSans";
-  src: url("../../Fonts/IRANSans/FontsFree-Net-ir_sans.eot");
-  src: url("../../Fonts/IRANSans/FontsFree-Net-ir_sans.eot?#iefix")
+  font-family: IRANSans;
+  font-style: normal;
+  src: url("../../Fonts/IRANSans/IRANSansXRegular.eot");
+  src: url("../../Fonts/IRANSans/IRANSansXRegular.eot?#iefix")
       format("embedded-opentype"),
-    url("../../Fonts/IRANSans/IRANSans.woff") format("woff"),
-    url("../../Fonts/IRANSans/FontsFree-Net-ir_sans.woff2") format("woff2"),
-    url("../../Fonts/IRANSans/IRANSans.ttf") format("truetype"),
-    url("../../Fonts/IRANSans/IRANSans.svg") format("svg");
+    url("../../Fonts/IRANSans/IRANSansXRegular.woff") format("woff"),
+    url("../../Fonts/IRANSans/IRANSansXRegular.woff2") format("woff2"),
+    url("../../Fonts/IRANSans/IRANSansXRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSans-light;
+  font-style: normal;
+  font-weight: 300;
+  src: url("../../Fonts/IRANSans/IRANSansXLight.woff") format("woff"),
+    url("../../Fonts/IRANSans/IRANSansXLight.woff2") format("woff2");
 }
 @font-face {
-  font-family: "IRANYecan";
-  src: url("../../Fonts/IRANYecan/IRANYekan.eot");
-  src: url("../../Fonts/IRANYecan/IRANYekan.eot?#iefix")
-      format("embedded-opentype"),
-    url("../../Fonts/IRANYecan/IRANYekan.woff") format("woff"),
-    url("../../Fonts/IRANYecan/IRANYekan.woff2") format("woff2"),
-    url("../../Fonts/IRANYecan/IRANYekan.ttf") format("truetype"),
-    url("../../Fonts/IRANYecan/IRANYekan.svg") format("svg");
+  font-family: IRANSans-bold;
+  font-style: normal;
+  font-weight: bold;
+  src: url("../../Fonts/IRANSans/IRANSansXBold.woff") format("woff"),
+    url("../../Fonts/IRANSans/IRANSansXBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: IRANSansDn;
+  font-style: normal;
+  src: url("../../Fonts/IRANSans/IRANSansDnRegular.woff") format("woff"),
+    url("../../Fonts/IRANSans/IRANSansDnRegular.woff2") format("woff2");
 }
 @font-face {
-  font-family: "QuranTaha";
-  src: url("../../Fonts/QuranTaha/QuranTaha.eot");
-  src: url("../../Fonts/QuranTaha/QuranTaha.eot?#iefix")
-      format("embedded-opentype"),
-    url("../../Fonts/QuranTaha/QuranTaha.woff") format("woff"),
-    url("../../Fonts/QuranTaha/QuranTaha.woff2") format("woff2"),
-    url("../../Fonts/QuranTaha/QuranTaha.ttf") format("truetype");
+  font-family: IRANSansDn-light;
+  font-style: normal;
+  font-weight: 300;
+  src: url("../../Fonts/IRANSans/IRANSansDnlight.woff") format("woff"),
+    url("../../Fonts/IRANSans/IRANSansDnlight.woff2") format("woff2");
 }
 @font-face {
-  font-family: "MeQuran";
-  src: url("../../Fonts/MeQuran/MeQuran.eot");
-  src: url("../../Fonts/MeQuran/MeQuran.eot?#iefix") format("embedded-opentype"),
-    url("../../Fonts/MeQuran/MeQuran.woff") format("woff"),
-    url("../../Fonts/MeQuran/MeQuran.woff2") format("woff2"),
-    url("../../Fonts/MeQuran/MeQuran.ttf") format("truetype"),
-    url("../../Fonts/MeQuran/MeQuran.svg") format("svg");
+  font-family: IRANSansDn-bold;
+  font-style: normal;
+  font-weight: bold;
+  src: url("../../Fonts/IRANSans/IRANSansDnbold.woff") format("woff"),
+    url("../../Fonts/IRANSans/IRANSansDnbold.woff2") format("woff2");
 }
-$IRANSans: "IRANSans", sans-serif;
-$IRANYecan: "IRANYecan", sans-serif;
-$MeQuran: "MeQuran", "QuranTaha";
+
+@font-face {
+  font-family: IRANYekan;
+  font-style: normal;
+  src: url("../../Fonts/IRANYekan/IRANYekan.woff") format("woff"),
+    url("../../Fonts/IRANYekan/IRANYekan.woff2") format("woff2");
+}
+@font-face {
+  font-family: IRANYekan-light;
+  font-style: normal;
+  font-weight: 300;
+  src: url("../../Fonts/IRANYekan/IRANYekanLight.woff") format("woff"),
+    url("../../Fonts/IRANYekan/IRANYekanLight.woff2") format("woff2");
+}
+@font-face {
+  font-family: IRANYekan-bold;
+  font-style: normal;
+  font-weight: bold;
+  src: url("../../Fonts/IRANYekan/IRANYekanBold.woff") format("woff"),
+    url("../../Fonts/IRANYekan/IRANYekanBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Vazir;
+  font-style: normal;
+  src: url("../../Fonts/Vazir/VazirmatnRegular.woff") format("woff"),
+    url("../../Fonts/Vazir/VazirmatnRegular.woff2") format("woff2");
+}
+@font-face {
+  font-family: Vazir-light;
+  font-style: normal;
+  src: url("../../Fonts/Vazir/VazirmatnLight.woff") format("woff"),
+    url("../../Fonts/Vazir/VazirmatnLight.woff2") format("woff2");
+}
+@font-face {
+  font-family: Vazir-normal;
+  font-style: normal;
+  src: url("../../Fonts/Vazir/VazirmatnRegular.woff") format("woff"),
+    url("../../Fonts/Vazir/VazirmatnRegular.woff2") format("woff2");
+}
+@font-face {
+  font-family: Vazir-bold;
+  font-style: normal;
+  src: url("../../Fonts/Vazir/VazirmatnBold.woff") format("woff"),
+    url("../../Fonts/Vazir/VazirmatnBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Simple-thin;
+  font-weight: normal;
+  src: url("../../Fonts/Simple/Simple.woff") format("woff"),
+    url("../../Fonts/Simple/Simple.woff2") format("woff2");
+}
+@font-face {
+  font-family: Simple-normal;
+  font-weight: 500;
+  src: url("../../Fonts/Simple/Simple-semibold.woff") format("woff"),
+    url("../../Fonts/Simple/Simple-semibold.woff2") format("woff2");
+}
+@font-face {
+  font-family: Simple-bold;
+  font-weight: bold;
+  src: url("../../Fonts/Simple/Simple-bold.woff") format("woff"),
+    url("../../Fonts/Simple/Simple-bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Muhammad;
+  src: url("../../Fonts/Muhammad/Muhammad.woff") format("woff"),
+    url("../../Fonts/Muhammad/Muhammad.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: UthmanTahaNotBold;
+  font-display: block;
+  src: url("../../Fonts/UthmanTaha/UthmanTahaNotBold.woff") format("woff"),
+    url("../../Fonts/UthmanTaha/UthmanTahaNotBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: UthmanTaha;
+  font-weight: bold;
+  font-display: block;
+  src: url("../../Fonts/UthmanTaha/UthmanTaha.woff") format("woff"),
+    url("../../Fonts/UthmanTaha/UthmanTaha.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: MeQuran;
+  src: url("../../Fonts/MeQuran/MeQuran.woff") format("woff"),
+    url("../../Fonts/MeQuran/MeQuran.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: QuranTaha;
+  src: url("../../Fonts/QuranTaha/QuranTaha.woff") format("woff"),
+    url("../../Fonts/QuranTaha/QuranTaha.woff2") format("woff2");
+}
+
+$IRANSans: IRANSans, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+  "Noto Color Emoji";
+$IRANSans-light: IRANSans-light;
+$IRANSans-normal: IRANSans;
+$IRANSans-bold: IRANSans-bold;
+
+$IRANSansDn: IRANSansDn;
+$IRANSansDn-light: IRANSansDn-light;
+$IRANSansDn-normal: IRANSansDn;
+$IRANSansDn-bold: IRANSansDn-bold;
+
+$IRANYekan: IRANYekan;
+$IRANYekan-light: IRANYekan-light;
+$IRANYekan-normal: IRANYekan;
+$IRANYekan-bold: IRANYekan-bold;
+
+$Vazir: Vazir;
+$Vazir-light: Vazir-light;
+$Vazir-normal: Vazir-normal;
+$Vazir-bold: Vazir-bold;
+
+$Simple-thin: Simple-thin, Muhammad, IRANSans;
+$Simple-normal: Simple-normal, Muhammad, IRANSans;
+$Simple-bold: Simple-bold, Muhammad, IRANSans;
+$Muhammad: Muhammad, IRANSans;
+$UthmanTahaNotBold: UthmanTahaNotBold, Muhammad, IRANSans;
+$UthmanTaha: UthmanTaha, Muhammad, IRANSans;
+$QuranTaha: QuranTaha, IRANSans;
+$MeQuran: MeQuran, QuranTaha, IRANSans;

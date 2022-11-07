@@ -2,7 +2,6 @@ import "../../Styles/Components/UI/Cover.scss";
 import { Icon } from "@iconify/react";
 import moonStarsFill from "@iconify/icons-mingcute/moon-stars-fill";
 import settingTwo from "@iconify/icons-icon-park-solid/setting-two";
-import { useAppSelector } from "../../Hooks/useAppSelector";
 import { Outlet, useNavigate } from "react-router-dom";
 
 const Cover = () => {

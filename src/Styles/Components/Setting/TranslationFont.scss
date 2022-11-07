@@ -1,26 +1,26 @@
 @import "../../Variables/colors.scss";
 @import "../../Variables/items.scss";
 
-.TextFont-container {
+.TranslationFont-container {
   width: 93%;
 }
 
-.TextFont-title {
+.TranslationFont-title {
   margin: 1rem 0 0.5rem 0;
   @include text($sky-color, 0.9rem, 600);
 }
 
-.TextFont-options {
+.TranslationFont-options {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 45%);
+  grid-template-columns: 65% 35%;
   grid-template-rows: repeat(2, 2rem);
   justify-content: space-between;
 }
 
-.TextFont-option {
+.TranslationFont-option {
   @include flex(flex-start, center, row);
 }
-.TextFont-option-title {
+.TranslationFont-option-title {
   @include text($sky-color2, 0.9rem, 400);
 }

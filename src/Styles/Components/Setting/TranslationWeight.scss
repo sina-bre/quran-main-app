@@ -1,23 +1,23 @@
 @import "../../Variables/colors.scss";
 @import "../../Variables/items.scss";
 
-.TextType-container {
+.TranslationWeight-container {
   width: 93%;
 }
 
-.TextType-title {
-  margin: 1.5rem 0 0.5rem 0;
-  width: 100%;
+.TranslationWeight-title {
+  margin: 0.5rem 0;
   @include text($sky-color, 0.9rem, 600);
 }
 
-.TextType-options {
+.TranslationWeight-options {
+  width: 100%;
   @include flex(space-between, center, row);
 }
 
-.TextType-option {
+.TranslationWeight-option {
   @include flex(flex-start, center, row);
 }
-.TextType-option-title {
+.TranslationWeight-option-title {
   @include text($sky-color2, 0.9rem, 400);
 }
