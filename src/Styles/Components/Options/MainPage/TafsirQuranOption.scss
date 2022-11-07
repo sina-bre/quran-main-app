@@ -26,7 +26,7 @@
 }
 .TafsirQuranOption-text-title {
   p {
-    @include text($title-text-color, 0.7rem, 400);
+    @include text($title-text-color, 0.8rem, 400);
   }
 }
 .TafsirQuranOption-text-subtitle {
@@ -47,7 +47,7 @@
   }
   .TafsirQuranOption-text-title {
     p {
-      @include text($title-text-color, 0.8rem, 400);
+      @include text($title-text-color, 0.9rem, 400);
     }
   }
 }
@@ -55,7 +55,7 @@
   .TafsirQuranOption-text-subtitle {
     display: block;
     p {
-      @include text($sub-title1-text-color, 0.6rem, 400);
+      @include text($sub-title1-text-color, 0.7rem, 400);
     }
   }
   .TafsirQuranOption-img-div {

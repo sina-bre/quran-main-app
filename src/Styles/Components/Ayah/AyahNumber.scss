@@ -1,0 +1,13 @@
+@import "../../Variables/colors.scss";
+@import "../../Variables/items.scss";
+
+.AyahNumber {
+  background-image: url("../../../Images/allah\ \(1\).png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 2.2rem;
+  height: 2.2rem;
+  @include flex(center, center, row);
+  @include text($sky-color, 0.9rem, 400);
+}

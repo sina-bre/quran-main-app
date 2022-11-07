@@ -1227,10 +1227,24 @@
   "resolved" "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz"
   "version" "1.2.1"
 
+"@iconify/icons-akar-icons@^1.2.11":
+  "integrity" "sha512-bfTEAiZmU/fKPisPMucgaTEwiESH04seXqz5muUWn7jZoFJ9BjxlH1L+PISIX/idjnccqHzcnykFaweRkP89qA=="
+  "resolved" "https://registry.npmjs.org/@iconify/icons-akar-icons/-/icons-akar-icons-1.2.11.tgz"
+  "version" "1.2.11"
+  dependencies:
+    "@iconify/types" "*"
+
 "@iconify/icons-bi@^1.2.11":
   "integrity" "sha512-V5TllvlSEpI3he/A7r72ksj3jCrRUvKcaADgM9ulukXwLdNhIJ3ua46wGYDhc9pY+uRnI/MtxO0BAi67YkVVGA=="
   "resolved" "https://registry.npmjs.org/@iconify/icons-bi/-/icons-bi-1.2.11.tgz"
   "version" "1.2.11"
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify/icons-emojione-monotone@^1.2.3":
+  "integrity" "sha512-VeobVCiqvXRoSXkf5zeKjwMzhAFfVVxM8crIGuRrwzrcezz10eo009RTisqS1nHUVj35bAq6F+5Lq9HrnOlwHw=="
+  "resolved" "https://registry.npmjs.org/@iconify/icons-emojione-monotone/-/icons-emojione-monotone-1.2.3.tgz"
+  "version" "1.2.3"
   dependencies:
     "@iconify/types" "*"
 

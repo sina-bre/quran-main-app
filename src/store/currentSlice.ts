@@ -11,11 +11,11 @@ interface currentState {
 }
 
 const initialCurrentState: currentState = {
-  currentAyah: 0,
+  currentAyah: 1,
   currentPage: 1,
-  currentSurah: 0,
-  currentJuz: 0,
-  currentAyahInSurah: 0,
+  currentSurah: 1,
+  currentJuz: 1,
+  currentAyahInSurah: 1,
   currentAudio: "",
   currentBisAudio: "",
 };

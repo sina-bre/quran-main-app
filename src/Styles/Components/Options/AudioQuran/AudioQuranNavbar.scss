@@ -15,7 +15,7 @@
   border-radius: 12px;
   a {
     cursor: pointer;
-    @include text(white, 0.7rem, 400);
+    @include text(white, 0.8rem, 400);
   }
 }
 .QuranNavbar-item.active {
@@ -32,7 +32,7 @@
 @media only screen and (min-width: 420px) {
   .QuranNavbar-item {
     a {
-      @include text(white, 0.8rem, 400);
+      @include text(white, 0.9rem, 400);
     }
   }
 }
@@ -40,7 +40,7 @@
 @media only screen and (min-width: 650px) {
   .QuranNavbar-item {
     a {
-      @include text(white, 0.9rem, 400);
+      @include text(white, 1rem, 400);
     }
   }
 }

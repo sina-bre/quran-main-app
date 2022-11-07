@@ -34,25 +34,25 @@
   margin-bottom: 0.5rem;
   width: 100%;
   p {
-    @include text($title-text-color, 1rem, 400);
+    @include text($title-text-color, 1.1rem, 400);
   }
 }
 .AudioQuranOption-subtitle {
   width: 100%;
   p {
-    @include text($sub-title1-text-color, 0.7rem, 400);
+    @include text($sub-title1-text-color, 0.8rem, 400);
   }
 }
 
 @media only screen and (min-width: 420px) {
   .AudioQuranOption-title {
     p {
-      @include text($title-text-color, 1.1rem, 400);
+      @include text($title-text-color, 1.2rem, 400);
     }
   }
   .AudioQuranOption-subtitle {
     p {
-      @include text($sub-title1-text-color, 0.8rem, 400);
+      @include text($sub-title1-text-color, 0.9rem, 400);
     }
   }
   .AudioQuranOption-img-div {
@@ -66,12 +66,12 @@
 @media only screen and (min-width: 650px) {
   AudioQuranOption-title {
     p {
-      @include text($title-text-color, 1.5rem, 400);
+      @include text($title-text-color, 1.6rem, 400);
     }
   }
   .AudioQuranOption-subtitle {
     p {
-      @include text($sub-title1-text-color, 0.9rem, 400);
+      @include text($sub-title1-text-color, 1rem, 400);
     }
   }
   .AudioQuranOption-img-div {

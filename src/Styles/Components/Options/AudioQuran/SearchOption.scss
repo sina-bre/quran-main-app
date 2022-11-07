@@ -20,7 +20,7 @@
 .searchOption-text {
   margin-right: 1rem;
   p {
-    @include text($sub-title1-text-color, 0.7rem, 400);
+    @include text($sub-title1-text-color, 0.8rem, 400);
   }
 }
 
@@ -35,7 +35,7 @@
   }
   .searchOption-text {
     p {
-      @include text($sub-title1-text-color, 0.8rem, 400);
+      @include text($sub-title1-text-color, 0.9rem, 400);
     }
   }
 }
@@ -51,7 +51,7 @@
   }
   .searchOption-text {
     p {
-      @include text($sub-title1-text-color, 0.9rem, 400);
+      @include text($sub-title1-text-color, 1rem, 400);
     }
   }
 }

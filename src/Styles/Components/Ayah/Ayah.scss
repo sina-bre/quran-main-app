@@ -1,0 +1,16 @@
+@import "../../Variables/colors.scss";
+@import "../../Variables/items.scss";
+.Ayah-container {
+  width: 100%;
+  @include flex(space-between, center, row);
+  margin-bottom: 4rem;
+}
+.Ayah-container-right {
+  // @include flex(flex-start, center, column);
+  width: 90%;
+}
+.Ayah-container-left {
+  // @include flex(flex-start, center, column);
+  width: 9%;
+  min-height: 6rem;
+}

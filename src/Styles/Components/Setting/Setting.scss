@@ -2,8 +2,8 @@
 @import "../../Variables/colors.scss";
 
 .Setting-container {
-  margin-top: 10rem;
-  @include flex(flex-start, center, column);
+  margin-top: 3rem;
+  @include flex(space-between, center, column);
   width: 100%;
 }
 .AyahTextSetting-head {
@@ -17,4 +17,24 @@
   @include flex(flex-start, center, row);
   @include text(black, 1.1rem, 600);
   margin: 1rem 0 0.5rem 0;
+}
+.Setting-topic-container {
+  width: 100%;
+  @include flex(center, center, row);
+}
+.Setting-topic-arrow {
+  @include flex(center, center, row);
+  margin: 2rem 0 1rem 1rem;
+}
+.Setting-topic {
+  @include text($sky-color, 1.5rem, 600);
+  @include flex(center, center, row);
+  margin: 2rem 0 1rem 0;
+}
+.Setting-topic-empty {
+  width: 2rem;
+  height: 2rem;
+  margin: 2rem 1rem 1rem 0;
+  @include flex(center, center, row);
+  background-color: transparent;
 }

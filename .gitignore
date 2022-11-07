@@ -2,8 +2,6 @@
 
 # dependencies
 /node_modules
-/src/Resources
-/src/Fonts
 /.pnp
 .pnp.js
 

@@ -1,3 +1,4 @@
+import "../../Styles/Components/Pages/PageContext.scss";
 import { useParams } from "react-router-dom";
 import quranPages from "../../Resources/QuranMetaData/quranPages";
 import Ayah from "../Ayah/Ayah";
@@ -11,11 +12,9 @@ const PageContext = () => {
   const indexArray = tempIndexArray;
 
   return (
-    <div>
+    <div className="PageContext-container">
       {indexArray.map((ayahIndex, index) => (
-        <div key={index}>
-          <Ayah index={ayahIndex} />
-        </div>
+        <Ayah index={ayahIndex} key={index} />
       ))}
     </div>
   );

@@ -26,7 +26,7 @@
 }
 .PagingQuranOption-text-title {
   p {
-    @include text($title-text-color, 0.7rem, 400);
+    @include text($title-text-color, 0.8rem, 400);
   }
 }
 .PagingQuranOption-text-subtitle {
@@ -44,7 +44,7 @@
   }
   .PagingQuranOption-text-title {
     p {
-      @include text($title-text-color, 0.8rem, 400);
+      @include text($title-text-color, 0.9rem, 400);
     }
   }
 }
@@ -52,7 +52,7 @@
   .PagingQuranOption-text-subtitle {
     display: block;
     p {
-      @include text($sub-title1-text-color, 0.6rem, 400);
+      @include text($sub-title1-text-color, 0.7rem, 400);
     }
   }
   .PagingQuranOption-img-div {

@@ -24,7 +24,7 @@
   height: 2rem;
 }
 .search-page-input::placeholder {
-  @include text($sub-title1-text-color, 0.6rem, 400);
+  @include text($sub-title1-text-color, 0.7rem, 400);
 }
 .PageList-item-container {
   width: 100%;
@@ -81,12 +81,12 @@
   width: 100%;
   @include flex(center, center, row);
   text-align: center;
-  @include text($sky-color, 0.8rem, 400);
+  @include text($sky-color, 0.9rem, 400);
 }
 
 @media only screen and (min-width: 420px) {
   .search-page-input::placeholder {
-    @include text($sub-title1-text-color, 0.7rem, 400);
+    @include text($sub-title1-text-color, 0.8rem, 400);
   }
   .PageList-number {
     font-size: 0.6rem;
@@ -104,13 +104,13 @@
     }
   }
   .PageList-off {
-    @include text($sky-color, 0.9rem, 400);
+    @include text($sky-color, 1rem, 400);
   }
 }
 
 @media only screen and (min-width: 650px) {
   .search-page-input::placeholder {
-    @include text($sub-title1-text-color, 0.8rem, 400);
+    @include text($sub-title1-text-color, 0.9rem, 400);
   }
   .PageList-number {
     font-size: 0.7rem;
@@ -128,6 +128,6 @@
     }
   }
   .PageList-off {
-    @include text($sky-color, 1rem, 400);
+    @include text($sky-color, 1.1rem, 400);
   }
 }
