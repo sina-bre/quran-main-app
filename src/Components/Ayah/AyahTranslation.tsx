@@ -18,6 +18,7 @@ const AyahTranslation: React.FC<{ index: number }> = (props) => {
   const ayahTranslationStyle = {
     fontSize: translationSize,
   };
+  const currentAyah = useAppSelector((state) => state.current.currentAyah);
   useEffect(() => {
     switch (translationName) {
       case "safavi":
@@ -49,7 +50,7 @@ const AyahTranslation: React.FC<{ index: number }> = (props) => {
           });
         break;
     }
-  }, [translationName]);
+  }, [translationName, currentAyah]);
   return (
     <div
       style={ayahTranslationStyle}

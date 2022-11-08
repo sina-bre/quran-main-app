@@ -5,9 +5,12 @@ import MeccanLogo from "../../../Images/kaaba.png";
 import MedinanLogo from "../../../Images/nabawi-mosque.png";
 import AddLogo from "../../../Images/addLogo.png";
 import toFaNumber from "../../../Functions/toFa";
+import { useAppDispatch } from "../../../Hooks/useAppDispatch";
+import { globalOrdersActions } from "../../../store/globalOrdersSlice";
 
 const SurahList = () => {
   const setCurrent = useSetCurrent();
+  const dispatch = useAppDispatch();
   const checkSurahType = (type: string | number) => {
     if (type === "meccan") {
       return true;
@@ -17,6 +20,7 @@ const SurahList = () => {
   };
 
   const surahOnclickHandler = (index: number) => {
+    dispatch(globalOrdersActions.setIsNavigateToSurah(true));
     setCurrent(quranSurahs2[index].start);
   };
   return (

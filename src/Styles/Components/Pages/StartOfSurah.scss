@@ -1,0 +1,498 @@
+@import "../../Variables/colors.scss";
+@import "../../Variables/items.scss";
+@import "../../Variables/fonts.scss";
+
+.StartOfSurah-container {
+  width: 90%;
+  border-radius: 15px;
+  background-color: $blue-color3;
+  @include flex(center, center, column);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+.QuranSurah {
+  font-family: $QuranSurah !important;
+  @include text(white, 2.5rem, bold);
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 3rem;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.startOfSurah-details {
+  width: 100%;
+  @include flex(space-evenly, center, row);
+  color: white;
+  margin-bottom: 0.5rem;
+}
+.startOfSurah-bis {
+  background-image: url("../../../Images/pngegg.png");
+  width: 90%;
+  height: 7rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.QuranSurah.Surah1:before {
+  content: "\e904 \e903";
+}
+
+.QuranSurah.Surah2:before {
+  content: "\e905 \e903";
+}
+
+.QuranSurah.Surah3:before {
+  content: "\e906 \e903";
+}
+
+.QuranSurah.Surah4:before {
+  content: "\e907 \e903";
+}
+
+.QuranSurah.Surah5:before {
+  content: "\e908 \e903";
+}
+
+.QuranSurah.Surah6:before {
+  content: "\e90b \e903";
+}
+
+.QuranSurah.Surah7:before {
+  content: "\e90c \e903";
+}
+
+.QuranSurah.Surah8:before {
+  content: "\e90d \e903";
+}
+
+.QuranSurah.Surah9:before {
+  content: "\e90e \e903";
+}
+
+.QuranSurah.Surah10:before {
+  content: "\e90f \e903";
+}
+
+.QuranSurah.Surah11:before {
+  content: "\e910";
+}
+
+.QuranSurah.Surah12:before {
+  content: "\e911";
+}
+
+.QuranSurah.Surah13:before {
+  content: "\e912";
+}
+
+.QuranSurah.Surah14:before {
+  content: "\e913";
+}
+
+.QuranSurah.Surah15:before {
+  content: "\e914";
+}
+
+.QuranSurah.Surah16:before {
+  content: "\e915";
+}
+
+.QuranSurah.Surah17:before {
+  content: "\e916";
+}
+
+.QuranSurah.Surah18:before {
+  content: "\e917";
+}
+
+.QuranSurah.Surah19:before {
+  content: "\e918";
+}
+
+.QuranSurah.Surah20:before {
+  content: "\e919";
+}
+
+.QuranSurah.Surah21:before {
+  content: "\e91a";
+}
+
+.QuranSurah.Surah22:before {
+  content: "\e91b";
+}
+
+.QuranSurah.Surah23:before {
+  content: "\e91c";
+}
+
+.QuranSurah.Surah24:before {
+  content: "\e91d";
+}
+
+.QuranSurah.Surah25:before {
+  content: "\e91e";
+}
+
+.QuranSurah.Surah26:before {
+  content: "\e91f";
+}
+
+.QuranSurah.Surah27:before {
+  content: "\e920";
+}
+
+.QuranSurah.Surah28:before {
+  content: "\e921";
+}
+
+.QuranSurah.Surah29:before {
+  content: "\e922";
+}
+
+.QuranSurah.Surah30:before {
+  content: "\e923";
+}
+
+.QuranSurah.Surah31:before {
+  content: "\e924";
+}
+
+.QuranSurah.Surah32:before {
+  content: "\e925";
+}
+
+.QuranSurah.Surah33:before {
+  content: "\e926";
+}
+
+.QuranSurah.Surah34:before {
+  content: "\e92e";
+}
+
+.QuranSurah.Surah35:before {
+  content: "\e92f";
+}
+
+.QuranSurah.Surah36:before {
+  content: "\e930";
+}
+
+.QuranSurah.Surah37:before {
+  content: "\e931";
+}
+
+.QuranSurah.Surah38:before {
+  content: "\e909 \e903";
+}
+
+.QuranSurah.Surah39:before {
+  content: "\e90a \e903";
+}
+
+.QuranSurah.Surah40:before {
+  content: "\e927";
+}
+
+.QuranSurah.Surah41:before {
+  content: "\e928";
+}
+
+.QuranSurah.Surah42:before {
+  content: "\e929";
+}
+
+.QuranSurah.Surah43:before {
+  content: "\e92a";
+}
+
+.QuranSurah.Surah44:before {
+  content: "\e92b";
+}
+
+.QuranSurah.Surah45:before {
+  content: "\e92c";
+}
+
+.QuranSurah.Surah46:before {
+  content: "\e92d";
+}
+
+.QuranSurah.Surah47:before {
+  content: "\e932";
+}
+
+.QuranSurah.Surah48:before {
+  content: "\e902 \e903";
+}
+
+.QuranSurah.Surah49:before {
+  content: "\e933";
+}
+
+.QuranSurah.Surah50:before {
+  content: "\e934";
+}
+
+.QuranSurah.Surah51:before {
+  content: "\e935";
+}
+
+.QuranSurah.Surah52:before {
+  content: "\e936";
+}
+
+.QuranSurah.Surah53:before {
+  content: "\e937";
+}
+
+.QuranSurah.Surah54:before {
+  content: "\e938";
+}
+
+.QuranSurah.Surah55:before {
+  content: "\e939";
+}
+
+.QuranSurah.Surah56:before {
+  content: "\e93a";
+}
+
+.QuranSurah.Surah57:before {
+  content: "\e93b";
+}
+
+.QuranSurah.Surah58:before {
+  content: "\e93c";
+}
+
+.QuranSurah.Surah59:before {
+  content: "\e900 \e903";
+}
+
+.QuranSurah.Surah60:before {
+  content: "\e901 \e903";
+}
+
+.QuranSurah.Surah61:before {
+  content: "\e941";
+}
+
+.QuranSurah.Surah62:before {
+  content: "\e942";
+}
+
+.QuranSurah.Surah63:before {
+  content: "\e943";
+}
+
+.QuranSurah.Surah64:before {
+  content: "\e944";
+}
+
+.QuranSurah.Surah65:before {
+  content: "\e945";
+}
+
+.QuranSurah.Surah66:before {
+  content: "\e946";
+}
+
+.QuranSurah.Surah67:before {
+  content: "\e947";
+}
+
+.QuranSurah.Surah68:before {
+  content: "\e948";
+}
+
+.QuranSurah.Surah69:before {
+  content: "\e949";
+}
+
+.QuranSurah.Surah70:before {
+  content: "\e94a";
+}
+
+.QuranSurah.Surah71:before {
+  content: "\e94b";
+}
+
+.QuranSurah.Surah72:before {
+  content: "\e94c";
+}
+
+.QuranSurah.Surah73:before {
+  content: "\e94d";
+}
+
+.QuranSurah.Surah74:before {
+  content: "\e94e";
+}
+
+.QuranSurah.Surah75:before {
+  content: "\e94f";
+}
+
+.QuranSurah.Surah76:before {
+  content: "\e950";
+}
+
+.QuranSurah.Surah77:before {
+  content: "\e951";
+}
+
+.QuranSurah.Surah78:before {
+  content: "\e952";
+}
+
+.QuranSurah.Surah79:before {
+  content: "\e93d";
+}
+
+.QuranSurah.Surah80:before {
+  content: "\e93e";
+}
+
+.QuranSurah.Surah81:before {
+  content: "\e93f";
+}
+
+.QuranSurah.Surah82:before {
+  content: "\e940";
+}
+
+.QuranSurah.Surah83:before {
+  content: "\e953";
+}
+
+.QuranSurah.Surah84:before {
+  content: "\e954";
+}
+
+.QuranSurah.Surah85:before {
+  content: "\e955";
+}
+
+.QuranSurah.Surah86:before {
+  content: "\e956";
+}
+
+.QuranSurah.Surah87:before {
+  content: "\e957";
+}
+
+.QuranSurah.Surah88:before {
+  content: "\e958";
+}
+
+.QuranSurah.Surah89:before {
+  content: "\e959";
+}
+
+.QuranSurah.Surah90:before {
+  content: "\e95a";
+}
+
+.QuranSurah.Surah91:before {
+  content: "\e95b";
+}
+
+.QuranSurah.Surah92:before {
+  content: "\e95c";
+}
+
+.QuranSurah.Surah93:before {
+  content: "\e95d";
+}
+
+.QuranSurah.Surah94:before {
+  content: "\e95e";
+}
+
+.QuranSurah.Surah95:before {
+  content: "\e95f";
+}
+
+.QuranSurah.Surah96:before {
+  content: "\e960";
+}
+
+.QuranSurah.Surah97:before {
+  content: "\e961";
+}
+
+.QuranSurah.Surah98:before {
+  content: "\e962";
+}
+
+.QuranSurah.Surah99:before {
+  content: "\e963";
+}
+
+.QuranSurah.Surah100:before {
+  content: "\e964";
+}
+
+.QuranSurah.Surah101:before {
+  content: "\e965";
+}
+
+.QuranSurah.Surah102:before {
+  content: "\e966";
+}
+
+.QuranSurah.Surah103:before {
+  content: "\e967";
+}
+
+.QuranSurah.Surah104:before {
+  content: "\e968";
+}
+
+.QuranSurah.Surah105:before {
+  content: "\e969";
+}
+
+.QuranSurah.Surah106:before {
+  content: "\e96a";
+}
+
+.QuranSurah.Surah107:before {
+  content: "\e96b";
+}
+
+.QuranSurah.Surah108:before {
+  content: "\e96c";
+}
+
+.QuranSurah.Surah109:before {
+  content: "\e96d";
+}
+
+.QuranSurah.Surah110:before {
+  content: "\e96e";
+}
+
+.QuranSurah.Surah111:before {
+  content: "\e96f";
+}
+
+.QuranSurah.Surah112:before {
+  content: "\e970";
+}
+
+.QuranSurah.Surah113:before {
+  content: "\e971";
+}
+
+.QuranSurah.Surah114:before {
+  content: "\e972";
+}

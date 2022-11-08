@@ -10,7 +10,7 @@ interface settingState {
   textType: string;
   translationName: string;
   isShowTranslation: boolean;
-  reciter: string;
+  reciterName: string;
   autoNextAyahPlay: boolean;
   translationAudioPlay: boolean;
   wakeLock: boolean;
@@ -26,7 +26,7 @@ const initialSettingState: settingState = {
   textType: "quranSimple",
   translationName: "fooladvand",
   isShowTranslation: true,
-  reciter: "Alafasy_64kbps",
+  reciterName: "Alafasy",
   autoNextAyahPlay: true,
   translationAudioPlay: false,
   wakeLock: true,
@@ -63,8 +63,8 @@ const settingSlice = createSlice({
     setIsShowTranslation(state, action) {
       state.isShowTranslation = action.payload;
     },
-    setReciter(state, action) {
-      state.reciter = action.payload;
+    setReciterName(state, action) {
+      state.reciterName = action.payload;
     },
     setAutoNextAyahPlay(state, action) {
       state.autoNextAyahPlay = action.payload;

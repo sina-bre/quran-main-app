@@ -4,4 +4,29 @@
 .Page-container {
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.Page-topic-container {
+  width: 100%;
+  @include flex(center, center, row);
+}
+.Page-topic-arrow {
+  @include flex(center, center, row);
+  margin: 2rem 0 1rem 1rem;
+}
+.Page-topic {
+  @include text($sky-color, 1.5rem, 600);
+  @include flex(center, center, row);
+  margin: 2rem 0 1rem 0;
+}
+.Page-topic-empty {
+  width: 2rem;
+  height: 2rem;
+  margin: 2rem 1rem 1rem 0;
+  @include flex(center, center, row);
+  background-color: transparent;
 }

@@ -11,13 +11,73 @@
   z-index: 10002;
   margin-right: auto !important;
   margin-left: auto !important;
-  @include flex(center, center, row);
+  @include flex(center, center, column);
+  z-index: 10006;
 }
 .Audio-container-inner {
   border-radius: 15px;
   height: 6rem;
-  @include flex(center, center, row);
+  @include flex(space-evenly, center, row);
   width: 87%;
   position: relative;
   background-color: $blue-color2;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+}
+.reciter-option {
+  width: 40px;
+  height: 40px;
+  border: 3px solid $blue-color2;
+  outline: 3px solid $blue-color2;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 0.2rem;
+}
+.reciter-option.active {
+  border: 3px solid white;
+  outline: 3px solid $color2;
+}
+.reciter-option.Alafasy {
+  background-image: url("../../../Images/Alafasy.png");
+}
+.reciter-option.Abdul_Basit_Murattal {
+  background-image: url("../../../Images/Abdul-basit.png");
+}
+.reciter-option.Husary {
+  background-image: url("../../../Images/Hussary.png");
+}
+.reciter-option.Minshawy_Mujawwad {
+  background-image: url("../../../Images/Minshawy.png");
+}
+
+.translation-option {
+  width: 40px;
+  height: 40px;
+  border: 3px solid $blue-color2;
+  outline: 3px solid $blue-color2;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 0.2rem;
+}
+.translation-option.active {
+  border: 3px solid white;
+  outline: 3px solid $color2;
+}
+
+.Audio-BackgundShadow {
+  width: 720px;
+  max-width: 100%;
+  min-height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  background-color: #0000007e;
+  z-index: 10005;
 }

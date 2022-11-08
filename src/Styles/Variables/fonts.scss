@@ -142,6 +142,13 @@
     url("../../Fonts/QuranTaha/QuranTaha.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: QuranSurah;
+  src: url("../../Fonts/QuranSurah/QuranSurah.woff") format("woff"),
+    url("../../Fonts/QuranSurah/QuranSurah.woff2") format("woff2"),
+    url("../../Fonts/QuranSurah/QuranSurah.ttf") format("truetype");
+}
+
 $IRANSans: IRANSans, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
   "Noto Color Emoji";
 $IRANSans-light: IRANSans-light;
@@ -164,10 +171,11 @@ $Vazir-normal: Vazir-normal;
 $Vazir-bold: Vazir-bold;
 
 $Simple-thin: Simple-thin, Muhammad, IRANSans;
-$Simple-normal: Simple-normal, Muhammad, IRANSans;
-$Simple-bold: Simple-bold, Muhammad, IRANSans;
+$Simple-normal: Simple-normal, Muhammad, QuranTaha, IRANSans;
+$Simple-bold: Simple-bold, Muhammad, QuranTaha, IRANSans;
 $Muhammad: Muhammad, IRANSans;
 $UthmanTahaNotBold: UthmanTahaNotBold, Muhammad, IRANSans;
 $UthmanTaha: UthmanTaha, Muhammad, IRANSans;
 $QuranTaha: QuranTaha, IRANSans;
 $MeQuran: MeQuran, QuranTaha, IRANSans;
+$QuranSurah: QuranSurah;

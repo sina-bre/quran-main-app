@@ -7,6 +7,7 @@ const Ayahtext: React.FC<{ index: number }> = (props) => {
   const textType = useAppSelector((state) => state.setting.textType);
   const textWeight = useAppSelector((state) => state.setting.textWeight);
   const textSize = useAppSelector((state) => state.setting.textSize);
+  const currentAyah = useAppSelector((state) => state.current.currentAyah);
   const ayahTextStyle = {
     fontSize: textSize,
   };
@@ -35,14 +36,14 @@ const Ayahtext: React.FC<{ index: number }> = (props) => {
           });
         break;
     }
-  }, [textType]);
+  }, [textType, currentAyah]);
 
   return (
     <div
       style={ayahTextStyle}
       className={`ayahText ${textFont}-${textWeight} ${
         textFont !== "Simple2" && textFont !== "Simple" && ["textAlign"]
-      }`}
+      } ${props.index === currentAyah && ["active"]}`}
     >
       {ayahTextTemp}
     </div>

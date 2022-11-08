@@ -9,9 +9,9 @@ const TranslationTextSetting = React.lazy(
 );
 
 const Setting = () => {
-  const nvaigate = useNavigate();
+  const navigate = useNavigate();
   const backArrowOnClick = () => {
-    nvaigate(-1);
+    navigate(-1);
   };
   return (
     <div className="Setting-container">

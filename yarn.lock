@@ -1248,6 +1248,13 @@
   dependencies:
     "@iconify/types" "*"
 
+"@iconify/icons-ep@^1.2.9":
+  "integrity" "sha512-XGXRlQEO37nCRBQFg1xv9se1oYXAgbifIVlfSHwBd4+gALvoSnQLGR0tH8itIn65npUGKCCacXP/JpLKbA1wfw=="
+  "resolved" "https://registry.npmjs.org/@iconify/icons-ep/-/icons-ep-1.2.9.tgz"
+  "version" "1.2.9"
+  dependencies:
+    "@iconify/types" "*"
+
 "@iconify/icons-fe@^1.2.2":
   "integrity" "sha512-1j75ZndTpZFECpJOt6WuHXRFxpzYECnz6tWtugvEKzHTd5/TfPU7FB+gsw5/oMTE3JECSD050JRZ0E2hMrDlAA=="
   "resolved" "https://registry.npmjs.org/@iconify/icons-fe/-/icons-fe-1.2.2.tgz"

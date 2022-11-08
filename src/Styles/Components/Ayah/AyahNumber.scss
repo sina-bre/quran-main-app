@@ -9,5 +9,9 @@
   width: 2.2rem;
   height: 2.2rem;
   @include flex(center, center, row);
-  @include text($sky-color, 0.9rem, 400);
+  @include text($sky-color, 0.8rem, 400);
+  position: sticky;
+  top: 0.5rem;
+  margin-top: 0.3rem;
+  z-index: 1007;
 }

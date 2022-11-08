@@ -4,4 +4,15 @@
 .PageContext-container {
   width: 100%;
   min-height: 100vh;
+  position: relative;
+  // margin-top: 18rem;
+  margin-bottom: 7rem;
+}
+.allAyah.active {
+  background-color: $blue-color2;
+}
+.StartOfSurah-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

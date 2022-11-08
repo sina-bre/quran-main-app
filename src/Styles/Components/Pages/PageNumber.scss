@@ -1,0 +1,24 @@
+@import "../../Variables/colors.scss";
+@import "../../Variables/items.scss";
+
+.PageNumber-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 9.5vh;
+  margin-bottom: 5rem;
+  position: sticky;
+  background-color: transparent;
+  top: 0.5rem;
+  z-index: 4900;
+}
+.PageNumber-number {
+  width: 4rem;
+  height: 2.5rem;
+  @include text($sky-color, 1.5rem, 600);
+  background-color: white;
+  @include option;
+  @include flex(center, center, row);
+  z-index: 5000;
+  position: absolute;
+}

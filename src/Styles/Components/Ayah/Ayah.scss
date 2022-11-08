@@ -2,15 +2,20 @@
 @import "../../Variables/items.scss";
 .Ayah-container {
   width: 100%;
-  @include flex(space-between, center, row);
-  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 4rem 0;
+  cursor: pointer;
 }
 .Ayah-container-right {
-  // @include flex(flex-start, center, column);
-  width: 90%;
+  margin: 0 0.5rem 0 0.2rem;
 }
+
 .Ayah-container-left {
-  // @include flex(flex-start, center, column);
-  width: 9%;
-  min-height: 6rem;
+  width: 40px;
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  flex-direction: column;
+  margin: 0 0.3rem 0 0.4rem;
 }

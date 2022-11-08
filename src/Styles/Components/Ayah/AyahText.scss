@@ -4,7 +4,11 @@
   color: $ayahText-color;
   -webkit-font-smoothing: antialiased;
   white-space: normal;
-  word-spacing: 0.5rem;
+  text-align: inherit;
+  margin-bottom: 1rem;
+}
+.ayahText.active {
+  color: $color2;
 }
 .ayahText.textAlign {
   text-align: justify;

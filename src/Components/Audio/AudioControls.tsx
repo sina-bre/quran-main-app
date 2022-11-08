@@ -10,9 +10,10 @@ const AudioControls = () => {
   const currentBisAudio = useAppSelector(
     (state) => state.current.currentBisAudio
   );
+  const reciterName = useAppSelector((state) => state.setting.reciterName);
 
-  const url = `http://www.everyayah.com/data/Alafasy_64kbps/${currentAudio}.mp3`;
-  const bisUrl = `http://www.everyayah.com/data/Alafasy_64kbps/${currentBisAudio}.mp3`;
+  const url = `http://www.everyayah.com/data/${reciterName}_64kbps/${currentAudio}.mp3`;
+  const bisUrl = `http://www.everyayah.com/data/${reciterName}_64kbps/${currentBisAudio}.mp3`;
 
   const audioOutput = useAudio();
   const {
