@@ -3,6 +3,7 @@ import { useAppSelector } from "../../Hooks/useAppSelector";
 import "../../Styles/Components/Audio/Audio.scss";
 import AudioControls from "./AudioControls";
 import ReciterName from "./ReciterName";
+import TranslationName2 from "./TranslationName2";
 
 const Audio = () => {
   const reciterName = useAppSelector((state) => state.setting.reciterName);
@@ -10,13 +11,13 @@ const Audio = () => {
     (state) => state.setting.translationName
   );
   const [openReciters, setOpenReciters] = useState(false);
-  const [openTranslation, setOpenTranslation] = useState(false);
+  const [openTranslations, setOpenTranslations] = useState(false);
   const reciterNameOnClick = () => {
     setOpenReciters(!openReciters);
-    setOpenTranslation(false);
+    setOpenTranslations(false);
   };
   const translationNameOnClick = () => {
-    setOpenTranslation(!openTranslation);
+    setOpenTranslations(!openTranslations);
     setOpenReciters(false);
   };
   return (
@@ -27,7 +28,7 @@ const Audio = () => {
           onClick={reciterNameOnClick}
         ></div>
       )}
-      {openTranslation && (
+      {openTranslations && (
         <div
           className="Audio-BackgundShadow"
           onClick={translationNameOnClick}
@@ -35,10 +36,11 @@ const Audio = () => {
       )}
       <div className="Audio-container">
         <ReciterName openReciters={openReciters} />
+        <TranslationName2 openTranslations={openTranslations} />
         <div className="Audio-container-inner">
           <div
             className={`translation-option ${
-              openTranslation && ["active"]
+              openTranslations && ["active"]
             } ${translationName}`}
             onClick={translationNameOnClick}
           ></div>

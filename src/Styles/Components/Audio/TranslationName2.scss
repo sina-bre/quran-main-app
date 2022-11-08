@@ -1,42 +1,42 @@
 @import "../../Variables/colors.scss";
 @import "../../Variables/items.scss";
 
-.ReciterName-container {
+.TranslationName2-container {
   width: 87%;
   background-color: $blue-color2;
   padding-bottom: 2rem;
-  margin-bottom: -3rem;
+  margin-bottom: -1rem;
   border-radius: 15px 15px 0 0;
 }
-.ReciterName-container.open {
+.TranslationName2-container.open {
   animation: openAnimation 0.7s;
 }
-.ReciterName-container.close {
+.TranslationName2-container.close {
   animation: closeAnimation 0.7s forwards alternate;
 }
-.ReciterName-title {
+.TranslationName2-title {
   margin: 1.5rem 0.5rem 0.5rem 0;
   @include text($sky-color, 0.9rem, 600);
 }
 
-.ReciterName-options {
+.TranslationName2-options {
   width: 100%;
   margin-right: 1rem;
   @include flex(space-between, flex-start, column);
 }
 
-.ReciterName-option {
+.TranslationName2-option {
   margin-bottom: 0.5rem;
   padding: 0.3rem;
   border-radius: 10px;
   width: 90%;
   @include flex(flex-start, center, row);
 }
-.ReciterName-option.active {
+.TranslationName2-option.active {
   background-color: darken($blue-color2, 10%);
 }
 
-.ReciterName-option-img {
+.TranslationName2-option-img {
   width: 40px;
   height: 40px;
   border: 3px solid $blue-color2;
@@ -47,23 +47,23 @@
   background-size: cover;
   margin-right: 0.2rem;
 }
-.ReciterName-option-img.active {
+.TranslationName2-option-img.active {
   border: 3px solid white;
   outline: 3px solid $color2;
 }
-.ReciterName-option-img.Alafasy {
+.TranslationName2-option-img.Alafasy {
   background-image: url("../../../Images/Alafasy.png");
 }
-.ReciterName-option-img.Abdul_Basit_Murattal {
+.TranslationName2-option-img.Abdul_Basit_Murattal {
   background-image: url("../../../Images/Abdul-basit.png");
 }
-.ReciterName-option-img.Husary {
+.TranslationName2-option-img.Husary {
   background-image: url("../../../Images/Hussary.png");
 }
-.ReciterName-option-img.Minshawy_Mujawwad {
+.TranslationName2-option-img.Minshawy_Mujawwad {
   background-image: url("../../../Images/Minshawy.png");
 }
-.ReciterName-option-title {
+.TranslationName2-option-title {
   margin-right: 0.5rem;
   @include text($sky-color2, 0.9rem, 400);
 }
