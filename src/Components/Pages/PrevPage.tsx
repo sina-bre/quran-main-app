@@ -11,9 +11,13 @@ const PrevPage = () => {
     setCurrent(quranPages[Number(CurrentPage) - 1].start);
   };
   return (
-    <div className="PrevPage-container" onClick={prevPageOnClickHndler}>
-      <Icon icon={arrowRight} hFlip={true} width={40} color="white" />
-    </div>
+    <>
+      {!(CurrentPage === 1) && (
+        <div className="PrevPage-container" onClick={prevPageOnClickHndler}>
+          <Icon icon={arrowRight} hFlip={true} width={40} color="white" />
+        </div>
+      )}
+    </>
   );
 };
 export default PrevPage;

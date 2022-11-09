@@ -10,6 +10,7 @@ const AudioControls = () => {
   const currentBisAudio = useAppSelector(
     (state) => state.current.currentBisAudio
   );
+  const currentAyah = useAppSelector((state) => state.current.currentAyah);
   const reciterName = useAppSelector((state) => state.setting.reciterName);
 
   const url = `http://www.everyayah.com/data/${reciterName}_64kbps/${currentAudio}.mp3`;
@@ -30,12 +31,14 @@ const AudioControls = () => {
   return (
     <div className="audio-controls">
       <div className="nextprev-div">
+        {currentAyah === 6236 && <div className="next-icon-div-off"></div>}
         <div className="next-icon-div" onClick={nextOnClickHandler}>
           <Icon icon={next24Regular} className="next-icon" />
         </div>
         <div className="prev-icon-div" onClick={prevOnClickHandler}>
           <Icon icon={next24Regular} hFlip={true} className="prev-icon" />
         </div>
+        {currentAyah === 1 && <div className="prev-icon-div-off"></div>}
       </div>
       {isPlaying ? (
         <div className="pauseIcon-div">

@@ -22,6 +22,9 @@ const PageContext = () => {
   const isNavigateToSurah = useAppSelector(
     (state) => state.globalOrders.isNavigateToSurah
   );
+  const isBackToEndOfPrevPage = useAppSelector(
+    (state) => state.globalOrders.isBackToEndOfPrevPage
+  );
   let tempIndexArray = [];
   // for (let i = quranPages[index].start; i <= quranPages[index].end; i++) {
   //   tempIndexArray.push(i);
@@ -46,8 +49,17 @@ const PageContext = () => {
   useEffect(() => {
     if (!isNavigateToSurah) {
       setCurrent(quranPages[index].start);
+      console.log("isNavigateToSurah is not true");
     } else {
       dispatch(globalOrdersActions.setIsNavigateToSurah(false));
+    }
+    if (!isBackToEndOfPrevPage) {
+      // setCurrent(quranPages[index].start);
+      console.log("isBackToEndOfPrevPage is not true");
+    } else {
+      setCurrent(quranPages[index].end);
+      dispatch(globalOrdersActions.setIsBackToEndOfPrevPage(false));
+      console.log("isBackToEndOfPrevPage is true");
     }
   }, [index]);
 

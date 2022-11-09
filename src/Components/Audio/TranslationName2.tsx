@@ -45,7 +45,7 @@ const TranslationName2: React.FC<{ openTranslations: boolean }> = (props) => {
         </div>
         <div
           className={`TranslationName2-option ${
-            translationName === "fooladvand" && ["active"]
+            translationName === "safavi" && ["active"]
           }`}
           onClick={() => optionOnClickHanlder("fooladvand")}
         >

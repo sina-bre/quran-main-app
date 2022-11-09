@@ -61,6 +61,22 @@
   margin-inline-end: 0.2rem;
   @include flex(center, center, row);
 }
+.next-icon-div-off {
+  background-color: #ffffff7f;
+  position: absolute;
+  width: 4.75rem;
+  height: 2rem;
+  right: 0;
+  @include flex(center, center, row);
+}
+.prev-icon-div-off {
+  background-color: #ffffff7f;
+  position: absolute;
+  width: 4.75rem;
+  height: 2rem;
+  left: 0;
+  @include flex(center, center, row);
+}
 
 .next-icon,
 .prev-icon {

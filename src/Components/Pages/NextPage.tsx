@@ -12,9 +12,13 @@ const NextPage = () => {
     setCurrent(quranPages[Number(CurrentPage) + 1].start);
   };
   return (
-    <div className="NextPage-container" onClick={nextPageOnClickHndler}>
-      <Icon icon={arrowRight} color="white" width={40} />
-    </div>
+    <>
+      {!(CurrentPage === 604) && (
+        <div className="NextPage-container" onClick={nextPageOnClickHndler}>
+          <Icon icon={arrowRight} color="white" width={40} />
+        </div>
+      )}
+    </>
   );
 };
 export default NextPage;

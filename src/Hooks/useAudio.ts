@@ -58,17 +58,30 @@ const useAudio = () => {
   }, [isChanging]);
 
   const prevOnClickHandler = () => {
-    dispatch(currentActions.setCurrentBisAudio("025001"));
-    setCurrent(Number(currentAyah) - 1);
+    if (currentAyah === 1) {
+      dispatch(globalOrdersActions.setIsPlaying(false));
+    } else {
+      dispatch(currentActions.setCurrentBisAudio("025001"));
+      setCurrent(Number(currentAyah) - 1);
+      dispatch(globalOrdersActions.setIsBackToEndOfPrevPage(true));
+    }
   };
   const nextOnClickHandler = () => {
-    dispatch(currentActions.setCurrentBisAudio("025001"));
-    setCurrent(Number(currentAyah) + 1);
+    if (currentAyah === 6236) {
+      dispatch(globalOrdersActions.setIsPlaying(false));
+    } else {
+      dispatch(currentActions.setCurrentBisAudio("025001"));
+      setCurrent(Number(currentAyah) + 1);
+    }
   };
   const audioRefOnEndedHandler = () => {
-    dispatch(currentActions.setCurrentBisAudio("025001"));
-    setCurrent(Number(currentAyah) + 1);
-    dispatch(globalOrdersActions.setBisHasBeenPlayed(false));
+    if (currentAyah === 6236) {
+      dispatch(globalOrdersActions.setIsPlaying(false));
+    } else {
+      dispatch(currentActions.setCurrentBisAudio("025001"));
+      setCurrent(Number(currentAyah) + 1);
+      dispatch(globalOrdersActions.setBisHasBeenPlayed(false));
+    }
   };
 
   const bimillahAudioRefOnEndedHandler = () => {

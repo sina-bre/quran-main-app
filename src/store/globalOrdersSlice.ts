@@ -7,6 +7,7 @@ interface globalOrdersState {
   bisHasBeenPlayed: boolean;
   isCahnging: boolean;
   isNavigateToSurah: boolean;
+  isBackToEndOfPrevPage: boolean;
 }
 
 const initailGlobalOrdersState: globalOrdersState = {
@@ -16,6 +17,7 @@ const initailGlobalOrdersState: globalOrdersState = {
   bisHasBeenPlayed: false,
   isCahnging: false,
   isNavigateToSurah: false,
+  isBackToEndOfPrevPage: false,
 };
 
 const globalOrdersSlice = createSlice({
@@ -39,6 +41,9 @@ const globalOrdersSlice = createSlice({
     },
     setIsNavigateToSurah(state, action) {
       state.isNavigateToSurah = action.payload;
+    },
+    setIsBackToEndOfPrevPage(state, action) {
+      state.isBackToEndOfPrevPage = action.payload;
     },
   },
 });
