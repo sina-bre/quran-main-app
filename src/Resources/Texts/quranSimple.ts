@@ -6236,11 +6236,11 @@ const startText = `
 الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ
 مِنَ الْجِنَّةِ وَالنَّاسِ`;
 const editedText = startText.split("\n");
-const finalText = editedText.map((item, index) => {
+const quranSimple = editedText.map((item, index) => {
   if (index === 3189 || index === 1) {
     return item;
   } else {
     return item.replaceAll("بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ", "");
   }
 });
-export default finalText;
+export default quranSimple;

@@ -86,7 +86,7 @@ const useAudio = () => {
 
   const bimillahAudioRefOnEndedHandler = () => {
     audioRef.current?.play();
-    dispatch(globalOrdersActions.setBisHasBeenPlayed(false));
+    dispatch(globalOrdersActions.setBisHasBeenPlayed(true));
   };
   const toggle = () => dispatch(globalOrdersActions.setIsPlaying(!isPlaying));
   const audioOutput = {

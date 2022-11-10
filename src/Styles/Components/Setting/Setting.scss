@@ -21,6 +21,7 @@
 .Setting-topic-container {
   width: 100%;
   @include flex(center, center, row);
+  margin-bottom: 1rem;
 }
 .Setting-topic-arrow {
   @include flex(center, center, row);
@@ -37,4 +38,22 @@
   margin: 2rem 1rem 1rem 0;
   @include flex(center, center, row);
   background-color: transparent;
+}
+
+@media only screen and (min-width: 420px) {
+  .Setting-topic-container {
+    margin-bottom: 3rem;
+  }
+}
+
+@media only screen and (min-width: 520px) {
+  .Setting-topic-container {
+    margin-bottom: 5rem;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .Setting-topic-container {
+    margin-bottom: 8rem;
+  }
 }

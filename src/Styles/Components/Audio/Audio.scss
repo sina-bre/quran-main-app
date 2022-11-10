@@ -14,6 +14,11 @@
   @include flex(center, center, column);
   z-index: 10006;
 }
+.close-Audio-btn {
+  width: 1rem;
+  height: 1rem;
+  size: 1rem;
+}
 .Audio-container-inner {
   border-radius: 15px;
   height: 6rem;
@@ -21,7 +26,7 @@
   width: 87%;
   position: relative;
   background-color: $blue-color2;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.359);
 }
 .reciter-option {
   width: 40px;
@@ -33,6 +38,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin-right: 0.2rem;
+  cursor: pointer;
 }
 .reciter-option.active {
   border: 3px solid white;
@@ -44,10 +50,10 @@
 .reciter-option.Abdul_Basit_Murattal {
   background-image: url("../../../Images/Abdul-basit.png");
 }
-.reciter-option.Husary {
-  background-image: url("../../../Images/Hussary.png");
+.reciter-option.Ghamadi {
+  background-image: url("../../../Images/Ghamadi.png");
 }
-.reciter-option.Minshawy_Mujawwad {
+.reciter-option.Minshawy_Murattal {
   background-image: url("../../../Images/Minshawy.png");
 }
 
@@ -61,6 +67,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin-right: 0.2rem;
+  cursor: pointer;
 }
 .translation-option.active {
   border: 3px solid white;
@@ -80,16 +87,30 @@
 }
 
 .Audio-BackgundShadow {
+  position: fixed;
   width: 720px;
   max-width: 100%;
-  min-height: 100vh;
+  max-height: 100vh;
   margin-right: auto;
   margin-left: auto;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  position: fixed;
   background-color: #0000007e;
   z-index: 10005;
+}
+.AyahOptionsNav-backgroundShadow {
+  position: fixed;
+  width: 720px;
+  max-width: 100%;
+  max-height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #0000007e;
+  z-index: 10007;
 }

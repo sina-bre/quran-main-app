@@ -4,7 +4,7 @@ import arrowRight from "@iconify/icons-ep/arrow-right";
 import { useAppSelector } from "../../Hooks/useAppSelector";
 import useSetCurrent from "../../Hooks/useSetCurrent";
 import quranPages from "../../Resources/QuranMetaData/quranPages";
-const PrevPage = () => {
+const PrevPage: React.FC<{ isScrolling: boolean }> = (props) => {
   const setCurrent = useSetCurrent();
   const CurrentPage = useAppSelector((state) => state.current.currentPage);
   const prevPageOnClickHndler = () => {
@@ -13,7 +13,12 @@ const PrevPage = () => {
   return (
     <>
       {!(CurrentPage === 1) && (
-        <div className="PrevPage-container" onClick={prevPageOnClickHndler}>
+        <div
+          className={`PrevPage-container ${
+            props.isScrolling ? ["hide"] : ["show"]
+          }`}
+          onClick={prevPageOnClickHndler}
+        >
           <Icon icon={arrowRight} hFlip={true} width={40} color="white" />
         </div>
       )}

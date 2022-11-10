@@ -1,19 +1,33 @@
 @import "../../Variables/colors.scss";
 @import "../../Variables/items.scss";
 
+.ReciterName {
+  position: fixed;
+  bottom: 4.5rem;
+  left: 0 !important;
+  right: 0 !important;
+  width: 720px;
+  max-width: 100%;
+  z-index: 10002;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  @include flex(center, center, column);
+  z-index: 10005;
+}
+.ReciterName.open {
+  animation: openAnimation 0.5s alternate;
+}
+.ReciterName.close {
+  animation: closeAnimation 0.5s forwards alternate;
+}
+
 .ReciterName-container {
   width: 87%;
   background-color: $blue-color2;
-  padding-bottom: 2rem;
-  margin-bottom: -3rem;
+  padding-bottom: 3.5rem;
   border-radius: 15px 15px 0 0;
 }
-.ReciterName-container.open {
-  animation: openAnimation 0.7s;
-}
-.ReciterName-container.close {
-  animation: closeAnimation 0.7s forwards alternate;
-}
+
 .ReciterName-title {
   margin: 1.5rem 0.5rem 0.5rem 0;
   @include text($sky-color, 0.9rem, 600);
@@ -31,6 +45,7 @@
   border-radius: 10px;
   width: 90%;
   @include flex(flex-start, center, row);
+  cursor: pointer;
 }
 .ReciterName-option.active {
   background-color: darken($blue-color2, 10%);
@@ -57,10 +72,10 @@
 .ReciterName-option-img.Abdul_Basit_Murattal {
   background-image: url("../../../Images/Abdul-basit.png");
 }
-.ReciterName-option-img.Husary {
-  background-image: url("../../../Images/Hussary.png");
+.ReciterName-option-img.Ghamadi {
+  background-image: url("../../../Images/Ghamadi.png");
 }
-.ReciterName-option-img.Minshawy_Mujawwad {
+.ReciterName-option-img.Minshawy_Murattal {
   background-image: url("../../../Images/Minshawy.png");
 }
 .ReciterName-option-title {
@@ -68,24 +83,28 @@
   @include text($sky-color2, 0.9rem, 400);
 }
 
-@keyframes openAnimation {
-  0% {
-    transform: translateY(400px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
+// @keyframes openAnimation1 {
+//   0% {
+//     transform: translateY(0px);
+//     // transform: scale(0);
+//     visibility: hidden;
+//   }
+//   100% {
+//     transform: translateY(-300px);
+//     // transform: scale(1);
+//     visibility: visible;
+//   }
+// }
 
-@keyframes closeAnimation {
-  0% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translateY(400px);
-    opacity: 0;
-    height: 0;
-  }
-}
+// @keyframes closeAnimation1 {
+//   0% {
+//     transform: translateY(-300px);
+//     // transform: scale(1);
+//     visibility: visible;
+//   }
+//   100% {
+//     transform: translateY(0);
+//     // transform: scale(0);
+//     visibility: hidden;
+//   }
+// }

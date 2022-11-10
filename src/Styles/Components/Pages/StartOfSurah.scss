@@ -11,7 +11,7 @@
 }
 .QuranSurah {
   font-family: $QuranSurah !important;
-  @include text(white, 2.5rem, bold);
+  @include text(white, 2.7rem, bold);
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -19,7 +19,6 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  font-size: 3rem;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -42,43 +41,43 @@
 }
 
 .QuranSurah.Surah1:before {
-  content: "\e904 \e903";
+  content: "\e904";
 }
 
 .QuranSurah.Surah2:before {
-  content: "\e905 \e903";
+  content: "\e905";
 }
 
 .QuranSurah.Surah3:before {
-  content: "\e906 \e903";
+  content: "\e906";
 }
 
 .QuranSurah.Surah4:before {
-  content: "\e907 \e903";
+  content: "\e907";
 }
 
 .QuranSurah.Surah5:before {
-  content: "\e908 \e903";
+  content: "\e908";
 }
 
 .QuranSurah.Surah6:before {
-  content: "\e90b \e903";
+  content: "\e90b";
 }
 
 .QuranSurah.Surah7:before {
-  content: "\e90c \e903";
+  content: "\e90c";
 }
 
 .QuranSurah.Surah8:before {
-  content: "\e90d \e903";
+  content: "\e90d";
 }
 
 .QuranSurah.Surah9:before {
-  content: "\e90e \e903";
+  content: "\e90e";
 }
 
 .QuranSurah.Surah10:before {
-  content: "\e90f \e903";
+  content: "\e90f";
 }
 
 .QuranSurah.Surah11:before {
@@ -190,11 +189,11 @@
 }
 
 .QuranSurah.Surah38:before {
-  content: "\e909 \e903";
+  content: "\e909";
 }
 
 .QuranSurah.Surah39:before {
-  content: "\e90a \e903";
+  content: "\e90a";
 }
 
 .QuranSurah.Surah40:before {
@@ -230,7 +229,7 @@
 }
 
 .QuranSurah.Surah48:before {
-  content: "\e902 \e903";
+  content: "\e902";
 }
 
 .QuranSurah.Surah49:before {
@@ -274,11 +273,11 @@
 }
 
 .QuranSurah.Surah59:before {
-  content: "\e900 \e903";
+  content: "\e900";
 }
 
 .QuranSurah.Surah60:before {
-  content: "\e901 \e903";
+  content: "\e901";
 }
 
 .QuranSurah.Surah61:before {

@@ -13,8 +13,20 @@ const AudioControls = () => {
   const currentAyah = useAppSelector((state) => state.current.currentAyah);
   const reciterName = useAppSelector((state) => state.setting.reciterName);
 
-  const url = `http://www.everyayah.com/data/${reciterName}_64kbps/${currentAudio}.mp3`;
-  const bisUrl = `http://www.everyayah.com/data/${reciterName}_64kbps/${currentBisAudio}.mp3`;
+  const url = `http://www.everyayah.com/data/${reciterName}_${
+    reciterName === "Ghamadi"
+      ? "40kbps"
+      : reciterName === "Minshawy_Murattal"
+      ? "128kbps"
+      : "64kbps"
+  }/${currentAudio}.mp3`;
+  const bisUrl = `http://www.everyayah.com/data/${reciterName}_${
+    reciterName === "Ghamadi"
+      ? "40kbps"
+      : reciterName === "Minshawy_Murattal"
+      ? "128kbps"
+      : "64kbps"
+  }/${currentBisAudio}.mp3`;
 
   const audioOutput = useAudio();
   const {

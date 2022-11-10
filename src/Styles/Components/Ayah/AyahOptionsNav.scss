@@ -1,0 +1,63 @@
+@import "../../Variables/colors.scss";
+@import "../../Variables/items.scss";
+.AyahOptionsNav {
+  position: fixed;
+  bottom: 18rem;
+  left: 0 !important;
+  right: 0 !important;
+  width: 720px;
+  max-width: 100%;
+  z-index: 10005;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  @include flex(center, center, column);
+  z-index: 10008;
+}
+.AyahOptionsNav-container {
+  width: 80%;
+  height: 6rem;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.247);
+  @include flex(center, center, row);
+}
+.AyahOptionsNav.open {
+  animation: openOptionsNav 0.3s alternate;
+}
+.AyahOptionsNav.close {
+  animation: closeOptionsNav 0.3s forwards alternate;
+}
+.AyahOptionsNav-container-options {
+  width: 90%;
+  @include flex(space-between, center, row);
+}
+.AyahOptionsNav-container-option {
+  width: 5rem;
+  @include flex(space-between, center, column);
+}
+.AyahOptionsNav-container-title {
+  @include text(#444444, 0.9rem, 400);
+}
+
+@keyframes openOptionsNav {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes closeOptionsNav {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.6);
+    opacity: 0;
+    z-index: -1;
+  }
+}

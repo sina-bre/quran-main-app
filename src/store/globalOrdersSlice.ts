@@ -8,6 +8,8 @@ interface globalOrdersState {
   isCahnging: boolean;
   isNavigateToSurah: boolean;
   isBackToEndOfPrevPage: boolean;
+  isAyahOptionsOpen: boolean;
+  selectedAyah: number;
 }
 
 const initailGlobalOrdersState: globalOrdersState = {
@@ -18,6 +20,8 @@ const initailGlobalOrdersState: globalOrdersState = {
   isCahnging: false,
   isNavigateToSurah: false,
   isBackToEndOfPrevPage: false,
+  isAyahOptionsOpen: false,
+  selectedAyah: 4,
 };
 
 const globalOrdersSlice = createSlice({
@@ -44,6 +48,12 @@ const globalOrdersSlice = createSlice({
     },
     setIsBackToEndOfPrevPage(state, action) {
       state.isBackToEndOfPrevPage = action.payload;
+    },
+    setIsAyahOptionsOpen(state, action) {
+      state.isAyahOptionsOpen = action.payload;
+    },
+    setSelectedAyah(state, action) {
+      state.selectedAyah = action.payload;
     },
   },
 });

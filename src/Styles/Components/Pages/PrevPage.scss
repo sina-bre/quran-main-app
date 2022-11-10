@@ -14,9 +14,33 @@
   border-radius: 0 15px 15px 0;
   cursor: pointer;
 }
+.PrevPage-container.show {
+  animation: show 0.5s alternate forwards;
+}
+.PrevPage-container.hide {
+  animation: hide 0.5s alternate forwards;
+}
 
 @media only screen and (min-width: 720px) {
   .PrevPage-container {
     left: calc(50vw - 360px);
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes show {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
   }
 }

@@ -1,19 +1,33 @@
 @import "../../Variables/colors.scss";
 @import "../../Variables/items.scss";
 
+.TranslationName2 {
+  position: fixed;
+  bottom: 4.5rem;
+  left: 0 !important;
+  right: 0 !important;
+  width: 720px;
+  max-width: 100%;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  @include flex(center, center, column);
+  z-index: 10005;
+}
+.TranslationName2.open {
+  animation: openAnimation 0.5s forwards alternate;
+}
+.TranslationName2.close {
+  animation: closeAnimation 0.5s forwards alternate;
+  z-index: -1;
+}
+
 .TranslationName2-container {
   width: 87%;
   background-color: $blue-color2;
-  padding-bottom: 2rem;
-  margin-bottom: -1rem;
+  padding-bottom: 3.5rem;
   border-radius: 15px 15px 0 0;
 }
-.TranslationName2-container.open {
-  animation: openAnimation 0.7s;
-}
-.TranslationName2-container.close {
-  animation: closeAnimation 0.7s forwards alternate;
-}
+
 .TranslationName2-title {
   margin: 1.5rem 0.5rem 0.5rem 0;
   @include text($sky-color, 0.9rem, 600);
@@ -31,6 +45,7 @@
   border-radius: 10px;
   width: 90%;
   @include flex(flex-start, center, row);
+  cursor: pointer;
 }
 .TranslationName2-option.active {
   background-color: darken($blue-color2, 10%);
@@ -70,22 +85,19 @@
 
 @keyframes openAnimation {
   0% {
-    transform: translateY(400px);
-    opacity: 0;
+    transform: translateY(30rem);
   }
   100% {
-    transform: translateY(0px);
-    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes closeAnimation {
   0% {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
   100% {
-    transform: translateY(400px);
-    opacity: 0;
-    height: 0;
+    transform: translateY(30rem);
+    z-index: -1;
   }
 }

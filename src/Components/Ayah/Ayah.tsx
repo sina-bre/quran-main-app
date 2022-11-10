@@ -5,6 +5,7 @@ import useSetCurrent from "../../Hooks/useSetCurrent";
 import { globalOrdersActions } from "../../store/globalOrdersSlice";
 import AyahNumber from "./AyahNumber";
 import AyahTranslation from "./AyahTranslation";
+import AyahOptions from "./AyahOptions";
 const Ayahtext = React.lazy(() => import("../Ayah/AyahText"));
 
 const Ayah: React.FC<{ index: number }> = (props) => {
@@ -23,7 +24,10 @@ const Ayah: React.FC<{ index: number }> = (props) => {
         <AyahTranslation index={ayahIndex} />
       </div>
       <div className="Ayah-container-left">
-        <AyahNumber index={ayahIndex} />
+        <div className="Ayah-container-left-inner">
+          <AyahNumber index={ayahIndex} />
+          <AyahOptions index={ayahIndex} />
+        </div>
       </div>
     </div>
   );

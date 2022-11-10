@@ -7,12 +7,27 @@ import Audio from "../Audio/Audio";
 import NextPage from "./NextPage";
 import PrevPage from "./PrevPage";
 import PageNumber from "./PageNumber";
-
+import { useEffect, useState } from "react";
 const Page = () => {
   const navigate = useNavigate();
+  let timeout: ReturnType<typeof setTimeout>;
+  const [isScrolling, setIsScrolling] = useState(false);
   const backArrowOnClick = () => {
     navigate("/audioQuran");
   };
+
+  const onScroll = () => {
+    setIsScrolling(true);
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      setIsScrolling(false);
+    }, 1000);
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <div className="Page-container">
       <div className="Page-topic-container">
@@ -22,10 +37,10 @@ const Page = () => {
         <div className="Page-topic">آیات قرآن</div>
         <div className="Page-topic-empty"></div>
       </div>
-      <PageNumber />
+      <PageNumber isScrolling={isScrolling} />
       <Outlet />
-      <NextPage />
-      <PrevPage />
+      <NextPage isScrolling={isScrolling} />
+      <PrevPage isScrolling={isScrolling} />
       <Audio />
     </div>
   );

@@ -10,12 +10,21 @@
 .Ayah-container-right {
   margin: 0 0.5rem 0 0.2rem;
 }
-
 .Ayah-container-left {
-  width: 40px;
+  width: 45px;
   display: flex;
   justify-content: flex-start;
   text-align: center;
   flex-direction: column;
   margin: 0 0.3rem 0 0.4rem;
+}
+.Ayah-container-left-inner {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  position: sticky;
+  top: 0.5rem;
+  cursor: default;
 }

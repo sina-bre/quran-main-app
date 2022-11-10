@@ -17,6 +17,7 @@
 .Page-topic-arrow {
   @include flex(center, center, row);
   margin: 2rem 0 1rem 1rem;
+  cursor: pointer;
 }
 .Page-topic {
   @include text($sky-color, 1.5rem, 600);
