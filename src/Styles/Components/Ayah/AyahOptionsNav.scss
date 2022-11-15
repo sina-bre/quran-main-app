@@ -7,7 +7,6 @@
   right: 0 !important;
   width: 720px;
   max-width: 100%;
-  z-index: 10005;
   margin-right: auto !important;
   margin-left: auto !important;
   @include flex(center, center, column);
@@ -34,6 +33,7 @@
 .AyahOptionsNav-container-option {
   width: 5rem;
   @include flex(space-between, center, column);
+  cursor: pointer;
 }
 .AyahOptionsNav-container-title {
   @include text(#444444, 0.9rem, 400);

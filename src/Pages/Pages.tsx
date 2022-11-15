@@ -7,6 +7,8 @@ const AudioQuran = React.lazy(() => import("../Components/Pages/AudioQuran"));
 const Setting = React.lazy(() => import("../Components/Setting/Setting"));
 const Page = React.lazy(() => import("../Components/Pages/Page"));
 const PageContext = React.lazy(() => import("../Components/Pages/PageContext"));
+const Search = React.lazy(() => import("../Components/Search/Search"));
+const SearchPage = React.lazy(() => import("../Components/Search/SearchPage"));
 
 const Pages = () => {
   return (
@@ -15,6 +17,11 @@ const Pages = () => {
         <Route path="/" element={<Cover />}>
           <Route index element={<MainPage />} />
           <Route path="/setting" element={<Setting />} />
+          {/* <Route path="/search" element={<Search />}>
+            <Route path="/page">
+              <Route path=":index2" element={<SearchPage />} />
+            </Route>
+          </Route> */}
           <Route path="/audioQuran" element={<AudioQuran />} />
           <Route path="/audioQuran/page" element={<Page />}>
             <Route path=":index" element={<PageContext />} />

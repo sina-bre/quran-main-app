@@ -17,21 +17,25 @@ const useAudio = () => {
     (state) => state.current.currentAyah
   );
   const isChanging = useAppSelector((state) => state.globalOrders.isCahnging);
+  const isAudioOpen = useAppSelector((state) => state.globalOrders.isAudioOpen);
 
   const audioRef = useRef<HTMLAudioElement>(null);
-  const bimillahAudioRef = useRef<HTMLAudioElement>(null);
+  const bismillahAudioRef = useRef<HTMLAudioElement>(null);
 
   // const [isPlaying, setIsPlaying] = useState(false);
   // const [bisHasBeenPlayed, setBisHasBeenPlayed] = useState(false);
 
   useEffect(() => {
     if (isPlaying) {
+      if (!isAudioOpen) {
+        dispatch(globalOrdersActions.setIsAudioOpen(true));
+      }
       if (checkIsSurahBegins(Number(currentAyah))) {
         if (Number(currentAyah) != 1236) {
           if (bisHasBeenPlayed) {
             audioRef.current?.play();
           } else {
-            bimillahAudioRef.current?.play();
+            bismillahAudioRef.current?.play();
           }
         } else {
           audioRef.current?.play();
@@ -39,11 +43,11 @@ const useAudio = () => {
       } else {
         dispatch(currentActions.setCurrentBisAudio("025001"));
         audioRef.current?.play();
-        bimillahAudioRef.current?.pause();
+        bismillahAudioRef.current?.pause();
       }
     } else {
       if (checkIsSurahBegins(Number(currentAyah))) {
-        bimillahAudioRef.current?.pause();
+        bismillahAudioRef.current?.pause();
         audioRef.current?.pause();
       } else {
         dispatch(currentActions.setCurrentBisAudio("025001"));
@@ -84,20 +88,20 @@ const useAudio = () => {
     }
   };
 
-  const bimillahAudioRefOnEndedHandler = () => {
+  const bismillahAudioRefOnEndedHandler = () => {
     audioRef.current?.play();
     dispatch(globalOrdersActions.setBisHasBeenPlayed(true));
   };
   const toggle = () => dispatch(globalOrdersActions.setIsPlaying(!isPlaying));
   const audioOutput = {
     audioRef,
-    bimillahAudioRef,
+    bismillahAudioRef,
     toggle,
     isPlaying,
     prevOnClickHandler,
     nextOnClickHandler,
     audioRefOnEndedHandler,
-    bimillahAudioRefOnEndedHandler,
+    bismillahAudioRefOnEndedHandler,
   };
   return audioOutput;
 };

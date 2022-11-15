@@ -17,14 +17,14 @@
   padding: 0 0.5rem;
   border-radius: 0 0 10px 10px;
   outline: 0;
-  border-bottom: 2px solid $sky-color;
-  border-right: 2px solid $sky-color;
-  border-left: 2px solid $sky-color;
+  border-bottom: 3px solid $blue-color1;
+  border-right: 3px solid $blue-color1;
+  border-left: 3px solid $blue-color1;
   border-top: 0;
   height: 2rem;
 }
 .search-page-input::placeholder {
-  @include text($sub-title1-text-color, 0.7rem, 400);
+  @include text($sub-title1-text-color, 0.8rem, 400);
 }
 .PageList-item-container {
   width: 100%;
@@ -48,11 +48,12 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3rem;
+  height: 3rem;
   @include flex(center, center, row);
-  color: $sky-color;
+  color: #d6e8fe;
   margin-left: 0.5rem;
+  font-size: 1rem !important;
 }
 .PageList-desc {
   @include flex(space-between, center, row);
@@ -62,7 +63,7 @@
   font-size: 0.5rem;
 }
 .PageList-desc {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .PageList-item-left {
@@ -73,7 +74,7 @@
   margin-right: 1rem;
   img {
     object-fit: contain;
-    width: 1.5rem;
+    width: 2rem;
     height: auto;
   }
 }
@@ -84,50 +85,50 @@
   @include text($sky-color, 0.9rem, 400);
 }
 
-@media only screen and (min-width: 420px) {
-  .search-page-input::placeholder {
-    @include text($sub-title1-text-color, 0.8rem, 400);
-  }
-  .PageList-number {
-    font-size: 0.6rem;
-  }
-  .PageList-desc {
-    font-size: 0.9rem;
-  }
-  .PageList-number {
-    width: 2.7rem;
-    height: 2.7rem;
-  }
-  .PageList-add {
-    img {
-      width: 1.7rem;
-    }
-  }
-  .PageList-off {
-    @include text($sky-color, 1rem, 400);
-  }
-}
+// @media only screen and (min-width: 420px) {
+//   .search-page-input::placeholder {
+//     @include text($sub-title1-text-color, 0.8rem, 400);
+//   }
+//   .PageList-number {
+//     font-size: 0.6rem;
+//   }
+//   .PageList-desc {
+//     font-size: 0.9rem;
+//   }
+//   .PageList-number {
+//     width: 2.7rem;
+//     height: 2.7rem;
+//   }
+//   .PageList-add {
+//     img {
+//       width: 1.7rem;
+//     }
+//   }
+//   .PageList-off {
+//     @include text($sky-color, 1rem, 400);
+//   }
+// }
 
-@media only screen and (min-width: 650px) {
-  .search-page-input::placeholder {
-    @include text($sub-title1-text-color, 0.9rem, 400);
-  }
-  .PageList-number {
-    font-size: 0.7rem;
-  }
-  .PageList-desc {
-    font-size: 1rem;
-  }
-  .PageList-number {
-    width: 3rem;
-    height: 3rem;
-  }
-  .PageList-add {
-    img {
-      width: 2rem;
-    }
-  }
-  .PageList-off {
-    @include text($sky-color, 1.1rem, 400);
-  }
-}
+// @media only screen and (min-width: 650px) {
+//   .search-page-input::placeholder {
+//     @include text($sub-title1-text-color, 0.9rem, 400);
+//   }
+//   .PageList-number {
+//     font-size: 0.7rem;
+//   }
+//   .PageList-desc {
+//     font-size: 1rem;
+//   }
+//   .PageList-number {
+//     width: 3rem;
+//     height: 3rem;
+//   }
+//   .PageList-add {
+//     img {
+//       width: 2rem;
+//     }
+//   }
+//   .PageList-off {
+//     @include text($sky-color, 1.1rem, 400);
+//   }
+// }

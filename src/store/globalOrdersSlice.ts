@@ -10,6 +10,7 @@ interface globalOrdersState {
   isBackToEndOfPrevPage: boolean;
   isAyahOptionsOpen: boolean;
   selectedAyah: number;
+  isAudioOpen: boolean;
 }
 
 const initailGlobalOrdersState: globalOrdersState = {
@@ -22,6 +23,7 @@ const initailGlobalOrdersState: globalOrdersState = {
   isBackToEndOfPrevPage: false,
   isAyahOptionsOpen: false,
   selectedAyah: 4,
+  isAudioOpen: true,
 };
 
 const globalOrdersSlice = createSlice({
@@ -54,6 +56,9 @@ const globalOrdersSlice = createSlice({
     },
     setSelectedAyah(state, action) {
       state.selectedAyah = action.payload;
+    },
+    setIsAudioOpen(state, action) {
+      state.isAudioOpen = action.payload;
     },
   },
 });

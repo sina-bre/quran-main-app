@@ -1241,6 +1241,13 @@
   dependencies:
     "@iconify/types" "*"
 
+"@iconify/icons-clarity@^1.2.5":
+  "integrity" "sha512-29sohexzLFoov0Pk47JdtuRP7C+iPpRifeCJrw6dH4uo1d2NOTVrM44tPU84GkynCja6VBwpdaAOv7RE+UIlyg=="
+  "resolved" "https://registry.npmjs.org/@iconify/icons-clarity/-/icons-clarity-1.2.5.tgz"
+  "version" "1.2.5"
+  dependencies:
+    "@iconify/types" "*"
+
 "@iconify/icons-emojione-monotone@^1.2.3":
   "integrity" "sha512-VeobVCiqvXRoSXkf5zeKjwMzhAFfVVxM8crIGuRrwzrcezz10eo009RTisqS1nHUVj35bAq6F+5Lq9HrnOlwHw=="
   "resolved" "https://registry.npmjs.org/@iconify/icons-emojione-monotone/-/icons-emojione-monotone-1.2.3.tgz"
@@ -1252,6 +1259,13 @@
   "integrity" "sha512-XGXRlQEO37nCRBQFg1xv9se1oYXAgbifIVlfSHwBd4+gALvoSnQLGR0tH8itIn65npUGKCCacXP/JpLKbA1wfw=="
   "resolved" "https://registry.npmjs.org/@iconify/icons-ep/-/icons-ep-1.2.9.tgz"
   "version" "1.2.9"
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify/icons-eva@^1.2.3":
+  "integrity" "sha512-iu9mTA0Aq+1RVyhOT3cUqoMbS9s9FtouK3uTBW01np1FZZH8aEgMrv2jLsdDzvzdOq58ppbrJBJ07ZqNEvfcvA=="
+  "resolved" "https://registry.npmjs.org/@iconify/icons-eva/-/icons-eva-1.2.3.tgz"
+  "version" "1.2.3"
   dependencies:
     "@iconify/types" "*"
 
@@ -1280,6 +1294,13 @@
   "integrity" "sha512-VuiuRqDjMFCltEg/wTqG6GiraA5A8ZQOCtyJT3Sj/Pvsp3FCizUO4xYngoyA7/0fv/HTDQMvh77/yHL4WIdlfg=="
   "resolved" "https://registry.npmjs.org/@iconify/icons-mingcute/-/icons-mingcute-1.2.1.tgz"
   "version" "1.2.1"
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify/icons-simple-line-icons@^1.2.2":
+  "integrity" "sha512-yUhirku5bWeAxY0SZU0+bKKCmdAnya9HqE26EtQQU8/Yd93c1OTQhxAYblxhEJrPUDl4bMQDiuobKtpodllcEA=="
+  "resolved" "https://registry.npmjs.org/@iconify/icons-simple-line-icons/-/icons-simple-line-icons-1.2.2.tgz"
+  "version" "1.2.2"
   dependencies:
     "@iconify/types" "*"
 

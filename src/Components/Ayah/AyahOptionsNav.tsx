@@ -4,16 +4,20 @@ import copy20Regular from "@iconify/icons-fluent/copy-20-regular";
 import documentCopy20Regular from "@iconify/icons-fluent/document-copy-20-regular";
 import channelShare48Regular from "@iconify/icons-fluent/channel-share-48-regular";
 import { useAppSelector } from "../../Hooks/useAppSelector";
+import { useAppDispatch } from "../../Hooks/useAppDispatch";
+import { globalOrdersActions } from "../../store/globalOrdersSlice";
 import useCopyToClipboard from "../../Hooks/useCopyToClipboard";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import SuccessMessage from "./SuccessMessage";
 const AyahOptionsNav = () => {
+  const dispatch = useAppDispatch();
   const [value, copy] = useCopyToClipboard();
-  const [ayahTextTemp, setAyahTextTemp] = useState("");
-  const [ayahTranslationTemp, setAyahTranslationTemp] = useState("");
+  const [successCopyAyah, setSuccessCopyAyah] = useState(false);
+  const [successCopyTranslation, setSuccessCopyTranslation] = useState(false);
   const isAyahOptionsOpen = useAppSelector(
     (state) => state.globalOrders.isAyahOptionsOpen
   );
-  // const currentAyah = useAppSelector((state) => state.current.currentAyah);
+
   const textType = useAppSelector((state) => state.setting.textType);
   const translationName = useAppSelector(
     (state) => state.setting.translationName
@@ -21,103 +25,118 @@ const AyahOptionsNav = () => {
   const selectedAyah = useAppSelector(
     (state) => state.globalOrders.selectedAyah
   );
+
+  const quranSimpleText = useAppSelector(
+    (state) => state.resources.quranSimpleText
+  );
+  const quranSimpleMinText = useAppSelector(
+    (state) => state.resources.quranSimpleMinText
+  );
+  const quranUthmaniText = useAppSelector(
+    (state) => state.resources.quranUthmaniText
+  );
+  const quranSafaviTranslation = useAppSelector(
+    (state) => state.resources.quranSafaviTranslation
+  );
+  const quranFooladVandTranslation = useAppSelector(
+    (state) => state.resources.quranFooladVandTranslation
+  );
+  const quranGhomsheiTranslation = useAppSelector(
+    (state) => state.resources.quranGhomsheiTranslation
+  );
+  const quranMakaremTranslation = useAppSelector(
+    (state) => state.resources.quranMakaremTranslation
+  );
+
   const ayahCopyOnClickHandler = () => {
-    copy(ayahTextTemp);
-  };
-  const translationCopyOnClickHandler = () => {
-    copy(ayahTranslationTemp);
-  };
-  useEffect(() => {
     switch (textType) {
       case "quranSimple":
-        import("../../Resources/Texts/quranSimple")
-          .then((res) => res.default)
-          .then((res) => {
-            setAyahTextTemp(res[selectedAyah]);
-          });
+        copy(quranSimpleText[selectedAyah]);
         break;
       case "quranSimpleMin":
-        import("../../Resources/Texts/quranSimpleMin")
-          .then((res) => res.default)
-          .then((res) => {
-            setAyahTextTemp(res[selectedAyah]);
-          });
+        copy(quranSimpleMinText[selectedAyah]);
         break;
       case "quranUthmani":
-        import("../../Resources/Texts/quranUthmani")
-          .then((res) => res.default)
-          .then((res) => {
-            setAyahTextTemp(res[selectedAyah]);
-          });
+        copy(quranUthmaniText[selectedAyah]);
         break;
     }
-  }, [textType, selectedAyah]);
+    dispatch(globalOrdersActions.setIsAyahOptionsOpen(false));
+    setSuccessCopyAyah(true);
+    setTimeout(() => {
+      setSuccessCopyAyah(false);
+    }, 2500);
+  };
 
-  useEffect(() => {
+  const translationCopyOnClickHandler = () => {
     switch (translationName) {
       case "safavi":
-        import("../../Resources/Translation/safaviTranslation")
-          .then((res) => res.default)
-          .then((res) => {
-            setAyahTranslationTemp(res[selectedAyah]);
-          });
+        copy(quranSafaviTranslation[selectedAyah]);
         break;
       case "fooladvand":
-        import("../../Resources/Translation/fooladvandTranslation")
-          .then((res) => res.default)
-          .then((res) => {
-            setAyahTranslationTemp(res[selectedAyah]);
-          });
+        copy(quranFooladVandTranslation[selectedAyah]);
         break;
       case "ghomshei":
-        import("../../Resources/Translation/ghomsheiTranslation")
-          .then((res) => res.default)
-          .then((res) => {
-            setAyahTranslationTemp(res[selectedAyah]);
-          });
+        copy(quranGhomsheiTranslation[selectedAyah]);
         break;
       case "makarem":
-        import("../../Resources/Translation/makaremTranslation")
-          .then((res) => res.default)
-          .then((res) => {
-            setAyahTranslationTemp(res[selectedAyah]);
-          });
+        copy(quranMakaremTranslation[selectedAyah]);
         break;
     }
-  }, [translationName, selectedAyah]);
+    dispatch(globalOrdersActions.setIsAyahOptionsOpen(false));
+    setSuccessCopyTranslation(true);
+    setTimeout(() => {
+      setSuccessCopyTranslation(false);
+    }, 2000);
+  };
+
   return (
-    <div
-      className={`AyahOptionsNav  ${isAyahOptionsOpen ? ["open"] : ["close"]}`}
-    >
-      <div className={`AyahOptionsNav-container`}>
-        <div className="AyahOptionsNav-container-options">
-          <div
-            className="AyahOptionsNav-container-option"
-            onClick={ayahCopyOnClickHandler}
-          >
-            <div>
-              <Icon icon={copy20Regular} width={40} color="#444444" />
+    <>
+      <SuccessMessage
+        successCopy={successCopyAyah}
+        message="آیه با موفقیت کپی شد!"
+      />
+      <SuccessMessage
+        successCopy={successCopyTranslation}
+        message="ترجمه با موفقیت کپی شد!"
+      />
+      <div
+        className={`AyahOptionsNav  ${
+          isAyahOptionsOpen ? ["open"] : ["close"]
+        }`}
+      >
+        <div className={`AyahOptionsNav-container`}>
+          <div className="AyahOptionsNav-container-options">
+            <div
+              className="AyahOptionsNav-container-option"
+              onClick={ayahCopyOnClickHandler}
+            >
+              <div>
+                <Icon icon={copy20Regular} width={40} color="#444444" />
+              </div>
+              <div className="AyahOptionsNav-container-title">کپی آیه</div>
             </div>
-            <div className="AyahOptionsNav-container-title">کپی آیه</div>
-          </div>
-          <div className="AyahOptionsNav-container-option">
-            <div>
-              <Icon icon={channelShare48Regular} width={40} color="#444444" />
+            <div className="AyahOptionsNav-container-option">
+              <div>
+                <Icon icon={channelShare48Regular} width={40} color="#444444" />
+              </div>
+              <div className="AyahOptionsNav-container-title">
+                {" "}
+                اشتراک گذاری
+              </div>
             </div>
-            <div className="AyahOptionsNav-container-title"> اشتراک گذاری</div>
-          </div>
-          <div
-            className="AyahOptionsNav-container-option"
-            onClick={translationCopyOnClickHandler}
-          >
-            <div>
-              <Icon icon={documentCopy20Regular} width={40} color="#444444" />
+            <div
+              className="AyahOptionsNav-container-option"
+              onClick={translationCopyOnClickHandler}
+            >
+              <div>
+                <Icon icon={documentCopy20Regular} width={40} color="#444444" />
+              </div>
+              <div className="AyahOptionsNav-container-title">کپی ترجمه</div>
             </div>
-            <div className="AyahOptionsNav-container-title">کپی ترجمه</div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 export default AyahOptionsNav;

@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "../../Styles/Components/Ayah/AyahText.scss";
+import { useAppDispatch } from "../../Hooks/useAppDispatch";
+import { resourcesActions } from "../../store/resourcesSlice";
 import { useAppSelector } from "../../Hooks/useAppSelector";
+
 const Ayahtext: React.FC<{ index: number }> = (props) => {
+  const dispatch = useAppDispatch();
   const [ayahTextTemp, setAyahTextTemp] = useState("");
   const textFont = useAppSelector((state) => state.setting.textFont);
   const textType = useAppSelector((state) => state.setting.textType);
@@ -12,31 +16,58 @@ const Ayahtext: React.FC<{ index: number }> = (props) => {
     fontSize: textSize,
   };
 
+  const quranSimpleText = useAppSelector(
+    (state) => state.resources.quranSimpleText
+  );
+  const quranSimpleMinText = useAppSelector(
+    (state) => state.resources.quranSimpleMinText
+  );
+  const quranUthmaniText = useAppSelector(
+    (state) => state.resources.quranUthmaniText
+  );
+
   useEffect(() => {
     switch (textType) {
       case "quranSimple":
-        import("../../Resources/Texts/quranSimple")
-          .then((res) => res.default)
-          .then((res) => {
-            setAyahTextTemp(res[props.index]);
-          });
+        if (!quranSimpleText) {
+          import("../../Resources/Texts/quranSimple")
+            .then((res) => res.default)
+            .then((res) => dispatch(resourcesActions.setQuranSimpleText(res)))
+            .then(() => {
+              setAyahTextTemp(quranSimpleText[props.index]);
+            });
+        } else {
+          setAyahTextTemp(quranSimpleText[props.index]);
+        }
         break;
       case "quranSimpleMin":
-        import("../../Resources/Texts/quranSimpleMin")
-          .then((res) => res.default)
-          .then((res) => {
-            setAyahTextTemp(res[props.index]);
-          });
+        if (!quranSimpleMinText) {
+          import("../../Resources/Texts/quranSimpleMin")
+            .then((res) => res.default)
+            .then((res) =>
+              dispatch(resourcesActions.setQuranSimpleMinText(res))
+            )
+            .then(() => {
+              setAyahTextTemp(quranSimpleMinText[props.index]);
+            });
+        } else {
+          setAyahTextTemp(quranSimpleMinText[props.index]);
+        }
         break;
       case "quranUthmani":
-        import("../../Resources/Texts/quranUthmani")
-          .then((res) => res.default)
-          .then((res) => {
-            setAyahTextTemp(res[props.index]);
-          });
+        if (!quranUthmaniText) {
+          import("../../Resources/Texts/quranUthmani")
+            .then((res) => res.default)
+            .then((res) => dispatch(resourcesActions.setQuranUthmaniText(res)))
+            .then(() => {
+              setAyahTextTemp(quranUthmaniText[props.index]);
+            });
+        } else {
+          setAyahTextTemp(quranUthmaniText[props.index]);
+        }
         break;
     }
-  }, [textType, currentAyah]);
+  }, [textType, currentAyah, ayahTextTemp]);
 
   return (
     <div

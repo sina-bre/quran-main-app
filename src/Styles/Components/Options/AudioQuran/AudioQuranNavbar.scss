@@ -13,34 +13,25 @@
   padding: 0.3rem 0.8rem;
   margin: 0.2rem;
   border-radius: 12px;
-  a {
-    cursor: pointer;
-    @include text(white, 0.8rem, 400);
-  }
+  cursor: pointer;
+  @include text(white, 0.9rem, 400);
 }
 .QuranNavbar-item.active {
   background-color: $blue-color1;
 }
-// .QuranNavbar-item:focus {
-//   border-bottom: 2px solid $blue-color1;
-//   margin-bottom: -2px;
-//   a {
-//     color: $sub-title2-text-color;
+
+// @media only screen and (min-width: 420px) {
+//   .QuranNavbar-item {
+//     a {
+//       @include text(white, 0.9rem, 400);
+//     }
 //   }
 // }
 
-@media only screen and (min-width: 420px) {
-  .QuranNavbar-item {
-    a {
-      @include text(white, 0.9rem, 400);
-    }
-  }
-}
-
-@media only screen and (min-width: 650px) {
-  .QuranNavbar-item {
-    a {
-      @include text(white, 1rem, 400);
-    }
-  }
-}
+// @media only screen and (min-width: 650px) {
+//   .QuranNavbar-item {
+//     a {
+//       @include text(white, 1rem, 400);
+//     }
+//   }
+// }

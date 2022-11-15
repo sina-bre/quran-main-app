@@ -14,14 +14,21 @@
 // }
 .cover-header {
   @include flex(space-between, center, row);
-  width: 90%;
+  width: 95%;
   min-height: 10vh;
   .IoSettings-div {
     @include flex(center, center, row);
     cursor: pointer;
   }
+  .settingTwo-div {
+    width: 5.5rem;
+    @include flex(space-between, center, row);
+  }
   .settingTwo {
     color: #ffffff;
+    cursor: pointer;
+  }
+  .search28Regular {
     cursor: pointer;
   }
   .moonStarsFill-div {
@@ -29,8 +36,9 @@
     position: relative;
     .moon-background {
       position: absolute;
-      width: 72px;
-      height: 72px;
+
+      width: 58px;
+      height: 58px;
       background: radial-gradient(
         50% 51.44% at 50% 50%,
         rgba(217, 217, 217, 0.235) 0%,

@@ -9,7 +9,7 @@
   .AudioQuran-title {
     margin: 2rem 0 1rem 0;
     p {
-      @include text($header-text-color, 1.2rem, 600);
+      @include text($header-text-color, 1.5rem, 600);
     }
   }
 }
@@ -22,9 +22,9 @@
     margin-top: 4rem;
     .AudioQuran-title {
       margin-bottom: 4rem;
-      p {
-        @include text($header-text-color, 1.4rem, 600);
-      }
+      // p {
+      //   @include text($header-text-color, 1.4rem, 600);
+      // }
     }
   }
 }
@@ -33,9 +33,9 @@
     margin-top: 5rem;
     .AudioQuran-title {
       margin-bottom: 6rem;
-      p {
-        @include text($header-text-color, 1.6rem, 600);
-      }
+      // p {
+      //   @include text($header-text-color, 1.6rem, 600);
+      // }
     }
   }
 }

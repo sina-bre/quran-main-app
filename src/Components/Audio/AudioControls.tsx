@@ -31,13 +31,13 @@ const AudioControls = () => {
   const audioOutput = useAudio();
   const {
     audioRef,
-    bimillahAudioRef,
+    bismillahAudioRef,
     toggle,
     isPlaying,
     prevOnClickHandler,
     nextOnClickHandler,
     audioRefOnEndedHandler,
-    bimillahAudioRefOnEndedHandler,
+    bismillahAudioRefOnEndedHandler,
   } = audioOutput;
 
   return (
@@ -73,9 +73,9 @@ const AudioControls = () => {
       )}
       <audio src={url} ref={audioRef} onEnded={audioRefOnEndedHandler} />
       <audio
-        ref={bimillahAudioRef}
+        ref={bismillahAudioRef}
         src={bisUrl}
-        onEnded={bimillahAudioRefOnEndedHandler}
+        onEnded={bismillahAudioRefOnEndedHandler}
       />
     </div>
   );

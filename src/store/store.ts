@@ -1,7 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import currentSlice from "./currentSlice";
+import favoritesSlice from "./favoritesSlice";
 import globalOrdersSlice from "./globalOrdersSlice";
 import navbarSlice from "./navbarSlice";
+import resourcesSlice from "./resourcesSlice";
 import settingSlice from "./settingSlice";
 // ...
 
@@ -11,6 +13,8 @@ export const store = configureStore({
     globalOrders: globalOrdersSlice.reducer,
     navbar: navbarSlice.reducer,
     setting: settingSlice.reducer,
+    resources: resourcesSlice.reducer,
+    favorites: favoritesSlice.reducer,
   },
 });
 

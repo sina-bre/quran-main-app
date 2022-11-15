@@ -29,28 +29,28 @@ const AudioQuranNavbar = () => {
         className={`QuranNavbar-item ${showSurahList && ["active"]}`}
         onClick={surahOnClickHamdler}
       >
-        <a href="#">سوره</a>
+        سوره
       </button>
       <button
         type="button"
         className={`QuranNavbar-item ${showPageList && ["active"]}`}
         onClick={pageOnClickHandler}
       >
-        <a href="#">صفحه</a>
+        صفحه
       </button>
       <button
         type="button"
         className={`QuranNavbar-item ${showJuzList && [`active`]}`}
         onClick={juzOnClickHandler}
       >
-        <a href="#">جزء</a>
+        جزء
       </button>
       <button
         type="button"
         className={`QuranNavbar-item ${showFavorites && ["active"]}`}
         onClick={FavoritesOnClickHandler}
       >
-        <a href="#">منتخب</a>
+        منتخب
       </button>
     </div>
   );

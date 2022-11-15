@@ -1,0 +1,68 @@
+@import "../../../Variables/colors.scss";
+@import "../../../Variables/items.scss";
+
+.FavoritesList-container {
+  width: 90%;
+  margin: 0 0 1rem 0;
+}
+
+.FavoritesList-item {
+  width: 100%;
+  @include flex(space-between, center, row);
+  margin: 0.5rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid $border-color;
+  cursor: pointer;
+}
+.FavoritesList-item-right {
+  width: 70%;
+  @include flex(flex-start, center, row);
+}
+
+.FavoritesList-item-number {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 3rem;
+  height: 3rem;
+  @include flex(center, center, row);
+  color: white;
+  margin-left: 0.5rem;
+}
+.FavoritesList-item-number.surah {
+  background-image: url("../../../../Images/islam.png");
+  @include text($title-text-color, 0.9rem, 400);
+}
+.FavoritesList-item-number.page {
+  background-image: url("../../../../Images/muhammad.png");
+  font-size: 0.9rem;
+  color: #d6e8fe;
+}
+.FavoritesList-item-number.juz {
+  background-image: url("../../../../Images/halal.png");
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.FavoritesList-item-desc {
+  @include flex(space-between, center, row);
+}
+
+.FavoritesList-item-left {
+  width: 50%;
+  @include flex(flex-end, center, row);
+}
+.FavoritesList-type {
+  img {
+    object-fit: contain;
+    width: 2rem;
+    height: auto;
+  }
+}
+.FavoritesList-remove {
+  margin-right: 1rem;
+  img {
+    object-fit: contain;
+    width: 2rem;
+    height: auto;
+  }
+}

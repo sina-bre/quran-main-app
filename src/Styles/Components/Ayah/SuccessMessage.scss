@@ -1,0 +1,50 @@
+@import "../../Variables/colors.scss";
+@import "../../Variables/items.scss";
+
+.SuccessMessage {
+  position: fixed;
+  bottom: 8rem;
+  left: 0 !important;
+  right: 0 !important;
+  width: 720px;
+  max-width: 100%;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  @include flex(center, center, column);
+  z-index: 10004;
+}
+.SuccessMessage.open {
+  animation: openSuccess 0.5s forwards alternate;
+}
+.SuccessMessage.close {
+  animation: closeSuccess 0.5s forwards alternate;
+}
+.SuccessMessage-conatiner {
+  background-color: #dff2bf;
+  border-radius: 15px;
+  height: 2.8rem;
+  width: 87%;
+  @include flex(flex-start, center, row);
+  color: #270;
+}
+.SuccessMessage-checkIcon {
+  margin: 0 0.5rem;
+}
+@keyframes openSuccess {
+  0% {
+    transform: translateY(30rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes closeSuccess {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(30rem);
+    z-index: -1;
+  }
+}

@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useAppDispatch } from "../../Hooks/useAppDispatch";
 import { useAppSelector } from "../../Hooks/useAppSelector";
 import { globalOrdersActions } from "../../store/globalOrdersSlice";
+import { Icon } from "@iconify/react";
+import closeFill from "@iconify/icons-eva/close-fill";
 import "../../Styles/Components/Audio/Audio.scss";
 import AudioControls from "./AudioControls";
 import ReciterName from "./ReciterName";
@@ -10,6 +12,7 @@ import AyahOptionsNav from "../Ayah/AyahOptionsNav";
 
 const Audio = () => {
   const dispatch = useAppDispatch();
+  const isAudioOpen = useAppSelector((state) => state.globalOrders.isAudioOpen);
   const reciterName = useAppSelector((state) => state.setting.reciterName);
   const translationName = useAppSelector(
     (state) => state.setting.translationName
@@ -31,6 +34,10 @@ const Audio = () => {
     dispatch(globalOrdersActions.setIsAyahOptionsOpen(false));
     // setOpenReciters(false);
     // setOpenTranslations(false);
+  };
+  const closeAudioOnClickHandler = () => {
+    dispatch(globalOrdersActions.setIsAudioOpen(false));
+    dispatch(globalOrdersActions.setIsPlaying(false));
   };
   return (
     <>
@@ -55,9 +62,11 @@ const Audio = () => {
       <ReciterName openReciters={openReciters} />
       <TranslationName2 openTranslations={openTranslations} />
       <AyahOptionsNav />
-      <div className="Audio-container">
+      <div className={`Audio-container ${isAudioOpen ? ["open"] : ["close"]}`}>
         <div className="Audio-container-inner">
-          <div className="close-Audio-btn">&times;</div>
+          <div className="close-Audio-btn" onClick={closeAudioOnClickHandler}>
+            <Icon icon={closeFill} height="20" color="#686868" />
+          </div>
           <div
             className={`translation-option ${
               openTranslations && ["active"]
