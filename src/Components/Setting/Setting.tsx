@@ -3,14 +3,19 @@ import React from "react";
 import { Icon } from "@iconify/react";
 import arrowRight from "@iconify/icons-akar-icons/arrow-right";
 import { useNavigate } from "react-router-dom";
+import AudioSetting from "./AudioSetting";
+import { useAppDispatch } from "../../Hooks/useAppDispatch";
+import { globalOrdersActions } from "../../store/globalOrdersSlice";
 const AyahTextSetting = React.lazy(() => import("./AyahTextSetting"));
 const TranslationTextSetting = React.lazy(
   () => import("./TranslationTextSetting")
 );
 
 const Setting = () => {
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const backArrowOnClick = () => {
+    dispatch(globalOrdersActions.setIsNavigateToSurah(true));
     navigate(-1);
   };
   return (
@@ -26,6 +31,8 @@ const Setting = () => {
       <AyahTextSetting />
       <div className="TranslationTextSetting-head">متن ترجمه</div>
       <TranslationTextSetting />
+      <div className="AudioSetting-head">تنظیمات صدا</div>
+      <AudioSetting />
     </div>
   );
 };

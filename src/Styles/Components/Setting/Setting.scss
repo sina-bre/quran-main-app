@@ -18,12 +18,19 @@
   @include text(black, 1.1rem, 600);
   margin: 1rem 0 0.5rem 0;
 }
+.AudioSetting-head {
+  width: 92%;
+  @include flex(flex-start, center, row);
+  @include text(black, 1.1rem, 600);
+  margin: 1rem 0 0.5rem 0;
+}
 .Setting-topic-container {
   width: 100%;
   @include flex(center, center, row);
   margin-bottom: 1rem;
 }
 .Setting-topic-arrow {
+  cursor: pointer;
   @include flex(center, center, row);
   margin: 2rem 0 1rem 1rem;
 }

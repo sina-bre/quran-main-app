@@ -1,0 +1,16 @@
+@import "../../Variables/colors.scss";
+@import "../../Variables/items.scss";
+
+.AudioSetting-container {
+  width: 92%;
+  background-color: $blue-color2;
+  border-radius: 15px;
+  @include flex(flex-start, center, column);
+  margin-bottom: 1.5rem;
+}
+
+.moreSetting-title {
+  width: 92%;
+  margin: 0.5rem 0 0.5rem 0;
+  @include text($sky-color, 0.9rem, 600);
+}

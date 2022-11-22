@@ -1,0 +1,13 @@
+@import "../../Variables/colors.scss";
+@import "../../Variables/items.scss";
+
+.autoNextAyahPlay-container {
+  width: 93%;
+  @include flex(flex-start, center, row);
+  margin-bottom: 1rem;
+}
+
+.autoNextAyahPlay-title {
+  margin-right: 0.5rem;
+  @include text($sky-color2, 0.9rem, 400);
+}

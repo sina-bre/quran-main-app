@@ -11,6 +11,7 @@ const TranslationFont = () => {
   );
   const optionChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(settingActions.setTranslationFont(e.target.value));
+    localStorage.setItem("translationFont", e.target.value);
   };
   return (
     <div className="TranslationFont-container">

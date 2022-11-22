@@ -1,8 +1,27 @@
 @import "../../Variables/items.scss";
+@import "../../Variables/colors.scss";
+.MainPage-topic {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  @include text($sky-color, 1.7rem, 600);
+  margin: 5rem 0 3rem 0;
+}
 .options-row1 {
   width: 90%;
   display: grid;
   grid-template-columns: repeat(2, 45%);
   grid-template-rows: repeat(2, 115px);
   justify-content: space-between;
+}
+
+@media only screen and (min-width: 450px) {
+  .MainPage-topic {
+    margin: 6rem 0 5rem 0;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .MainPage-topic {
+    margin: 7rem 0 7rem 0;
+  }
 }

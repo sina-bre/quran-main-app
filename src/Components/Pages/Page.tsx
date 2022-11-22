@@ -8,6 +8,8 @@ import NextPage from "./NextPage";
 import PrevPage from "./PrevPage";
 import PageNumber from "./PageNumber";
 import { useEffect, useState } from "react";
+import { useAppSelector } from "../../Hooks/useAppSelector";
+import PageSurah from "./PageSurah";
 const Page = () => {
   const navigate = useNavigate();
   let timeout: ReturnType<typeof setTimeout>;
@@ -37,7 +39,10 @@ const Page = () => {
         <div className="Page-topic">آیات قرآن</div>
         <div className="Page-topic-empty"></div>
       </div>
-      <PageNumber isScrolling={isScrolling} />
+      <div className="Page-sticky">
+        <PageNumber isScrolling={isScrolling} />
+        <PageSurah />
+      </div>
       <Outlet />
       <NextPage isScrolling={isScrolling} />
       <PrevPage isScrolling={isScrolling} />

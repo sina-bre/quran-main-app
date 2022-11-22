@@ -10,6 +10,7 @@ const TranslationWeight = () => {
   );
   const optionChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     disptach(settingActions.settranslationWeight(e.target.value));
+    localStorage.setItem("translationWeight", e.target.value);
   };
   return (
     <div className="TranslationWeight-container">

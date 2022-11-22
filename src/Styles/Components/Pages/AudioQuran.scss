@@ -5,14 +5,28 @@
   height: 100%;
   margin-top: 3rem;
   @include flex(space-between, center, column);
-
-  .AudioQuran-title {
-    margin: 2rem 0 1rem 0;
-    p {
-      @include text($header-text-color, 1.5rem, 600);
-    }
-  }
 }
+.AudioQuran-title-div {
+  width: 100%;
+  margin: 2rem 0 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+.AudioQuran-title-arrow {
+  @include flex(center, center, row);
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.AudioQuran-title {
+  @include text($header-text-color, 1.5rem, 600);
+}
+.AudioQuran-title-empty {
+  width: 2rem;
+  height: 2rem;
+  @include flex(center, center, row);
+  background-color: transparent;
+}
+
 .AudioQuran-container.pageList {
   @include flex(flex-start, center, column);
 }
@@ -20,22 +34,16 @@
 @media only screen and (min-width: 420px) {
   .AudioQuran-container {
     margin-top: 4rem;
-    .AudioQuran-title {
+    .AudioQuran-title-div {
       margin-bottom: 4rem;
-      // p {
-      //   @include text($header-text-color, 1.4rem, 600);
-      // }
     }
   }
 }
 @media only screen and (min-width: 650px) {
   .AudioQuran-container {
     margin-top: 5rem;
-    .AudioQuran-title {
+    .AudioQuran-title-div {
       margin-bottom: 6rem;
-      // p {
-      //   @include text($header-text-color, 1.6rem, 600);
-      // }
     }
   }
 }

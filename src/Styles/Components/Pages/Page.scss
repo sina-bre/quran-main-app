@@ -12,22 +12,35 @@
 
 .Page-topic-container {
   width: 100%;
-  @include flex(center, center, row);
+  margin: 2rem 0 1rem 0;
+  display: flex;
+  justify-content: center;
 }
 .Page-topic-arrow {
   @include flex(center, center, row);
-  margin: 2rem 0 1rem 1rem;
+  margin-left: 1rem;
   cursor: pointer;
 }
 .Page-topic {
   @include text($sky-color, 1.5rem, 600);
   @include flex(center, center, row);
-  margin: 2rem 0 1rem 0;
 }
 .Page-topic-empty {
   width: 2rem;
   height: 2rem;
-  margin: 2rem 1rem 1rem 0;
+  // margin: 2rem 1rem 1rem 0;
   @include flex(center, center, row);
+  background-color: transparent;
+}
+
+.Page-sticky {
+  width: 100%;
+  position: sticky;
+  top: 0.5rem;
+  z-index: 4900;
+  margin-top: 6.5vh;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
   background-color: transparent;
 }

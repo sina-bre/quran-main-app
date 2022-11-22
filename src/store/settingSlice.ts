@@ -1,32 +1,69 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 interface settingState {
-  textSize: string;
-  translationSize: string;
-  textWeight: string;
-  translationWeight: string;
-  textFont: string;
-  translationFont: string;
-  textType: string;
-  translationName: string;
+  textSize: string | null;
+  translationSize: string | null;
+  textWeight: string | null;
+  translationWeight: string | null;
+  textFont: string | null;
+  translationFont: string | null;
+  textType: string | null;
+  translationName: string | null;
   isShowTranslation: boolean;
-  reciterName: string;
+  reciterName: string | null;
   autoNextAyahPlay: boolean;
   translationAudioPlay: boolean;
   wakeLock: boolean;
 }
 
+const textSize =
+  localStorage.getItem("textSize") !== null
+    ? localStorage.getItem("textSize")
+    : "26px";
+const translationSize =
+  localStorage.getItem("translationSize") !== null
+    ? localStorage.getItem("translationSize")
+    : "19px";
+const textWeight =
+  localStorage.getItem("textWeight") !== null
+    ? localStorage.getItem("textWeight")
+    : "normal";
+const translationWeight =
+  localStorage.getItem("translationWeight") !== null
+    ? localStorage.getItem("translationWeight")
+    : "normal";
+const textFont =
+  localStorage.getItem("textFont") !== null
+    ? localStorage.getItem("textFont")
+    : "Simple";
+const translationFont =
+  localStorage.getItem("translationFont") !== null
+    ? localStorage.getItem("translationFont")
+    : "IRANSans";
+const textType =
+  localStorage.getItem("textType") !== null
+    ? localStorage.getItem("textType")
+    : "quranSimple";
+const translationName =
+  localStorage.getItem("translationName") !== null
+    ? localStorage.getItem("translationName")
+    : "fooladvand";
+const reciterName =
+  localStorage.getItem("reciterName") !== null
+    ? localStorage.getItem("reciterName")
+    : "Alafasy";
+
 const initialSettingState: settingState = {
-  textSize: "26px",
-  translationSize: "19px",
-  textWeight: "normal",
-  translationWeight: "normal",
-  textFont: "Simple",
-  translationFont: "IRANSans",
-  textType: "quranSimple",
-  translationName: "fooladvand",
+  textSize: textSize,
+  translationSize: translationSize,
+  textWeight: textWeight,
+  translationWeight: translationWeight,
+  textFont: textFont,
+  translationFont: translationFont,
+  textType: textType,
+  translationName: translationName,
   isShowTranslation: true,
-  reciterName: "Alafasy",
+  reciterName: reciterName,
   autoNextAyahPlay: true,
   translationAudioPlay: false,
   wakeLock: true,

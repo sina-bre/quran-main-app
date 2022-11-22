@@ -10,9 +10,11 @@ const TranslationName = () => {
   );
   const optionChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(settingActions.setTranslationName(e.target.value));
+    localStorage.setItem("translationName", e.target.value);
   };
   const optionOnClickHanlder = (input: string) => {
     dispatch(settingActions.setTranslationName(input));
+    localStorage.setItem("translationName", input);
   };
   return (
     <div className="TranslationName-container">

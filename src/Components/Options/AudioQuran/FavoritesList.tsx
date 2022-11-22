@@ -12,6 +12,7 @@ import quranSurahs2 from "../../../Resources/QuranMetaData/quranSurahs2";
 import quranJuzes from "../../../Resources/QuranMetaData/quranJuzes";
 import { resourcesActions } from "../../../store/resourcesSlice";
 import useSetCurrent from "../../../Hooks/useSetCurrent";
+import { globalOrdersActions } from "../../../store/globalOrdersSlice";
 
 const FavoritesList = () => {
   const dispatch = useAppDispatch();
@@ -32,6 +33,7 @@ const FavoritesList = () => {
   const favoriteOnClickHandler = (index: number) => {
     switch (favorites[index].type) {
       case "surah":
+        dispatch(globalOrdersActions.setIsNavigateToSurah(true));
         setCurrent(surahs[favorites[index].index].start);
         break;
       case "juz":
@@ -85,56 +87,60 @@ const FavoritesList = () => {
   };
   return (
     <div className="FavoritesList-container">
-      {favorites.map((item, index) => (
-        <div
-          className="FavoritesList-item"
-          key={index}
-          onClick={() => favoriteOnClickHandler(Number(index))}
-        >
-          <div className="FavoritesList-item-right">
-            <div
-              className={`FavoritesList-item-number ${
-                item.type === "surah" && ["surah"]
-              } ${item.type === "juz" && ["juz"]} ${
-                item.type === "page" && ["page"]
-              }`}
-            >
-              {item.index !== -1 && toFaNumber(item.index.toString())}
-            </div>
-            <div className="FavoritesList-item-desc">
-              {item.type === "surah" && quranSurahs2[item.index].name}
-              {item.type === "page" &&
-                "صفحه" + " " + toFaNumber(item.index.toString())}
-              {item.type === "juz" &&
-                "سوره" +
-                  " " +
-                  quranSurahs2[
-                    Number(findSurahByAyah(quranJuzes[item.index].start))
-                  ].name +
-                  " " +
-                  "آیه" +
-                  findAyahInSurah(quranJuzes[item.index].start)}
-            </div>
-          </div>
-          <div className="FavoritesList-item-left">
-            {item.type === "surah" && (
-              <div className="SurahList-type">
-                {checkSurahType(quranSurahs2[item.index].type) ? (
-                  <img src={MeccanLogo} alt="MeccanLogo" />
-                ) : (
-                  <img src={MedinanLogo} alt="MedinanLogo" />
-                )}
+      {(favorites[0] && favorites[0].index !== -1) || favorites[0] ? (
+        favorites.map((item, index) => (
+          <div
+            className="FavoritesList-item"
+            key={index}
+            onClick={() => favoriteOnClickHandler(Number(index))}
+          >
+            <div className="FavoritesList-item-right">
+              <div
+                className={`FavoritesList-item-number ${
+                  item.type === "surah" && ["surah"]
+                } ${item.type === "juz" && ["juz"]} ${
+                  item.type === "page" && ["page"]
+                }`}
+              >
+                {item.index !== -1 && toFaNumber(item.index.toString())}
               </div>
-            )}
-            <div
-              className="FavoritesList-remove"
-              onClick={(e) => removeOnClickHandler(e, index)}
-            >
-              <img src={checkLogo} alt="checkLogo" />
+              <div className="FavoritesList-item-desc">
+                {item.type === "surah" && quranSurahs2[item.index].name}
+                {item.type === "page" &&
+                  "صفحه" + " " + toFaNumber(item.index.toString())}
+                {item.type === "juz" &&
+                  "سوره" +
+                    " " +
+                    quranSurahs2[
+                      Number(findSurahByAyah(quranJuzes[item.index].start))
+                    ].name +
+                    " " +
+                    "آیه" +
+                    findAyahInSurah(quranJuzes[item.index].start)}
+              </div>
+            </div>
+            <div className="FavoritesList-item-left">
+              {item.type === "surah" && (
+                <div className="SurahList-type">
+                  {checkSurahType(quranSurahs2[item.index].type) ? (
+                    <img src={MeccanLogo} alt="MeccanLogo" />
+                  ) : (
+                    <img src={MedinanLogo} alt="MedinanLogo" />
+                  )}
+                </div>
+              )}
+              <div
+                className="FavoritesList-remove"
+                onClick={(e) => removeOnClickHandler(e, index)}
+              >
+                <img src={checkLogo} alt="checkLogo" />
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))
+      ) : (
+        <div className="FavoritesList-empty"> هنوز هیچ منتخبی وجود ندارد.</div>
+      )}
     </div>
   );
 };

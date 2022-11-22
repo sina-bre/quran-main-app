@@ -8,6 +8,7 @@ const TextWeight = () => {
   const textWeight = useAppSelector((state) => state.setting.textWeight);
   const optionChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     disptach(settingActions.setTextWeight(e.target.value));
+    localStorage.setItem("textWeight", e.target.value);
   };
   return (
     <div className="TextWeight-container">

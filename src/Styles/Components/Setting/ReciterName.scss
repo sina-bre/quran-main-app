@@ -1,0 +1,60 @@
+@import "../../Variables/colors.scss";
+@import "../../Variables/items.scss";
+
+.ReciterName-container {
+  width: 93%;
+}
+
+.ReciterName-title {
+  margin: 1.5rem 0 0.5rem 0;
+  @include text($sky-color, 0.9rem, 600);
+}
+
+.ReciterName-options {
+  width: 100%;
+  @include flex(space-between, flex-start, column);
+}
+
+.ReciterName-option {
+  margin-bottom: 0.5rem;
+  padding: 0.3rem;
+  border-radius: 10px;
+  width: 100%;
+  @include flex(flex-start, center, row);
+  cursor: pointer;
+}
+.ReciterName-option.active {
+  background-color: darken($blue-color2, 10%);
+}
+
+.ReciterName-option-img {
+  width: 40px;
+  height: 40px;
+  border: 3px solid $blue-color2;
+  outline: 3px solid $blue-color2;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 0.2rem;
+}
+.ReciterName-option-img.active {
+  border: 3px solid white;
+  outline: 3px solid $color2;
+}
+.ReciterName-option-img.Alafasy {
+  background-image: url("../../../Images/Alafasy.png");
+}
+.ReciterName-option-img.Abdul_Basit_Murattal {
+  background-image: url("../../../Images/Abdul-basit.png");
+}
+.ReciterName-option-img.Ghamadi {
+  background-image: url("../../../Images/Ghamadi.png");
+}
+.ReciterName-option-img.Minshawy_Murattal {
+  background-image: url("../../../Images/Minshawy.png");
+}
+.ReciterName-option-title {
+  margin-right: 0.5rem;
+  @include text($sky-color2, 0.9rem, 400);
+}

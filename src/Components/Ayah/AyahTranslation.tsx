@@ -99,7 +99,7 @@ const AyahTranslation: React.FC<{ index: number }> = (props) => {
   }, [translationName, currentAyah, ayahTranslationTemp]);
   return (
     <div
-      style={ayahTranslationStyle}
+      style={{ fontSize: `${translationSize}` }}
       className={`AyahTranslation ${translationFont}-${translationWeight}`}
     >
       {ayahTranslationTemp}

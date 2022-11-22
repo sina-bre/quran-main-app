@@ -9,6 +9,7 @@ const TextFont = () => {
   const textFont = useAppSelector((state) => state.setting.textFont);
   const optionChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(settingActions.setTextFont(e.target.value));
+    localStorage.setItem("textFont", e.target.value);
   };
 
   return (

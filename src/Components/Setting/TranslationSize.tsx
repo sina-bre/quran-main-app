@@ -9,6 +9,7 @@ const TranslationSize = () => {
   );
   const changeOnClickHandler = (input: string) => {
     dispatch(settingActions.setTranslationSize(input));
+    localStorage.setItem("translationSize", input);
   };
 
   return (

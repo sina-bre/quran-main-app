@@ -7,6 +7,7 @@ import AboutAppOption from "../Options/MainPage/AboutAppOption";
 const MainPage = () => {
   return (
     <>
+      <div className="MainPage-topic">صفحه اصلی</div>
       <AudioQuraOption />
       <div className="options-row1">
         <PagingQuranOption />

@@ -8,6 +8,7 @@ const TextSize = () => {
   const textSize = useAppSelector((state) => state.setting.textSize);
   const changeOnClickHandler = (input: string) => {
     dispatch(settingActions.setTextSize(input));
+    localStorage.setItem("textSize", input);
   };
   return (
     <div className="TextSize-container">

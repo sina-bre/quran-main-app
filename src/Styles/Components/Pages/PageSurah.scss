@@ -1,0 +1,485 @@
+@import "../../Variables/colors.scss";
+@import "../../Variables/items.scss";
+@import "../../Variables/fonts.scss";
+
+.PageSurah-container {
+  width: 6rem;
+  height: 4rem;
+  @include text($sky-color, 1.5rem, 600);
+  background-color: white;
+  @include option;
+  @include flex(center, center, row);
+  z-index: 5000;
+  margin-right: 1rem;
+}
+
+.PageSurah-surah {
+  margin: 0 0.5rem 0 0;
+  font-style: normal;
+  font-weight: normal;
+  font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include text($sky-color, 2rem, bold);
+  font-family: $QuranSurah !important;
+}
+
+.PageSurah-surah.Surah1:before {
+  content: "\e904";
+}
+
+.PageSurah-surah.Surah2:before {
+  content: "\e905";
+}
+
+.PageSurah-surah.Surah3:before {
+  content: "\e906";
+}
+
+.PageSurah-surah.Surah4:before {
+  content: "\e907";
+}
+
+.PageSurah-surah.Surah5:before {
+  content: "\e908";
+}
+
+.PageSurah-surah.Surah6:before {
+  content: "\e90b";
+}
+
+.PageSurah-surah.Surah7:before {
+  content: "\e90c";
+}
+
+.PageSurah-surah.Surah8:before {
+  content: "\e90d";
+}
+
+.PageSurah-surah.Surah9:before {
+  content: "\e90e";
+}
+
+.PageSurah-surah.Surah10:before {
+  content: "\e90f";
+}
+
+.PageSurah-surah.Surah11:before {
+  content: "\e910";
+}
+
+.PageSurah-surah.Surah12:before {
+  content: "\e911";
+}
+
+.PageSurah-surah.Surah13:before {
+  content: "\e912";
+}
+
+.PageSurah-surah.Surah14:before {
+  content: "\e913";
+}
+
+.PageSurah-surah.Surah15:before {
+  content: "\e914";
+}
+
+.PageSurah-surah.Surah16:before {
+  content: "\e915";
+}
+
+.PageSurah-surah.Surah17:before {
+  content: "\e916";
+}
+
+.PageSurah-surah.Surah18:before {
+  content: "\e917";
+}
+
+.PageSurah-surah.Surah19:before {
+  content: "\e918";
+}
+
+.PageSurah-surah.Surah20:before {
+  content: "\e919";
+}
+
+.PageSurah-surah.Surah21:before {
+  content: "\e91a";
+}
+
+.PageSurah-surah.Surah22:before {
+  content: "\e91b";
+}
+
+.PageSurah-surah.Surah23:before {
+  content: "\e91c";
+}
+
+.PageSurah-surah.Surah24:before {
+  content: "\e91d";
+}
+
+.PageSurah-surah.Surah25:before {
+  content: "\e91e";
+}
+
+.PageSurah-surah.Surah26:before {
+  content: "\e91f";
+}
+
+.PageSurah-surah.Surah27:before {
+  content: "\e920";
+}
+
+.PageSurah-surah.Surah28:before {
+  content: "\e921";
+}
+
+.PageSurah-surah.Surah29:before {
+  content: "\e922";
+}
+
+.PageSurah-surah.Surah30:before {
+  content: "\e923";
+}
+
+.PageSurah-surah.Surah31:before {
+  content: "\e924";
+}
+
+.PageSurah-surah.Surah32:before {
+  content: "\e925";
+}
+
+.PageSurah-surah.Surah33:before {
+  content: "\e926";
+}
+
+.PageSurah-surah.Surah34:before {
+  content: "\e92e";
+}
+
+.PageSurah-surah.Surah35:before {
+  content: "\e92f";
+}
+
+.PageSurah-surah.Surah36:before {
+  content: "\e930";
+}
+
+.PageSurah-surah.Surah37:before {
+  content: "\e931";
+}
+
+.PageSurah-surah.Surah38:before {
+  content: "\e909";
+}
+
+.PageSurah-surah.Surah39:before {
+  content: "\e90a";
+}
+
+.PageSurah-surah.Surah40:before {
+  content: "\e927";
+}
+
+.PageSurah-surah.Surah41:before {
+  content: "\e928";
+}
+
+.PageSurah-surah.Surah42:before {
+  content: "\e929";
+}
+
+.PageSurah-surah.Surah43:before {
+  content: "\e92a";
+}
+
+.PageSurah-surah.Surah44:before {
+  content: "\e92b";
+}
+
+.PageSurah-surah.Surah45:before {
+  content: "\e92c";
+}
+
+.PageSurah-surah.Surah46:before {
+  content: "\e92d";
+}
+
+.PageSurah-surah.Surah47:before {
+  content: "\e932";
+}
+
+.PageSurah-surah.Surah48:before {
+  content: "\e902";
+}
+
+.PageSurah-surah.Surah49:before {
+  content: "\e933";
+}
+
+.PageSurah-surah.Surah50:before {
+  content: "\e934";
+}
+
+.PageSurah-surah.Surah51:before {
+  content: "\e935";
+}
+
+.PageSurah-surah.Surah52:before {
+  content: "\e936";
+}
+
+.PageSurah-surah.Surah53:before {
+  content: "\e937";
+}
+
+.PageSurah-surah.Surah54:before {
+  content: "\e938";
+}
+
+.PageSurah-surah.Surah55:before {
+  content: "\e939";
+}
+
+.PageSurah-surah.Surah56:before {
+  content: "\e93a";
+}
+
+.PageSurah-surah.Surah57:before {
+  content: "\e93b";
+}
+
+.PageSurah-surah.Surah58:before {
+  content: "\e93c";
+}
+
+.PageSurah-surah.Surah59:before {
+  content: "\e900";
+}
+
+.PageSurah-surah.Surah60:before {
+  content: "\e901";
+}
+
+.PageSurah-surah.Surah61:before {
+  content: "\e941";
+}
+
+.PageSurah-surah.Surah62:before {
+  content: "\e942";
+}
+
+.PageSurah-surah.Surah63:before {
+  content: "\e943";
+}
+
+.PageSurah-surah.Surah64:before {
+  content: "\e944";
+}
+
+.PageSurah-surah.Surah65:before {
+  content: "\e945";
+}
+
+.PageSurah-surah.Surah66:before {
+  content: "\e946";
+}
+
+.PageSurah-surah.Surah67:before {
+  content: "\e947";
+}
+
+.PageSurah-surah.Surah68:before {
+  content: "\e948";
+}
+
+.PageSurah-surah.Surah69:before {
+  content: "\e949";
+}
+
+.PageSurah-surah.Surah70:before {
+  content: "\e94a";
+}
+
+.PageSurah-surah.Surah71:before {
+  content: "\e94b";
+}
+
+.PageSurah-surah.Surah72:before {
+  content: "\e94c";
+}
+
+.PageSurah-surah.Surah73:before {
+  content: "\e94d";
+}
+
+.PageSurah-surah.Surah74:before {
+  content: "\e94e";
+}
+
+.PageSurah-surah.Surah75:before {
+  content: "\e94f";
+}
+
+.PageSurah-surah.Surah76:before {
+  content: "\e950";
+}
+
+.PageSurah-surah.Surah77:before {
+  content: "\e951";
+}
+
+.PageSurah-surah.Surah78:before {
+  content: "\e952";
+}
+
+.PageSurah-surah.Surah79:before {
+  content: "\e93d";
+}
+
+.PageSurah-surah.Surah80:before {
+  content: "\e93e";
+}
+
+.PageSurah-surah.Surah81:before {
+  content: "\e93f";
+}
+
+.PageSurah-surah.Surah82:before {
+  content: "\e940";
+}
+
+.PageSurah-surah.Surah83:before {
+  content: "\e953";
+}
+
+.PageSurah-surah.Surah84:before {
+  content: "\e954";
+}
+
+.PageSurah-surah.Surah85:before {
+  content: "\e955";
+}
+
+.PageSurah-surah.Surah86:before {
+  content: "\e956";
+}
+
+.PageSurah-surah.Surah87:before {
+  content: "\e957";
+}
+
+.PageSurah-surah.Surah88:before {
+  content: "\e958";
+}
+
+.PageSurah-surah.Surah89:before {
+  content: "\e959";
+}
+
+.PageSurah-surah.Surah90:before {
+  content: "\e95a";
+}
+
+.PageSurah-surah.Surah91:before {
+  content: "\e95b";
+}
+
+.PageSurah-surah.Surah92:before {
+  content: "\e95c";
+}
+
+.PageSurah-surah.Surah93:before {
+  content: "\e95d";
+}
+
+.PageSurah-surah.Surah94:before {
+  content: "\e95e";
+}
+
+.PageSurah-surah.Surah95:before {
+  content: "\e95f";
+}
+
+.PageSurah-surah.Surah96:before {
+  content: "\e960";
+}
+
+.PageSurah-surah.Surah97:before {
+  content: "\e961";
+}
+
+.PageSurah-surah.Surah98:before {
+  content: "\e962";
+}
+
+.PageSurah-surah.Surah99:before {
+  content: "\e963";
+}
+
+.PageSurah-surah.Surah100:before {
+  content: "\e964";
+}
+
+.PageSurah-surah.Surah101:before {
+  content: "\e965";
+}
+
+.PageSurah-surah.Surah102:before {
+  content: "\e966";
+}
+
+.PageSurah-surah.Surah103:before {
+  content: "\e967";
+}
+
+.PageSurah-surah.Surah104:before {
+  content: "\e968";
+}
+
+.PageSurah-surah.Surah105:before {
+  content: "\e969";
+}
+
+.PageSurah-surah.Surah106:before {
+  content: "\e96a";
+}
+
+.PageSurah-surah.Surah107:before {
+  content: "\e96b";
+}
+
+.PageSurah-surah.Surah108:before {
+  content: "\e96c";
+}
+
+.PageSurah-surah.Surah109:before {
+  content: "\e96d";
+}
+
+.PageSurah-surah.Surah110:before {
+  content: "\e96e";
+}
+
+.PageSurah-surah.Surah111:before {
+  content: "\e96f";
+}
+
+.PageSurah-surah.Surah112:before {
+  content: "\e970";
+}
+
+.PageSurah-surah.Surah113:before {
+  content: "\e971";
+}
+
+.PageSurah-surah.Surah114:before {
+  content: "\e972";
+}

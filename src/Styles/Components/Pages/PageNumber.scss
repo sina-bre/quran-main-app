@@ -1,17 +1,6 @@
 @import "../../Variables/colors.scss";
 @import "../../Variables/items.scss";
 
-.PageNumber-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 7.5vh;
-  margin-bottom: 5rem;
-  position: sticky;
-  background-color: transparent;
-  top: 0.5rem;
-  z-index: 4900;
-}
 // .PageNumber-container.show {
 //   animation: show 0.5s alternate forwards;
 // }
@@ -26,7 +15,7 @@
   @include option;
   @include flex(center, center, row);
   z-index: 5000;
-  position: absolute;
+  // position: absolute;
 }
 
 @keyframes show {

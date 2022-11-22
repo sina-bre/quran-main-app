@@ -9,6 +9,7 @@ const TextType = () => {
   const textType = useAppSelector((state) => state.setting.textType);
   const optionChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(settingActions.setTextType(e.target.value));
+    localStorage.setItem("textType", e.target.value);
   };
   useEffect(() => {
     console.log(textType);

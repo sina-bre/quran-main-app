@@ -9,9 +9,11 @@ const ReciterName: React.FC<{ openReciters: boolean }> = (props) => {
   const reciterName = useAppSelector((state) => state.setting.reciterName);
   const optionChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(settingActions.setReciterName(e.target.value));
+    localStorage.setItem("reciterName", e.target.value);
   };
   const optionOnClickHanlder = (input: string) => {
     dispatch(settingActions.setReciterName(input));
+    localStorage.setItem("reciterName", input);
     dispatch(globalOrdersActions.setIsPlaying(false));
   };
   return (
